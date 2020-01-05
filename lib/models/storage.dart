@@ -7,7 +7,7 @@ class Storage {
 
   /// Storage
   Storage(API api) {
-    this._api = api;
+    _api = api;
   }
 
   toString() {
@@ -26,7 +26,7 @@ class Storage {
   ///
   /// `global` *(boolean)*
   Future<Map> get([Map<String, String> params]) async {
-    return this._api.request('storage.get', {
+    return _api.request('storage.get', {
       ...?params,
     });
   }
@@ -43,7 +43,7 @@ class Storage {
   ///
   /// `count` *(integer)* amount of variable names the info needs to be collected from., default: 100, max: 1000
   Future<Map> getKeys([Map<String, String> params]) async {
-    return this._api.request('storage.getKeys', {
+    return _api.request('storage.getKeys', {
       ...?params,
     });
   }
@@ -60,7 +60,7 @@ class Storage {
   ///
   /// `global` *(boolean)*
   Future<Map> set([Map<String, String> params]) async {
-    return this._api.request('storage.set', {
+    return _api.request('storage.set', {
       ...?params,
     });
   }

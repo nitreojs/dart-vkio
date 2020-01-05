@@ -7,7 +7,7 @@ class Orders {
 
   /// Orders
   Orders(API api) {
-    this._api = api;
+    _api = api;
   }
 
   toString() {
@@ -22,7 +22,7 @@ class Orders {
   ///
   /// `pending_cancel` *(boolean)*
   Future<Map> cancelSubscription([Map<String, String> params]) async {
-    return this._api.request('orders.cancelSubscription', {
+    return _api.request('orders.cancelSubscription', {
       ...?params,
     });
   }
@@ -39,7 +39,7 @@ class Orders {
   ///
   /// `test_mode` *(boolean)* if this parameter is set to 1, this method returns a list of test mode orders. By default — 0.
   Future<Map> changeState([Map<String, String> params]) async {
-    return this._api.request('orders.changeState', {
+    return _api.request('orders.changeState', {
       ...?params,
     });
   }
@@ -54,7 +54,7 @@ class Orders {
   ///
   /// `test_mode` *(boolean)* if this parameter is set to 1, this method returns a list of test mode orders. By default — 0.
   Future<Map> get([Map<String, String> params]) async {
-    return this._api.request('orders.get', {
+    return _api.request('orders.get', {
       ...?params,
     });
   }
@@ -65,7 +65,7 @@ class Orders {
   ///
   /// `votes` *(array)*
   Future<Map> getAmount([Map<String, String> params]) async {
-    return this._api.request('orders.getAmount', {
+    return _api.request('orders.getAmount', {
       ...?params,
     });
   }
@@ -80,7 +80,7 @@ class Orders {
   ///
   /// `test_mode` *(boolean)* if this parameter is set to 1, this method returns a list of test mode orders. By default — 0.
   Future<Map> getById([Map<String, String> params]) async {
-    return this._api.request('orders.getById', {
+    return _api.request('orders.getById', {
       ...?params,
     });
   }
@@ -91,7 +91,7 @@ class Orders {
   ///
   /// `subscription_id` *(integer)*
   Future<Map> getUserSubscriptionById([Map<String, String> params]) async {
-    return this._api.request('orders.getUserSubscriptionById', {
+    return _api.request('orders.getUserSubscriptionById', {
       ...?params,
     });
   }
@@ -100,7 +100,7 @@ class Orders {
   ///
   /// `user_id` *(integer)*
   Future<Map> getUserSubscriptions([Map<String, String> params]) async {
-    return this._api.request('orders.getUserSubscriptions', {
+    return _api.request('orders.getUserSubscriptions', {
       ...?params,
     });
   }
@@ -113,7 +113,7 @@ class Orders {
   ///
   /// `price` *(integer)*
   Future<Map> updateSubscription([Map<String, String> params]) async {
-    return this._api.request('orders.updateSubscription', {
+    return _api.request('orders.updateSubscription', {
       ...?params,
     });
   }

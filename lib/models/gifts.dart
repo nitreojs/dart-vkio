@@ -7,7 +7,7 @@ class Gifts {
 
   /// Gifts
   Gifts(API api) {
-    this._api = api;
+    _api = api;
   }
 
   toString() {
@@ -24,7 +24,7 @@ class Gifts {
   ///
   /// `offset` *(integer)* Offset needed to return a specific subset of results.
   Future<Map> get([Map<String, String> params]) async {
-    return this._api.request('gifts.get', {
+    return _api.request('gifts.get', {
       ...?params,
     });
   }

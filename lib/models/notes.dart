@@ -7,7 +7,7 @@ class Notes {
 
   /// Notes
   Notes(API api) {
-    this._api = api;
+    _api = api;
   }
 
   toString() {
@@ -26,7 +26,7 @@ class Notes {
   ///
   /// `privacy_comment` *(array)*, default: all
   Future<Map> add([Map<String, String> params]) async {
-    return this._api.request('notes.add', {
+    return _api.request('notes.add', {
       ...?params,
     });
   }
@@ -45,7 +45,7 @@ class Notes {
   ///
   /// `guid` *(string)*
   Future<Map> createComment([Map<String, String> params]) async {
-    return this._api.request('notes.createComment', {
+    return _api.request('notes.createComment', {
       ...?params,
     });
   }
@@ -56,7 +56,7 @@ class Notes {
   ///
   /// `note_id` *(integer)* Note ID.
   Future<Map> delete([Map<String, String> params]) async {
-    return this._api.request('notes.delete', {
+    return _api.request('notes.delete', {
       ...?params,
     });
   }
@@ -69,7 +69,7 @@ class Notes {
   ///
   /// `owner_id` *(integer)* Note owner ID.
   Future<Map> deleteComment([Map<String, String> params]) async {
-    return this._api.request('notes.deleteComment', {
+    return _api.request('notes.deleteComment', {
       ...?params,
     });
   }
@@ -88,7 +88,7 @@ class Notes {
   ///
   /// `privacy_comment` *(array)*, default: all
   Future<Map> edit([Map<String, String> params]) async {
-    return this._api.request('notes.edit', {
+    return _api.request('notes.edit', {
       ...?params,
     });
   }
@@ -103,7 +103,7 @@ class Notes {
   ///
   /// `message` *(string)* New comment text.
   Future<Map> editComment([Map<String, String> params]) async {
-    return this._api.request('notes.editComment', {
+    return _api.request('notes.editComment', {
       ...?params,
     });
   }
@@ -122,7 +122,7 @@ class Notes {
   ///
   /// `sort` *(integer)*
   Future<Map> get([Map<String, String> params]) async {
-    return this._api.request('notes.get', {
+    return _api.request('notes.get', {
       ...?params,
     });
   }
@@ -137,7 +137,7 @@ class Notes {
   ///
   /// `need_wiki` *(boolean)*
   Future<Map> getById([Map<String, String> params]) async {
-    return this._api.request('notes.getById', {
+    return _api.request('notes.getById', {
       ...?params,
     });
   }
@@ -156,7 +156,7 @@ class Notes {
   ///
   /// `count` *(integer)* Number of comments to return., default: 20, max: 100
   Future<Map> getComments([Map<String, String> params]) async {
-    return this._api.request('notes.getComments', {
+    return _api.request('notes.getComments', {
       ...?params,
     });
   }
@@ -169,7 +169,7 @@ class Notes {
   ///
   /// `owner_id` *(integer)* Note owner ID.
   Future<Map> restoreComment([Map<String, String> params]) async {
-    return this._api.request('notes.restoreComment', {
+    return _api.request('notes.restoreComment', {
       ...?params,
     });
   }

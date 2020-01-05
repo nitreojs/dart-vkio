@@ -7,7 +7,7 @@ class Search {
 
   /// Search
   Search(API api) {
-    this._api = api;
+    _api = api;
   }
 
   toString() {
@@ -30,7 +30,7 @@ class Search {
   ///
   /// `search_global` *(boolean)*, default: 1
   Future<Map> getHints([Map<String, String> params]) async {
-    return this._api.request('search.getHints', {
+    return _api.request('search.getHints', {
       ...?params,
     });
   }

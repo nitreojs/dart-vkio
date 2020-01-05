@@ -7,7 +7,7 @@ class Ads {
 
   /// Ads
   Ads(API api) {
-    this._api = api;
+    _api = api;
   }
 
   toString() {
@@ -22,7 +22,7 @@ class Ads {
   ///
   /// `data` *(string)* Serialized JSON array of objects that describe added managers. Description of 'user_specification' objects see below.
   Future<Map> addOfficeUsers([Map<String, String> params]) async {
-    return this._api.request('ads.addOfficeUsers', {
+    return _api.request('ads.addOfficeUsers', {
       ...?params,
     });
   }
@@ -39,7 +39,7 @@ class Ads {
   ///
   /// `campaign_id` *(integer)* Campaign ID
   Future<Map> checkLink([Map<String, String> params]) async {
-    return this._api.request('ads.checkLink', {
+    return _api.request('ads.checkLink', {
       ...?params,
     });
   }
@@ -52,7 +52,7 @@ class Ads {
   ///
   /// `data` *(string)* Serialized JSON array of objects that describe created ads. Description of 'ad_specification' objects see below.
   Future<Map> createAds([Map<String, String> params]) async {
-    return this._api.request('ads.createAds', {
+    return _api.request('ads.createAds', {
       ...?params,
     });
   }
@@ -65,7 +65,7 @@ class Ads {
   ///
   /// `data` *(string)* Serialized JSON array of objects that describe created campaigns. Description of 'campaign_specification' objects see below.
   Future<Map> createCampaigns([Map<String, String> params]) async {
-    return this._api.request('ads.createCampaigns', {
+    return _api.request('ads.createCampaigns', {
       ...?params,
     });
   }
@@ -78,7 +78,7 @@ class Ads {
   ///
   /// `data` *(string)* Serialized JSON array of objects that describe created campaigns. Description of 'client_specification' objects see below.
   Future<Map> createClients([Map<String, String> params]) async {
-    return this._api.request('ads.createClients', {
+    return _api.request('ads.createClients', {
       ...?params,
     });
   }
@@ -99,7 +99,7 @@ class Ads {
   ///
   /// `target_pixel_rules` *(string)*
   Future<Map> createTargetGroup([Map<String, String> params]) async {
-    return this._api.request('ads.createTargetGroup', {
+    return _api.request('ads.createTargetGroup', {
       ...?params,
     });
   }
@@ -112,7 +112,7 @@ class Ads {
   ///
   /// `ids` *(string)* Serialized JSON array with ad IDs.
   Future<Map> deleteAds([Map<String, String> params]) async {
-    return this._api.request('ads.deleteAds', {
+    return _api.request('ads.deleteAds', {
       ...?params,
     });
   }
@@ -125,7 +125,7 @@ class Ads {
   ///
   /// `ids` *(string)* Serialized JSON array with IDs of deleted campaigns.
   Future<Map> deleteCampaigns([Map<String, String> params]) async {
-    return this._api.request('ads.deleteCampaigns', {
+    return _api.request('ads.deleteCampaigns', {
       ...?params,
     });
   }
@@ -138,7 +138,7 @@ class Ads {
   ///
   /// `ids` *(string)* Serialized JSON array with IDs of deleted clients.
   Future<Map> deleteClients([Map<String, String> params]) async {
-    return this._api.request('ads.deleteClients', {
+    return _api.request('ads.deleteClients', {
       ...?params,
     });
   }
@@ -153,7 +153,7 @@ class Ads {
   ///
   /// `target_group_id` *(integer)* Group ID.
   Future<Map> deleteTargetGroup([Map<String, String> params]) async {
-    return this._api.request('ads.deleteTargetGroup', {
+    return _api.request('ads.deleteTargetGroup', {
       ...?params,
     });
   }
@@ -162,7 +162,7 @@ class Ads {
   ///
   /// Params: none
   Future<Map> getAccounts([Map<String, String> params]) async {
-    return this._api.request('ads.getAccounts', {
+    return _api.request('ads.getAccounts', {
       ...?params,
     });
   }
@@ -185,7 +185,7 @@ class Ads {
   ///
   /// `offset` *(integer)* Offset. Used in the same cases as 'limit' parameter.
   Future<Map> getAds([Map<String, String> params]) async {
-    return this._api.request('ads.getAds', {
+    return _api.request('ads.getAds', {
       ...?params,
     });
   }
@@ -208,7 +208,7 @@ class Ads {
   ///
   /// `offset` *(integer)* Offset. Used in the same cases as 'limit' parameter.
   Future<Map> getAdsLayout([Map<String, String> params]) async {
-    return this._api.request('ads.getAdsLayout', {
+    return _api.request('ads.getAdsLayout', {
       ...?params,
     });
   }
@@ -231,7 +231,7 @@ class Ads {
   ///
   /// `offset` *(integer)* Offset needed to return a specific subset of results.
   Future<Map> getAdsTargeting([Map<String, String> params]) async {
-    return this._api.request('ads.getAdsTargeting', {
+    return _api.request('ads.getAdsTargeting', {
       ...?params,
     });
   }
@@ -242,7 +242,7 @@ class Ads {
   ///
   /// `account_id` *(integer)* Advertising account ID.
   Future<Map> getBudget([Map<String, String> params]) async {
-    return this._api.request('ads.getBudget', {
+    return _api.request('ads.getBudget', {
       ...?params,
     });
   }
@@ -259,7 +259,7 @@ class Ads {
   ///
   /// `campaign_ids` *(string)* Filter of advertising campaigns to show. Serialized JSON array with campaign IDs. Only campaigns that exist in 'campaign_ids' and belong to the specified advertising account will be shown. If the parameter is null, all campaigns will be shown.
   Future<Map> getCampaigns([Map<String, String> params]) async {
-    return this._api.request('ads.getCampaigns', {
+    return _api.request('ads.getCampaigns', {
       ...?params,
     });
   }
@@ -270,7 +270,7 @@ class Ads {
   ///
   /// `lang` *(string)* Language. The full list of supported languages is [here](https://vk.com/dev/api_requests).
   Future<Map> getCategories([Map<String, String> params]) async {
-    return this._api.request('ads.getCategories', {
+    return _api.request('ads.getCategories', {
       ...?params,
     });
   }
@@ -281,7 +281,7 @@ class Ads {
   ///
   /// `account_id` *(integer)* Advertising account ID.
   Future<Map> getClients([Map<String, String> params]) async {
-    return this._api.request('ads.getClients', {
+    return _api.request('ads.getClients', {
       ...?params,
     });
   }
@@ -302,7 +302,7 @@ class Ads {
   ///
   /// `date_to` *(string)* Date to show statistics to. For different value of 'period' different date format is used: *day: YYYY-MM-DD, example: 2011-09-27 — September 27, 2011, **0 — current day,, *month: YYYY-MM, example: 2011-09 — September 2011, **0 — current month,, *overall: 0.
   Future<Map> getDemographics([Map<String, String> params]) async {
-    return this._api.request('ads.getDemographics', {
+    return _api.request('ads.getDemographics', {
       ...?params,
     });
   }
@@ -313,7 +313,7 @@ class Ads {
   ///
   /// `account_id` *(integer)* Advertising account ID.
   Future<Map> getFloodStats([Map<String, String> params]) async {
-    return this._api.request('ads.getFloodStats', {
+    return _api.request('ads.getFloodStats', {
       ...?params,
     });
   }
@@ -324,7 +324,7 @@ class Ads {
   ///
   /// `account_id` *(integer)* Advertising account ID.
   Future<Map> getOfficeUsers([Map<String, String> params]) async {
-    return this._api.request('ads.getOfficeUsers', {
+    return _api.request('ads.getOfficeUsers', {
       ...?params,
     });
   }
@@ -339,7 +339,7 @@ class Ads {
   ///
   /// `ids` *(string)* IDs requested ads or campaigns, separated with a comma, depending on the value set in 'ids_type'. Maximum 100 objects.
   Future<Map> getPostsReach([Map<String, String> params]) async {
-    return this._api.request('ads.getPostsReach', {
+    return _api.request('ads.getPostsReach', {
       ...?params,
     });
   }
@@ -352,7 +352,7 @@ class Ads {
   ///
   /// `ad_id` *(integer)* Ad ID.
   Future<Map> getRejectionReason([Map<String, String> params]) async {
-    return this._api.request('ads.getRejectionReason', {
+    return _api.request('ads.getRejectionReason', {
       ...?params,
     });
   }
@@ -373,7 +373,7 @@ class Ads {
   ///
   /// `date_to` *(string)* Date to show statistics to. For different value of 'period' different date format is used: *day: YYYY-MM-DD, example: 2011-09-27 — September 27, 2011, **0 — current day,, *month: YYYY-MM, example: 2011-09 — September 2011, **0 — current month,, *overall: 0.
   Future<Map> getStatistics([Map<String, String> params]) async {
-    return this._api.request('ads.getStatistics', {
+    return _api.request('ads.getStatistics', {
       ...?params,
     });
   }
@@ -394,7 +394,7 @@ class Ads {
   ///
   /// `lang` *(string)* Language of the returned string values. Supported languages: *ru — Russian,, *ua — Ukrainian,, *en — English.
   Future<Map> getSuggestions([Map<String, String> params]) async {
-    return this._api.request('ads.getSuggestions', {
+    return _api.request('ads.getSuggestions', {
       ...?params,
     });
   }
@@ -409,7 +409,7 @@ class Ads {
   ///
   /// `extended` *(boolean)* '1' — to return pixel code.
   Future<Map> getTargetGroups([Map<String, String> params]) async {
-    return this._api.request('ads.getTargetGroups', {
+    return _api.request('ads.getTargetGroups', {
       ...?params,
     });
   }
@@ -438,7 +438,7 @@ class Ads {
   ///
   /// `link_domain` *(string)* Domain of the advertised object.
   Future<Map> getTargetingStats([Map<String, String> params]) async {
-    return this._api.request('ads.getTargetingStats', {
+    return _api.request('ads.getTargetingStats', {
       ...?params,
     });
   }
@@ -451,7 +451,7 @@ class Ads {
   ///
   /// `icon` *(integer)*
   Future<Map> getUploadURL([Map<String, String> params]) async {
-    return this._api.request('ads.getUploadURL', {
+    return _api.request('ads.getUploadURL', {
       ...?params,
     });
   }
@@ -460,7 +460,7 @@ class Ads {
   ///
   /// Params: none
   Future<Map> getVideoUploadURL([Map<String, String> params]) async {
-    return this._api.request('ads.getVideoUploadURL', {
+    return _api.request('ads.getVideoUploadURL', {
       ...?params,
     });
   }
@@ -477,7 +477,7 @@ class Ads {
   ///
   /// `contacts` *(string)* List of phone numbers, emails or user IDs separated with a comma.
   Future<Map> importTargetContacts([Map<String, String> params]) async {
-    return this._api.request('ads.importTargetContacts', {
+    return _api.request('ads.importTargetContacts', {
       ...?params,
     });
   }
@@ -490,7 +490,7 @@ class Ads {
   ///
   /// `ids` *(string)* Serialized JSON array with IDs of deleted managers.
   Future<Map> removeOfficeUsers([Map<String, String> params]) async {
-    return this._api.request('ads.removeOfficeUsers', {
+    return _api.request('ads.removeOfficeUsers', {
       ...?params,
     });
   }
@@ -503,7 +503,7 @@ class Ads {
   ///
   /// `data` *(string)* Serialized JSON array of objects that describe changes in ads. Description of 'ad_edit_specification' objects see below.
   Future<Map> updateAds([Map<String, String> params]) async {
-    return this._api.request('ads.updateAds', {
+    return _api.request('ads.updateAds', {
       ...?params,
     });
   }
@@ -516,7 +516,7 @@ class Ads {
   ///
   /// `data` *(string)* Serialized JSON array of objects that describe changes in campaigns. Description of 'campaign_mod' objects see below.
   Future<Map> updateCampaigns([Map<String, String> params]) async {
-    return this._api.request('ads.updateCampaigns', {
+    return _api.request('ads.updateCampaigns', {
       ...?params,
     });
   }
@@ -529,7 +529,7 @@ class Ads {
   ///
   /// `data` *(string)* Serialized JSON array of objects that describe changes in clients. Description of 'client_mod' objects see below.
   Future<Map> updateClients([Map<String, String> params]) async {
-    return this._api.request('ads.updateClients', {
+    return _api.request('ads.updateClients', {
       ...?params,
     });
   }
@@ -554,7 +554,7 @@ class Ads {
   ///
   /// `target_pixel_rules` *(string)*
   Future<Map> updateTargetGroup([Map<String, String> params]) async {
-    return this._api.request('ads.updateTargetGroup', {
+    return _api.request('ads.updateTargetGroup', {
       ...?params,
     });
   }

@@ -6,9 +6,9 @@ class APIException implements Exception {
     String cause, {
     num code,
   }) {
-    this.cause = cause;
-    this.code = code;
+    cause = cause;
+    code = code;
   }
 
-  String get error => 'APIException #${this.code}: ${this.cause}';
+  String get error => 'APIException #${code}: ${cause}';
 }

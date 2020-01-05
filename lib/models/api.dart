@@ -156,43 +156,43 @@ class API {
 
   /// API
   API(VK vk) {
-    this._vk = vk;
+    _vk = vk;
 
-    this.account = new Account(this);
-    this.ads = new Ads(this);
-    this.apps = new Apps(this);
-    this.auth = new Auth(this);
-    this.board = new Board(this);
-    this.database = new Database(this);
-    this.docs = new Docs(this);
-    this.fave = new Fave(this);
-    this.friends = new Friends(this);
-    this.gifts = new Gifts(this);
-    this.groups = new Groups(this);
-    this.leads = new Leads(this);
-    this.likes = new Likes(this);
-    this.market = new Market(this);
-    this.messages = new Messages(this);
-    this.newsfeed = new Newsfeed(this);
-    this.notes = new Notes(this);
-    this.notifications = new Notifications(this);
-    this.orders = new Orders(this);
-    this.pages = new Pages(this);
-    this.photos = new Photos(this);
-    this.polls = new Polls(this);
-    this.prettyCards = new PrettyCards(this);
-    this.search = new Search(this);
-    this.secure = new Secure(this);
-    this.stats = new Stats(this);
-    this.status = new Status(this);
-    this.storage = new Storage(this);
-    this.stories = new Stories(this);
-    this.streaming = new Streaming(this);
-    this.users = new Users(this);
-    this.utils = new Utils(this);
-    this.video = new Video(this);
-    this.wall = new Wall(this);
-    this.widgets = new Widgets(this);
+    account = new Account(this);
+    ads = new Ads(this);
+    apps = new Apps(this);
+    auth = new Auth(this);
+    board = new Board(this);
+    database = new Database(this);
+    docs = new Docs(this);
+    fave = new Fave(this);
+    friends = new Friends(this);
+    gifts = new Gifts(this);
+    groups = new Groups(this);
+    leads = new Leads(this);
+    likes = new Likes(this);
+    market = new Market(this);
+    messages = new Messages(this);
+    newsfeed = new Newsfeed(this);
+    notes = new Notes(this);
+    notifications = new Notifications(this);
+    orders = new Orders(this);
+    pages = new Pages(this);
+    photos = new Photos(this);
+    polls = new Polls(this);
+    prettyCards = new PrettyCards(this);
+    search = new Search(this);
+    secure = new Secure(this);
+    stats = new Stats(this);
+    status = new Status(this);
+    storage = new Storage(this);
+    stories = new Stories(this);
+    streaming = new Streaming(this);
+    users = new Users(this);
+    utils = new Utils(this);
+    video = new Video(this);
+    wall = new Wall(this);
+    widgets = new Widgets(this);
   }
 
   toString() {
@@ -201,13 +201,13 @@ class API {
 
   Future<Map> request(String method, [Map<String, String> params]) async {
     Map body = <String, String>{
-      'access_token': this._vk.options['token'],
-      'v': this._vk.options['version'],
+      'access_token': _vk.options['token'],
+      'v': _vk.options['version'],
       ...?params,
     };
 
     http.Response response = await http.post(
-      this._baseUrl + '/$method',
+      _baseUrl + '/$method',
       body: body,
     );
 
@@ -227,14 +227,14 @@ class API {
 
   /// Call an API [method] with [params]
   Future<Map> call(String method, [Map<String, String> params]) async {
-    return this.request(method, {
+    return request(method, {
       ...?params,
     });
   }
 
   /// Execute [code]
   Future<Map> execute(String code) async {
-    return this.call('execute', {
+    return call('execute', {
       'code': code,
     });
   }

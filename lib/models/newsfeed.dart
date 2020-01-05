@@ -7,7 +7,7 @@ class Newsfeed {
 
   /// Newsfeed
   Newsfeed(API api) {
-    this._api = api;
+    _api = api;
   }
 
   toString() {
@@ -22,7 +22,7 @@ class Newsfeed {
   ///
   /// `group_ids` *(array)*
   Future<Map> addBan([Map<String, String> params]) async {
-    return this._api.request('newsfeed.addBan', {
+    return _api.request('newsfeed.addBan', {
       ...?params,
     });
   }
@@ -35,7 +35,7 @@ class Newsfeed {
   ///
   /// `group_ids` *(array)*
   Future<Map> deleteBan([Map<String, String> params]) async {
-    return this._api.request('newsfeed.deleteBan', {
+    return _api.request('newsfeed.deleteBan', {
       ...?params,
     });
   }
@@ -44,7 +44,7 @@ class Newsfeed {
   ///
   /// `list_id` *(integer)*
   Future<Map> deleteList([Map<String, String> params]) async {
-    return this._api.request('newsfeed.deleteList', {
+    return _api.request('newsfeed.deleteList', {
       ...?params,
     });
   }
@@ -73,7 +73,7 @@ class Newsfeed {
   ///
   /// `section` *(string)*
   Future<Map> get([Map<String, String> params]) async {
-    return this._api.request('newsfeed.get', {
+    return _api.request('newsfeed.get', {
       ...?params,
     });
   }
@@ -88,7 +88,7 @@ class Newsfeed {
   ///
   /// `name_case` *(string)* Case for declension of user name and surname: 'nom' — nominative (default), 'gen' — genitive , 'dat' — dative, 'acc' — accusative , 'ins' — instrumental , 'abl' — prepositional
   Future<Map> getBanned([Map<String, String> params]) async {
-    return this._api.request('newsfeed.getBanned', {
+    return _api.request('newsfeed.getBanned', {
       ...?params,
     });
   }
@@ -113,7 +113,7 @@ class Newsfeed {
   ///
   /// `fields` *(array)* Additional fields of [communities](https://vk.com/dev/fields|profiles] and [vk.com/dev/fields_groups) to return.
   Future<Map> getComments([Map<String, String> params]) async {
-    return this._api.request('newsfeed.getComments', {
+    return _api.request('newsfeed.getComments', {
       ...?params,
     });
   }
@@ -126,7 +126,7 @@ class Newsfeed {
   ///
   /// `extended` *(boolean)* Return additional list info
   Future<Map> getLists([Map<String, String> params]) async {
-    return this._api.request('newsfeed.getLists', {
+    return _api.request('newsfeed.getLists', {
       ...?params,
     });
   }
@@ -145,7 +145,7 @@ class Newsfeed {
   ///
   /// `count` *(integer)* Number of posts to return., default: 20, max: 50
   Future<Map> getMentions([Map<String, String> params]) async {
-    return this._api.request('newsfeed.getMentions', {
+    return _api.request('newsfeed.getMentions', {
       ...?params,
     });
   }
@@ -166,7 +166,7 @@ class Newsfeed {
   ///
   /// `fields` *(array)* Additional fields of [communities](https://vk.com/dev/fields|profiles] and [vk.com/dev/fields_groups) to return.
   Future<Map> getRecommended([Map<String, String> params]) async {
-    return this._api.request('newsfeed.getRecommended', {
+    return _api.request('newsfeed.getRecommended', {
       ...?params,
     });
   }
@@ -183,7 +183,7 @@ class Newsfeed {
   ///
   /// `fields` *(array)* list of extra fields to be returned. See available fields for [communities](https://vk.com/dev/fields|users] and [vk.com/dev/fields_groups).
   Future<Map> getSuggestedSources([Map<String, String> params]) async {
-    return this._api.request('newsfeed.getSuggestedSources', {
+    return _api.request('newsfeed.getSuggestedSources', {
       ...?params,
     });
   }
@@ -198,7 +198,7 @@ class Newsfeed {
   ///
   /// `item_id` *(integer)* Item identifier
   Future<Map> ignoreItem([Map<String, String> params]) async {
-    return this._api.request('newsfeed.ignoreItem', {
+    return _api.request('newsfeed.ignoreItem', {
       ...?params,
     });
   }
@@ -215,7 +215,7 @@ class Newsfeed {
   ///
   /// `no_reposts` *(boolean)* reposts display on and off ('1' is for off).
   Future<Map> saveList([Map<String, String> params]) async {
-    return this._api.request('newsfeed.saveList', {
+    return _api.request('newsfeed.saveList', {
       ...?params,
     });
   }
@@ -242,7 +242,7 @@ class Newsfeed {
   ///
   /// `fields` *(array)* Additional fields of [communities](https://vk.com/dev/fields|profiles] and [vk.com/dev/fields_groups) to return.
   Future<Map> search([Map<String, String> params]) async {
-    return this._api.request('newsfeed.search', {
+    return _api.request('newsfeed.search', {
       ...?params,
     });
   }
@@ -257,7 +257,7 @@ class Newsfeed {
   ///
   /// `item_id` *(integer)* Item identifier
   Future<Map> unignoreItem([Map<String, String> params]) async {
-    return this._api.request('newsfeed.unignoreItem', {
+    return _api.request('newsfeed.unignoreItem', {
       ...?params,
     });
   }
@@ -272,7 +272,7 @@ class Newsfeed {
   ///
   /// `item_id` *(integer)* Object ID.
   Future<Map> unsubscribe([Map<String, String> params]) async {
-    return this._api.request('newsfeed.unsubscribe', {
+    return _api.request('newsfeed.unsubscribe', {
       ...?params,
     });
   }

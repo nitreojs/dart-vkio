@@ -7,7 +7,7 @@ class Secure {
 
   /// Secure
   Secure(API api) {
-    this._api = api;
+    _api = api;
   }
 
   toString() {
@@ -24,7 +24,7 @@ class Secure {
   ///
   /// `value` *(integer)* depends on activity_id: * 1 – number, current level number,, * 2 – number, current user's points amount, , Any other value is ignored
   Future<Map> addAppEvent([Map<String, String> params]) async {
-    return this._api.request('secure.addAppEvent', {
+    return _api.request('secure.addAppEvent', {
       ...?params,
     });
   }
@@ -37,7 +37,7 @@ class Secure {
   ///
   /// `ip` *(string)* user 'ip address'. Note that user may access using the 'ipv6' address, in this case it is required to transmit the 'ipv6' address. If not transmitted, the address will not be checked.
   Future<Map> checkToken([Map<String, String> params]) async {
-    return this._api.request('secure.checkToken', {
+    return _api.request('secure.checkToken', {
       ...?params,
     });
   }
@@ -46,7 +46,7 @@ class Secure {
   ///
   /// Params: none
   Future<Map> getAppBalance([Map<String, String> params]) async {
-    return this._api.request('secure.getAppBalance', {
+    return _api.request('secure.getAppBalance', {
       ...?params,
     });
   }
@@ -63,7 +63,7 @@ class Secure {
   ///
   /// `limit` *(integer)* number of returned posts. By default — 1000., default: 1000, max: 1000
   Future<Map> getSMSHistory([Map<String, String> params]) async {
-    return this._api.request('secure.getSMSHistory', {
+    return _api.request('secure.getSMSHistory', {
       ...?params,
     });
   }
@@ -84,7 +84,7 @@ class Secure {
   ///
   /// `limit` *(integer)*, default: 1000, max: 1000
   Future<Map> getTransactionsHistory([Map<String, String> params]) async {
-    return this._api.request('secure.getTransactionsHistory', {
+    return _api.request('secure.getTransactionsHistory', {
       ...?params,
     });
   }
@@ -95,7 +95,7 @@ class Secure {
   ///
   /// `user_ids` *(array)*
   Future<Map> getUserLevel([Map<String, String> params]) async {
-    return this._api.request('secure.getUserLevel', {
+    return _api.request('secure.getUserLevel', {
       ...?params,
     });
   }
@@ -108,7 +108,7 @@ class Secure {
   ///
   /// `achievement_id` *(integer)*
   Future<Map> giveEventSticker([Map<String, String> params]) async {
-    return this._api.request('secure.giveEventSticker', {
+    return _api.request('secure.giveEventSticker', {
       ...?params,
     });
   }
@@ -123,7 +123,7 @@ class Secure {
   ///
   /// `message` *(string)* notification text which should be sent in 'UTF-8' encoding ('254' characters maximum).
   Future<Map> sendNotification([Map<String, String> params]) async {
-    return this._api.request('secure.sendNotification', {
+    return _api.request('secure.sendNotification', {
       ...?params,
     });
   }
@@ -136,7 +136,7 @@ class Secure {
   ///
   /// `message` *(string)* 'SMS' text to be sent in 'UTF-8' encoding. Only Latin letters and numbers are allowed. Maximum size is '160' characters.
   Future<Map> sendSMSNotification([Map<String, String> params]) async {
-    return this._api.request('secure.sendSMSNotification', {
+    return _api.request('secure.sendSMSNotification', {
       ...?params,
     });
   }
@@ -153,7 +153,7 @@ class Secure {
   ///
   /// `increment` *(boolean)*
   Future<Map> setCounter([Map<String, String> params]) async {
-    return this._api.request('secure.setCounter', {
+    return _api.request('secure.setCounter', {
       ...?params,
     });
   }

@@ -7,7 +7,7 @@ class Notifications {
 
   /// Notifications
   Notifications(API api) {
-    this._api = api;
+    _api = api;
   }
 
   toString() {
@@ -28,7 +28,7 @@ class Notifications {
   ///
   /// `end_time` *(integer)* Latest timestamp (in Unix time) of a notification to return. By default, the current time.
   Future<Map> get([Map<String, String> params]) async {
-    return this._api.request('notifications.get', {
+    return _api.request('notifications.get', {
       ...?params,
     });
   }
@@ -38,7 +38,7 @@ class Notifications {
   /// Params:
 
   Future<Map> markAsViewed([Map<String, String> params]) async {
-    return this._api.request('notifications.markAsViewed', {
+    return _api.request('notifications.markAsViewed', {
       ...?params,
     });
   }

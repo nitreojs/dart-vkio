@@ -7,7 +7,7 @@ class Apps {
 
   /// Apps
   Apps(API api) {
-    this._api = api;
+    _api = api;
   }
 
   toString() {
@@ -18,7 +18,7 @@ class Apps {
   ///
   /// Params: none
   Future<Map> deleteAppRequests([Map<String, String> params]) async {
-    return this._api.request('apps.deleteAppRequests', {
+    return _api.request('apps.deleteAppRequests', {
       ...?params,
     });
   }
@@ -41,7 +41,7 @@ class Apps {
   ///
   /// `name_case` *(string)* Case for declension of user name and surname: 'nom' — nominative (default),, 'gen' — genitive,, 'dat' — dative,, 'acc' — accusative,, 'ins' — instrumental,, 'abl' — prepositional. (only if 'return_friends' = '1')
   Future<Map> get([Map<String, String> params]) async {
-    return this._api.request('apps.get', {
+    return _api.request('apps.get', {
       ...?params,
     });
   }
@@ -72,7 +72,7 @@ class Apps {
   ///
   /// `filter` *(string)* 'installed' — to return list of installed apps (only for mobile platform).
   Future<Map> getCatalog([Map<String, String> params]) async {
-    return this._api.request('apps.getCatalog', {
+    return _api.request('apps.getCatalog', {
       ...?params,
     });
   }
@@ -91,7 +91,7 @@ class Apps {
   ///
   /// `fields` *(array)* Additional profile fields, see [description](https://vk.com/dev/fields).
   Future<Map> getFriendsList([Map<String, String> params]) async {
-    return this._api.request('apps.getFriendsList', {
+    return _api.request('apps.getFriendsList', {
       ...?params,
     });
   }
@@ -106,7 +106,7 @@ class Apps {
   ///
   /// `extended` *(boolean)* 1 — to return additional info about users
   Future<Map> getLeaderboard([Map<String, String> params]) async {
-    return this._api.request('apps.getLeaderboard', {
+    return _api.request('apps.getLeaderboard', {
       ...?params,
     });
   }
@@ -117,7 +117,7 @@ class Apps {
   ///
   /// `type` *(string)*, default: user
   Future<Map> getScopes([Map<String, String> params]) async {
-    return this._api.request('apps.getScopes', {
+    return _api.request('apps.getScopes', {
       ...?params,
     });
   }
@@ -128,7 +128,7 @@ class Apps {
   ///
   /// `user_id` *(integer)*
   Future<Map> getScore([Map<String, String> params]) async {
-    return this._api.request('apps.getScore', {
+    return _api.request('apps.getScore', {
       ...?params,
     });
   }
@@ -149,7 +149,7 @@ class Apps {
   ///
   /// `separate` *(boolean)*
   Future<Map> sendRequest([Map<String, String> params]) async {
-    return this._api.request('apps.sendRequest', {
+    return _api.request('apps.sendRequest', {
       ...?params,
     });
   }

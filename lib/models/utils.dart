@@ -7,7 +7,7 @@ class Utils {
 
   /// Utils
   Utils(API api) {
-    this._api = api;
+    _api = api;
   }
 
   toString() {
@@ -20,7 +20,7 @@ class Utils {
   ///
   /// `url` *(string)* Link to check (e.g., 'http://google.com').
   Future<Map> checkLink([Map<String, String> params]) async {
-    return this._api.request('utils.checkLink', {
+    return _api.request('utils.checkLink', {
       ...?params,
     });
   }
@@ -31,7 +31,7 @@ class Utils {
   ///
   /// `key` *(string)* Link key (characters after vk.cc/).
   Future<Map> deleteFromLastShortened([Map<String, String> params]) async {
-    return this._api.request('utils.deleteFromLastShortened', {
+    return _api.request('utils.deleteFromLastShortened', {
       ...?params,
     });
   }
@@ -44,7 +44,7 @@ class Utils {
   ///
   /// `offset` *(integer)* Offset needed to return a specific subset of links.
   Future<Map> getLastShortenedLinks([Map<String, String> params]) async {
-    return this._api.request('utils.getLastShortenedLinks', {
+    return _api.request('utils.getLastShortenedLinks', {
       ...?params,
     });
   }
@@ -65,7 +65,7 @@ class Utils {
   ///
   /// `extended` *(boolean)* 1 — to return extended stats data (sex, age, geo). 0 — to return views number only.
   Future<Map> getLinkStats([Map<String, String> params]) async {
-    return this._api.request('utils.getLinkStats', {
+    return _api.request('utils.getLinkStats', {
       ...?params,
     });
   }
@@ -74,7 +74,7 @@ class Utils {
   ///
   /// Params: none
   Future<Map> getServerTime([Map<String, String> params]) async {
-    return this._api.request('utils.getServerTime', {
+    return _api.request('utils.getServerTime', {
       ...?params,
     });
   }
@@ -87,7 +87,7 @@ class Utils {
   ///
   /// `private` *(boolean)* 1 — private stats, 0 — public stats.
   Future<Map> getShortLink([Map<String, String> params]) async {
-    return this._api.request('utils.getShortLink', {
+    return _api.request('utils.getShortLink', {
       ...?params,
     });
   }
@@ -98,7 +98,7 @@ class Utils {
   ///
   /// `screen_name` *(string)* Screen name of the user, community (e.g., 'apiclub,' 'andrew', or 'rules_of_war'), or application.
   Future<Map> resolveScreenName([Map<String, String> params]) async {
-    return this._api.request('utils.resolveScreenName', {
+    return _api.request('utils.resolveScreenName', {
       ...?params,
     });
   }

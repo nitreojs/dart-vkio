@@ -7,7 +7,7 @@ class Likes {
 
   /// Likes
   Likes(API api) {
-    this._api = api;
+    _api = api;
   }
 
   toString() {
@@ -26,7 +26,7 @@ class Likes {
   ///
   /// `access_key` *(string)* Access key required for an object owned by a private entity.
   Future<Map> add([Map<String, String> params]) async {
-    return this._api.request('likes.add', {
+    return _api.request('likes.add', {
       ...?params,
     });
   }
@@ -41,7 +41,7 @@ class Likes {
   ///
   /// `item_id` *(integer)* Object ID.
   Future<Map> delete([Map<String, String> params]) async {
-    return this._api.request('likes.delete', {
+    return _api.request('likes.delete', {
       ...?params,
     });
   }
@@ -70,7 +70,7 @@ class Likes {
   ///
   /// `skip_own` *(boolean)*
   Future<Map> getList([Map<String, String> params]) async {
-    return this._api.request('likes.getList', {
+    return _api.request('likes.getList', {
       ...?params,
     });
   }
@@ -87,7 +87,7 @@ class Likes {
   ///
   /// `item_id` *(integer)* Object ID.
   Future<Map> isLiked([Map<String, String> params]) async {
-    return this._api.request('likes.isLiked', {
+    return _api.request('likes.isLiked', {
       ...?params,
     });
   }

@@ -7,7 +7,7 @@ class Wall {
 
   /// Wall
   Wall(API api) {
-    this._api = api;
+    _api = api;
   }
 
   toString() {
@@ -20,7 +20,7 @@ class Wall {
   ///
   /// `post_id` *(integer)*
   Future<Map> closeComments([Map<String, String> params]) async {
-    return this._api.request('wall.closeComments', {
+    return _api.request('wall.closeComments', {
       ...?params,
     });
   }
@@ -45,7 +45,7 @@ class Wall {
   ///
   /// `guid` *(string)* Unique identifier to avoid repeated comments.
   Future<Map> createComment([Map<String, String> params]) async {
-    return this._api.request('wall.createComment', {
+    return _api.request('wall.createComment', {
       ...?params,
     });
   }
@@ -58,7 +58,7 @@ class Wall {
   ///
   /// `post_id` *(integer)* ID of the post to be deleted.
   Future<Map> delete([Map<String, String> params]) async {
-    return this._api.request('wall.delete', {
+    return _api.request('wall.delete', {
       ...?params,
     });
   }
@@ -71,7 +71,7 @@ class Wall {
   ///
   /// `comment_id` *(integer)* Comment ID.
   Future<Map> deleteComment([Map<String, String> params]) async {
-    return this._api.request('wall.deleteComment', {
+    return _api.request('wall.deleteComment', {
       ...?params,
     });
   }
@@ -112,7 +112,7 @@ class Wall {
   ///
   /// `poster_bkg_access_hash` *(string)*
   Future<Map> edit([Map<String, String> params]) async {
-    return this._api.request('wall.edit', {
+    return _api.request('wall.edit', {
       ...?params,
     });
   }
@@ -145,7 +145,7 @@ class Wall {
   ///
   /// `link_video` *(string)* Link video ID in format "<owner_id>_<media_id>"
   Future<Map> editAdsStealth([Map<String, String> params]) async {
-    return this._api.request('wall.editAdsStealth', {
+    return _api.request('wall.editAdsStealth', {
       ...?params,
     });
   }
@@ -162,7 +162,7 @@ class Wall {
   ///
   /// `attachments` *(array)* List of objects attached to the comment, in the following format: , "<owner_id>_<media_id>,<owner_id>_<media_id>", '' — Type of media attachment: 'photo' — photo, 'video' — video, 'audio' — audio, 'doc' — document, '<owner_id>' — ID of the media attachment owner. '<media_id>' — Media attachment ID. For example: "photo100172_166443618,photo66748_265827614"
   Future<Map> editComment([Map<String, String> params]) async {
-    return this._api.request('wall.editComment', {
+    return _api.request('wall.editComment', {
       ...?params,
     });
   }
@@ -185,7 +185,7 @@ class Wall {
   ///
   /// `fields` *(array)*
   Future<Map> get([Map<String, String> params]) async {
-    return this._api.request('wall.get', {
+    return _api.request('wall.get', {
       ...?params,
     });
   }
@@ -202,7 +202,7 @@ class Wall {
   ///
   /// `fields` *(array)*
   Future<Map> getById([Map<String, String> params]) async {
-    return this._api.request('wall.getById', {
+    return _api.request('wall.getById', {
       ...?params,
     });
   }
@@ -235,7 +235,7 @@ class Wall {
   ///
   /// `thread_items_count` *(integer)* Count items in threads., max: 10
   Future<Map> getComments([Map<String, String> params]) async {
-    return this._api.request('wall.getComments', {
+    return _api.request('wall.getComments', {
       ...?params,
     });
   }
@@ -252,7 +252,7 @@ class Wall {
   ///
   /// `count` *(integer)* Number of reposts to return., default: 20, max: 1000
   Future<Map> getReposts([Map<String, String> params]) async {
-    return this._api.request('wall.getReposts', {
+    return _api.request('wall.getReposts', {
       ...?params,
     });
   }
@@ -263,7 +263,7 @@ class Wall {
   ///
   /// `post_id` *(integer)*
   Future<Map> openComments([Map<String, String> params]) async {
-    return this._api.request('wall.openComments', {
+    return _api.request('wall.openComments', {
       ...?params,
     });
   }
@@ -276,7 +276,7 @@ class Wall {
   ///
   /// `post_id` *(integer)* Post ID.
   Future<Map> pin([Map<String, String> params]) async {
-    return this._api.request('wall.pin', {
+    return _api.request('wall.pin', {
       ...?params,
     });
   }
@@ -317,7 +317,7 @@ class Wall {
   ///
   /// `mute_notifications` *(boolean)*
   Future<Map> post([Map<String, String> params]) async {
-    return this._api.request('wall.post', {
+    return _api.request('wall.post', {
       ...?params,
     });
   }
@@ -350,7 +350,7 @@ class Wall {
   ///
   /// `link_video` *(string)* Link video ID in format "<owner_id>_<media_id>"
   Future<Map> postAdsStealth([Map<String, String> params]) async {
-    return this._api.request('wall.postAdsStealth', {
+    return _api.request('wall.postAdsStealth', {
       ...?params,
     });
   }
@@ -365,7 +365,7 @@ class Wall {
   ///
   /// `reason` *(integer)* Reason for the complaint: '0' – spam, '1' – child pornography, '2' – extremism, '3' – violence, '4' – drug propaganda, '5' – adult material, '6' – insult, abuse
   Future<Map> reportComment([Map<String, String> params]) async {
-    return this._api.request('wall.reportComment', {
+    return _api.request('wall.reportComment', {
       ...?params,
     });
   }
@@ -380,7 +380,7 @@ class Wall {
   ///
   /// `reason` *(integer)* Reason for the complaint: '0' – spam, '1' – child pornography, '2' – extremism, '3' – violence, '4' – drug propaganda, '5' – adult material, '6' – insult, abuse
   Future<Map> reportPost([Map<String, String> params]) async {
-    return this._api.request('wall.reportPost', {
+    return _api.request('wall.reportPost', {
       ...?params,
     });
   }
@@ -399,7 +399,7 @@ class Wall {
   ///
   /// `mute_notifications` *(boolean)*
   Future<Map> repost([Map<String, String> params]) async {
-    return this._api.request('wall.repost', {
+    return _api.request('wall.repost', {
       ...?params,
     });
   }
@@ -412,7 +412,7 @@ class Wall {
   ///
   /// `post_id` *(integer)* ID of the post to be restored.
   Future<Map> restore([Map<String, String> params]) async {
-    return this._api.request('wall.restore', {
+    return _api.request('wall.restore', {
       ...?params,
     });
   }
@@ -425,7 +425,7 @@ class Wall {
   ///
   /// `comment_id` *(integer)* Comment ID.
   Future<Map> restoreComment([Map<String, String> params]) async {
-    return this._api.request('wall.restoreComment', {
+    return _api.request('wall.restoreComment', {
       ...?params,
     });
   }
@@ -450,7 +450,7 @@ class Wall {
   ///
   /// `fields` *(array)*
   Future<Map> search([Map<String, String> params]) async {
-    return this._api.request('wall.search', {
+    return _api.request('wall.search', {
       ...?params,
     });
   }
@@ -463,7 +463,7 @@ class Wall {
   ///
   /// `post_id` *(integer)* Post ID.
   Future<Map> unpin([Map<String, String> params]) async {
-    return this._api.request('wall.unpin', {
+    return _api.request('wall.unpin', {
       ...?params,
     });
   }

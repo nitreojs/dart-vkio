@@ -7,7 +7,7 @@ class Account {
 
   /// Account
   Account(API api) {
-    this._api = api;
+    _api = api;
   }
 
   toString() {
@@ -18,7 +18,7 @@ class Account {
   ///
   /// `owner_id` *(integer)*
   Future<Map> ban([Map<String, String> params]) async {
-    return this._api.request('account.ban', {
+    return _api.request('account.ban', {
       ...?params,
     });
   }
@@ -35,7 +35,7 @@ class Account {
   ///
   /// `new_password` *(string)* New password that will be set as a current
   Future<Map> changePassword([Map<String, String> params]) async {
-    return this._api.request('account.changePassword', {
+    return _api.request('account.changePassword', {
       ...?params,
     });
   }
@@ -48,7 +48,7 @@ class Account {
   ///
   /// `count` *(integer)* Number of results to return., default: 100, max: 100
   Future<Map> getActiveOffers([Map<String, String> params]) async {
-    return this._api.request('account.getActiveOffers', {
+    return _api.request('account.getActiveOffers', {
       ...?params,
     });
   }
@@ -59,7 +59,7 @@ class Account {
   ///
   /// `user_id` *(integer)* User ID whose settings information shall be got. By default: current user.
   Future<Map> getAppPermissions([Map<String, String> params]) async {
-    return this._api.request('account.getAppPermissions', {
+    return _api.request('account.getAppPermissions', {
       ...?params,
     });
   }
@@ -72,7 +72,7 @@ class Account {
   ///
   /// `count` *(integer)* Number of results to return., default: 20, max: 200
   Future<Map> getBanned([Map<String, String> params]) async {
-    return this._api.request('account.getBanned', {
+    return _api.request('account.getBanned', {
       ...?params,
     });
   }
@@ -83,7 +83,7 @@ class Account {
   ///
   /// `filter` *(array)* Counters to be returned.
   Future<Map> getCounters([Map<String, String> params]) async {
-    return this._api.request('account.getCounters', {
+    return _api.request('account.getCounters', {
       ...?params,
     });
   }
@@ -94,7 +94,7 @@ class Account {
   ///
   /// `fields` *(array)* Fields to return. Possible values: *'country' — user country,, *'https_required' — is "HTTPS only" option enabled,, *'own_posts_default' — is "Show my posts only" option is enabled,, *'no_wall_replies' — are wall replies disabled or not,, *'intro' — is intro passed by user or not,, *'lang' — user language. By default: all.
   Future<Map> getInfo([Map<String, String> params]) async {
-    return this._api.request('account.getInfo', {
+    return _api.request('account.getInfo', {
       ...?params,
     });
   }
@@ -103,7 +103,7 @@ class Account {
   ///
   /// Params: none
   Future<Map> getProfileInfo([Map<String, String> params]) async {
-    return this._api.request('account.getProfileInfo', {
+    return _api.request('account.getProfileInfo', {
       ...?params,
     });
   }
@@ -114,7 +114,7 @@ class Account {
   ///
   /// `device_id` *(string)* Unique device ID.
   Future<Map> getPushSettings([Map<String, String> params]) async {
-    return this._api.request('account.getPushSettings', {
+    return _api.request('account.getPushSettings', {
       ...?params,
     });
   }
@@ -137,7 +137,7 @@ class Account {
   ///
   /// `sandbox` *(boolean)*
   Future<Map> registerDevice([Map<String, String> params]) async {
-    return this._api.request('account.registerDevice', {
+    return _api.request('account.registerDevice', {
       ...?params,
     });
   }
@@ -174,7 +174,7 @@ class Account {
   ///
   /// `status` *(string)* Status text.
   Future<Map> saveProfileInfo([Map<String, String> params]) async {
-    return this._api.request('account.saveProfileInfo', {
+    return _api.request('account.saveProfileInfo', {
       ...?params,
     });
   }
@@ -187,7 +187,7 @@ class Account {
   ///
   /// `value` *(string)* Setting value.
   Future<Map> setInfo([Map<String, String> params]) async {
-    return this._api.request('account.setInfo', {
+    return _api.request('account.setInfo', {
       ...?params,
     });
   }
@@ -200,7 +200,7 @@ class Account {
   ///
   /// `name` *(string)* Application screen name.
   Future<Map> setNameInMenu([Map<String, String> params]) async {
-    return this._api.request('account.setNameInMenu', {
+    return _api.request('account.setNameInMenu', {
       ...?params,
     });
   }
@@ -209,7 +209,7 @@ class Account {
   ///
   /// Params: none
   Future<Map> setOffline([Map<String, String> params]) async {
-    return this._api.request('account.setOffline', {
+    return _api.request('account.setOffline', {
       ...?params,
     });
   }
@@ -220,7 +220,7 @@ class Account {
   ///
   /// `voip` *(boolean)* '1' if videocalls are available for current device.
   Future<Map> setOnline([Map<String, String> params]) async {
-    return this._api.request('account.setOnline', {
+    return _api.request('account.setOnline', {
       ...?params,
     });
   }
@@ -237,7 +237,7 @@ class Account {
   ///
   /// `value` *(array)* New value for the key in a [special format](https://vk.com/dev/push_settings).
   Future<Map> setPushSettings([Map<String, String> params]) async {
-    return this._api.request('account.setPushSettings', {
+    return _api.request('account.setPushSettings', {
       ...?params,
     });
   }
@@ -254,7 +254,7 @@ class Account {
   ///
   /// `sound` *(integer)* '1' — to enable sound in this dialog, '0' — to disable sound. Only if 'peer_id' contains user or community ID.
   Future<Map> setSilenceMode([Map<String, String> params]) async {
-    return this._api.request('account.setSilenceMode', {
+    return _api.request('account.setSilenceMode', {
       ...?params,
     });
   }
@@ -263,7 +263,7 @@ class Account {
   ///
   /// `owner_id` *(integer)*
   Future<Map> unban([Map<String, String> params]) async {
-    return this._api.request('account.unban', {
+    return _api.request('account.unban', {
       ...?params,
     });
   }
@@ -276,7 +276,7 @@ class Account {
   ///
   /// `sandbox` *(boolean)*
   Future<Map> unregisterDevice([Map<String, String> params]) async {
-    return this._api.request('account.unregisterDevice', {
+    return _api.request('account.unregisterDevice', {
       ...?params,
     });
   }

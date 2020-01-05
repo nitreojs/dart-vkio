@@ -7,7 +7,7 @@ class Users {
 
   /// Users
   Users(API api) {
-    this._api = api;
+    _api = api;
   }
 
   toString() {
@@ -24,7 +24,7 @@ class Users {
   ///
   /// `name_case` *(string)* Case for declension of user name and surname: 'nom' — nominative (default), 'gen' — genitive , 'dat' — dative, 'acc' — accusative , 'ins' — instrumental , 'abl' — prepositional
   Future<Map> get([Map<String, String> params]) async {
-    return this._api.request('users.get', {
+    return _api.request('users.get', {
       ...?params,
     });
   }
@@ -43,7 +43,7 @@ class Users {
   ///
   /// `name_case` *(string)* Case for declension of user name and surname: 'nom' — nominative (default), 'gen' — genitive , 'dat' — dative, 'acc' — accusative , 'ins' — instrumental , 'abl' — prepositional
   Future<Map> getFollowers([Map<String, String> params]) async {
-    return this._api.request('users.getFollowers', {
+    return _api.request('users.getFollowers', {
       ...?params,
     });
   }
@@ -62,7 +62,7 @@ class Users {
   ///
   /// `fields` *(array)*
   Future<Map> getSubscriptions([Map<String, String> params]) async {
-    return this._api.request('users.getSubscriptions', {
+    return _api.request('users.getSubscriptions', {
       ...?params,
     });
   }
@@ -73,7 +73,7 @@ class Users {
   ///
   /// `user_id` *(integer)*
   Future<Map> isAppUser([Map<String, String> params]) async {
-    return this._api.request('users.isAppUser', {
+    return _api.request('users.isAppUser', {
       ...?params,
     });
   }
@@ -88,7 +88,7 @@ class Users {
   ///
   /// `comment` *(string)* Comment describing the complaint.
   Future<Map> report([Map<String, String> params]) async {
-    return this._api.request('users.report', {
+    return _api.request('users.report', {
       ...?params,
     });
   }
@@ -163,7 +163,7 @@ class Users {
   ///
   /// `from_list` *(array)*
   Future<Map> search([Map<String, String> params]) async {
-    return this._api.request('users.search', {
+    return _api.request('users.search', {
       ...?params,
     });
   }

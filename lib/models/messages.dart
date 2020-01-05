@@ -7,7 +7,7 @@ class Messages {
 
   /// Messages
   Messages(API api) {
-    this._api = api;
+    _api = api;
   }
 
   toString() {
@@ -22,7 +22,7 @@ class Messages {
   ///
   /// `user_id` *(integer)* ID of the user to be added to the chat.
   Future<Map> addChatUser([Map<String, String> params]) async {
-    return this._api.request('messages.addChatUser', {
+    return _api.request('messages.addChatUser', {
       ...?params,
     });
   }
@@ -35,7 +35,7 @@ class Messages {
   ///
   /// `key` *(string)*
   Future<Map> allowMessagesFromGroup([Map<String, String> params]) async {
-    return this._api.request('messages.allowMessagesFromGroup', {
+    return _api.request('messages.allowMessagesFromGroup', {
       ...?params,
     });
   }
@@ -48,7 +48,7 @@ class Messages {
   ///
   /// `title` *(string)* Chat title.
   Future<Map> createChat([Map<String, String> params]) async {
-    return this._api.request('messages.createChat', {
+    return _api.request('messages.createChat', {
       ...?params,
     });
   }
@@ -65,7 +65,7 @@ class Messages {
   ///
   /// `delete_for_all` *(boolean)* '1' — delete message for for all.
   Future<Map> delete([Map<String, String> params]) async {
-    return this._api.request('messages.delete', {
+    return _api.request('messages.delete', {
       ...?params,
     });
   }
@@ -78,7 +78,7 @@ class Messages {
   ///
   /// `group_id` *(integer)*
   Future<Map> deleteChatPhoto([Map<String, String> params]) async {
-    return this._api.request('messages.deleteChatPhoto', {
+    return _api.request('messages.deleteChatPhoto', {
       ...?params,
     });
   }
@@ -97,7 +97,7 @@ class Messages {
   ///
   /// `group_id` *(integer)* Group ID (for group messages with user access token)
   Future<Map> deleteConversation([Map<String, String> params]) async {
-    return this._api.request('messages.deleteConversation', {
+    return _api.request('messages.deleteConversation', {
       ...?params,
     });
   }
@@ -108,7 +108,7 @@ class Messages {
   ///
   /// `group_id` *(integer)* Group ID.
   Future<Map> denyMessagesFromGroup([Map<String, String> params]) async {
-    return this._api.request('messages.denyMessagesFromGroup', {
+    return _api.request('messages.denyMessagesFromGroup', {
       ...?params,
     });
   }
@@ -137,7 +137,7 @@ class Messages {
   ///
   /// `dont_parse_links` *(boolean)*
   Future<Map> edit([Map<String, String> params]) async {
-    return this._api.request('messages.edit', {
+    return _api.request('messages.edit', {
       ...?params,
     });
   }
@@ -150,7 +150,7 @@ class Messages {
   ///
   /// `title` *(string)* New title of the chat.
   Future<Map> editChat([Map<String, String> params]) async {
-    return this._api.request('messages.editChat', {
+    return _api.request('messages.editChat', {
       ...?params,
     });
   }
@@ -169,7 +169,7 @@ class Messages {
   ///
   /// `group_id` *(integer)* Group ID (for group messages with group access token)
   Future<Map> getByConversationMessageId([Map<String, String> params]) async {
-    return this._api.request('messages.getByConversationMessageId', {
+    return _api.request('messages.getByConversationMessageId', {
       ...?params,
     });
   }
@@ -188,7 +188,7 @@ class Messages {
   ///
   /// `group_id` *(integer)* Group ID (for group messages with group access token)
   Future<Map> getById([Map<String, String> params]) async {
-    return this._api.request('messages.getById', {
+    return _api.request('messages.getById', {
       ...?params,
     });
   }
@@ -201,7 +201,7 @@ class Messages {
   ///
   /// `fields` *(array)* Profile fields to return.
   Future<Map> getChatPreview([Map<String, String> params]) async {
-    return this._api.request('messages.getChatPreview', {
+    return _api.request('messages.getChatPreview', {
       ...?params,
     });
   }
@@ -216,7 +216,7 @@ class Messages {
   ///
   /// `group_id` *(integer)* Group ID (for group messages with group access token)
   Future<Map> getConversationMembers([Map<String, String> params]) async {
-    return this._api.request('messages.getConversationMembers', {
+    return _api.request('messages.getConversationMembers', {
       ...?params,
     });
   }
@@ -239,7 +239,7 @@ class Messages {
   ///
   /// `group_id` *(integer)* Group ID (for group messages with group access token)
   Future<Map> getConversations([Map<String, String> params]) async {
-    return this._api.request('messages.getConversations', {
+    return _api.request('messages.getConversations', {
       ...?params,
     });
   }
@@ -256,7 +256,7 @@ class Messages {
   ///
   /// `group_id` *(integer)* Group ID (for group messages with group access token)
   Future<Map> getConversationsById([Map<String, String> params]) async {
-    return this._api.request('messages.getConversationsById', {
+    return _api.request('messages.getConversationsById', {
       ...?params,
     });
   }
@@ -283,7 +283,7 @@ class Messages {
   ///
   /// `group_id` *(integer)* Group ID (for group messages with group access token)
   Future<Map> getHistory([Map<String, String> params]) async {
-    return this._api.request('messages.getHistory', {
+    return _api.request('messages.getHistory', {
       ...?params,
     });
   }
@@ -310,7 +310,7 @@ class Messages {
   ///
   /// `max_forwards_level` *(integer)*, default: 45, max: 45
   Future<Map> getHistoryAttachments([Map<String, String> params]) async {
-    return this._api.request('messages.getHistoryAttachments', {
+    return _api.request('messages.getHistoryAttachments', {
       ...?params,
     });
   }
@@ -323,7 +323,7 @@ class Messages {
   ///
   /// `group_id` *(integer)* Group ID
   Future<Map> getInviteLink([Map<String, String> params]) async {
-    return this._api.request('messages.getInviteLink', {
+    return _api.request('messages.getInviteLink', {
       ...?params,
     });
   }
@@ -334,7 +334,7 @@ class Messages {
   ///
   /// `user_id` *(integer)* User ID.
   Future<Map> getLastActivity([Map<String, String> params]) async {
-    return this._api.request('messages.getLastActivity', {
+    return _api.request('messages.getLastActivity', {
       ...?params,
     });
   }
@@ -367,7 +367,7 @@ class Messages {
   ///
   /// `credentials` *(boolean)*
   Future<Map> getLongPollHistory([Map<String, String> params]) async {
-    return this._api.request('messages.getLongPollHistory', {
+    return _api.request('messages.getLongPollHistory', {
       ...?params,
     });
   }
@@ -382,7 +382,7 @@ class Messages {
   ///
   /// `lp_version` *(integer)* Long poll version
   Future<Map> getLongPollServer([Map<String, String> params]) async {
-    return this._api.request('messages.getLongPollServer', {
+    return _api.request('messages.getLongPollServer', {
       ...?params,
     });
   }
@@ -395,7 +395,7 @@ class Messages {
   ///
   /// `user_id` *(integer)* User ID.
   Future<Map> isMessagesFromGroupAllowed([Map<String, String> params]) async {
-    return this._api.request('messages.isMessagesFromGroupAllowed', {
+    return _api.request('messages.isMessagesFromGroupAllowed', {
       ...?params,
     });
   }
@@ -404,7 +404,7 @@ class Messages {
   ///
   /// `link` *(string)* Invitation link.
   Future<Map> joinChatByInviteLink([Map<String, String> params]) async {
-    return this._api.request('messages.joinChatByInviteLink', {
+    return _api.request('messages.joinChatByInviteLink', {
       ...?params,
     });
   }
@@ -419,7 +419,7 @@ class Messages {
   ///
   /// `group_id` *(integer)* Group ID (for group messages with group access token)
   Future<Map> markAsAnsweredConversation([Map<String, String> params]) async {
-    return this._api.request('messages.markAsAnsweredConversation', {
+    return _api.request('messages.markAsAnsweredConversation', {
       ...?params,
     });
   }
@@ -432,7 +432,7 @@ class Messages {
   ///
   /// `important` *(integer)* '1' — to add a star (mark as important), '0' — to remove the star
   Future<Map> markAsImportant([Map<String, String> params]) async {
-    return this._api.request('messages.markAsImportant', {
+    return _api.request('messages.markAsImportant', {
       ...?params,
     });
   }
@@ -447,7 +447,7 @@ class Messages {
   ///
   /// `group_id` *(integer)* Group ID (for group messages with group access token)
   Future<Map> markAsImportantConversation([Map<String, String> params]) async {
-    return this._api.request('messages.markAsImportantConversation', {
+    return _api.request('messages.markAsImportantConversation', {
       ...?params,
     });
   }
@@ -462,7 +462,7 @@ class Messages {
   ///
   /// `group_id` *(integer)* Group ID (for group messages with user access token)
   Future<Map> markAsRead([Map<String, String> params]) async {
-    return this._api.request('messages.markAsRead', {
+    return _api.request('messages.markAsRead', {
       ...?params,
     });
   }
@@ -475,7 +475,7 @@ class Messages {
   ///
   /// `message_id` *(integer)*
   Future<Map> pin([Map<String, String> params]) async {
-    return this._api.request('messages.pin', {
+    return _api.request('messages.pin', {
       ...?params,
     });
   }
@@ -490,7 +490,7 @@ class Messages {
   ///
   /// `member_id` *(integer)*
   Future<Map> removeChatUser([Map<String, String> params]) async {
-    return this._api.request('messages.removeChatUser', {
+    return _api.request('messages.removeChatUser', {
       ...?params,
     });
   }
@@ -503,7 +503,7 @@ class Messages {
   ///
   /// `group_id` *(integer)* Group ID (for group messages with user access token)
   Future<Map> restore([Map<String, String> params]) async {
-    return this._api.request('messages.restore', {
+    return _api.request('messages.restore', {
       ...?params,
     });
   }
@@ -530,7 +530,7 @@ class Messages {
   ///
   /// `group_id` *(integer)* Group ID (for group messages with group access token)
   Future<Map> search([Map<String, String> params]) async {
-    return this._api.request('messages.search', {
+    return _api.request('messages.search', {
       ...?params,
     });
   }
@@ -549,7 +549,7 @@ class Messages {
   ///
   /// `group_id` *(integer)* Group ID (for group messages with user access token)
   Future<Map> searchConversations([Map<String, String> params]) async {
-    return this._api.request('messages.searchConversations', {
+    return _api.request('messages.searchConversations', {
       ...?params,
     });
   }
@@ -594,7 +594,7 @@ class Messages {
   ///
   /// `disable_mentions` *(boolean)*
   Future<Map> send([Map<String, String> params]) async {
-    return this._api.request('messages.send', {
+    return _api.request('messages.send', {
       ...?params,
     });
   }
@@ -611,7 +611,7 @@ class Messages {
   ///
   /// `group_id` *(integer)* Group ID (for group messages with group access token)
   Future<Map> setActivity([Map<String, String> params]) async {
-    return this._api.request('messages.setActivity', {
+    return _api.request('messages.setActivity', {
       ...?params,
     });
   }
@@ -622,7 +622,7 @@ class Messages {
   ///
   /// `file` *(string)* Upload URL from the 'response' field returned by the [photos.getChatUploadServer](https://vk.com/dev/photos.getChatUploadServer) method upon successfully uploading an image.
   Future<Map> setChatPhoto([Map<String, String> params]) async {
-    return this._api.request('messages.setChatPhoto', {
+    return _api.request('messages.setChatPhoto', {
       ...?params,
     });
   }
@@ -633,7 +633,7 @@ class Messages {
   ///
   /// `group_id` *(integer)*
   Future<Map> unpin([Map<String, String> params]) async {
-    return this._api.request('messages.unpin', {
+    return _api.request('messages.unpin', {
       ...?params,
     });
   }

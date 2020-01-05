@@ -7,7 +7,7 @@ class Database {
 
   /// Database
   Database(API api) {
-    this._api = api;
+    _api = api;
   }
 
   toString() {
@@ -24,7 +24,7 @@ class Database {
   ///
   /// `count` *(integer)* amount of chairs to get, default: 100, max: 10000
   Future<Map> getChairs([Map<String, String> params]) async {
-    return this._api.request('database.getChairs', {
+    return _api.request('database.getChairs', {
       ...?params,
     });
   }
@@ -45,7 +45,7 @@ class Database {
   ///
   /// `count` *(integer)* Number of cities to return., default: 100, max: 1000
   Future<Map> getCities([Map<String, String> params]) async {
-    return this._api.request('database.getCities', {
+    return _api.request('database.getCities', {
       ...?params,
     });
   }
@@ -56,7 +56,7 @@ class Database {
   ///
   /// `city_ids` *(array)* City IDs.
   Future<Map> getCitiesById([Map<String, String> params]) async {
-    return this._api.request('database.getCitiesById', {
+    return _api.request('database.getCitiesById', {
       ...?params,
     });
   }
@@ -73,7 +73,7 @@ class Database {
   ///
   /// `count` *(integer)* Number of countries to return., default: 100, max: 1000
   Future<Map> getCountries([Map<String, String> params]) async {
-    return this._api.request('database.getCountries', {
+    return _api.request('database.getCountries', {
       ...?params,
     });
   }
@@ -84,7 +84,7 @@ class Database {
   ///
   /// `country_ids` *(array)* Country IDs.
   Future<Map> getCountriesById([Map<String, String> params]) async {
-    return this._api.request('database.getCountriesById', {
+    return _api.request('database.getCountriesById', {
       ...?params,
     });
   }
@@ -99,7 +99,7 @@ class Database {
   ///
   /// `count` *(integer)* Number of faculties to return., default: 100, max: 10000
   Future<Map> getFaculties([Map<String, String> params]) async {
-    return this._api.request('database.getFaculties', {
+    return _api.request('database.getFaculties', {
       ...?params,
     });
   }
@@ -116,7 +116,7 @@ class Database {
   ///
   /// `extended` *(boolean)*
   Future<Map> getMetroStations([Map<String, String> params]) async {
-    return this._api.request('database.getMetroStations', {
+    return _api.request('database.getMetroStations', {
       ...?params,
     });
   }
@@ -127,7 +127,7 @@ class Database {
   ///
   /// `station_ids` *(array)*
   Future<Map> getMetroStationsById([Map<String, String> params]) async {
-    return this._api.request('database.getMetroStationsById', {
+    return _api.request('database.getMetroStationsById', {
       ...?params,
     });
   }
@@ -144,7 +144,7 @@ class Database {
   ///
   /// `count` *(integer)* Number of regions to return., default: 100, max: 1000
   Future<Map> getRegions([Map<String, String> params]) async {
-    return this._api.request('database.getRegions', {
+    return _api.request('database.getRegions', {
       ...?params,
     });
   }
@@ -155,7 +155,7 @@ class Database {
   ///
   /// `country_id` *(integer)* Country ID.
   Future<Map> getSchoolClasses([Map<String, String> params]) async {
-    return this._api.request('database.getSchoolClasses', {
+    return _api.request('database.getSchoolClasses', {
       ...?params,
     });
   }
@@ -172,7 +172,7 @@ class Database {
   ///
   /// `count` *(integer)* Number of schools to return., default: 100, max: 10000
   Future<Map> getSchools([Map<String, String> params]) async {
-    return this._api.request('database.getSchools', {
+    return _api.request('database.getSchools', {
       ...?params,
     });
   }
@@ -191,7 +191,7 @@ class Database {
   ///
   /// `count` *(integer)* Number of universities to return., default: 100, max: 10000
   Future<Map> getUniversities([Map<String, String> params]) async {
-    return this._api.request('database.getUniversities', {
+    return _api.request('database.getUniversities', {
       ...?params,
     });
   }

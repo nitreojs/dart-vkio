@@ -7,13 +7,13 @@ class VK {
   // Updates updates;
 
   VK({String token, String version = '5.98'}) {
-    this.options = {
+    options = {
       'token': token,
       'version': version,
     };
 
-    this.api = new API(this);
-    // this.updates = new Updates(this);
+    api = new API(this);
+    // updates = new Updates(this);
   }
 
   VK.create(String token, [String version = '5.98'])

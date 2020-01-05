@@ -7,7 +7,7 @@ class Auth {
 
   /// Auth
   Auth(API api) {
-    this._api = api;
+    _api = api;
   }
 
   toString() {
@@ -26,7 +26,7 @@ class Auth {
   ///
   /// `auth_by_phone` *(boolean)*
   Future<Map> checkPhone([Map<String, String> params]) async {
-    return this._api.request('auth.checkPhone', {
+    return _api.request('auth.checkPhone', {
       ...?params,
     });
   }
@@ -39,7 +39,7 @@ class Auth {
   ///
   /// `last_name` *(string)* User last name.
   Future<Map> restore([Map<String, String> params]) async {
-    return this._api.request('auth.restore', {
+    return _api.request('auth.restore', {
       ...?params,
     });
   }

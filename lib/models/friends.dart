@@ -7,7 +7,7 @@ class Friends {
 
   /// Friends
   Friends(API api) {
-    this._api = api;
+    _api = api;
   }
 
   toString() {
@@ -24,7 +24,7 @@ class Friends {
   ///
   /// `follow` *(boolean)* '1' to pass an incoming request to followers list.
   Future<Map> add([Map<String, String> params]) async {
-    return this._api.request('friends.add', {
+    return _api.request('friends.add', {
       ...?params,
     });
   }
@@ -37,7 +37,7 @@ class Friends {
   ///
   /// `user_ids` *(array)* IDs of users to be added to the friend list.
   Future<Map> addList([Map<String, String> params]) async {
-    return this._api.request('friends.addList', {
+    return _api.request('friends.addList', {
       ...?params,
     });
   }
@@ -50,7 +50,7 @@ class Friends {
   ///
   /// `need_sign` *(boolean)* '1' — to return 'sign' field. 'sign' is md5("{id}_{user_id}_{friends_status}_{application_secret}"), where id is current user ID. This field allows to check that data has not been modified by the client. By default: '0'.
   Future<Map> areFriends([Map<String, String> params]) async {
-    return this._api.request('friends.areFriends', {
+    return _api.request('friends.areFriends', {
       ...?params,
     });
   }
@@ -61,7 +61,7 @@ class Friends {
   ///
   /// `user_id` *(integer)* ID of the user whose friend request is to be declined or who is to be deleted from the current user's friend list.
   Future<Map> delete([Map<String, String> params]) async {
-    return this._api.request('friends.delete', {
+    return _api.request('friends.delete', {
       ...?params,
     });
   }
@@ -70,7 +70,7 @@ class Friends {
   ///
   /// Params: none
   Future<Map> deleteAllRequests([Map<String, String> params]) async {
-    return this._api.request('friends.deleteAllRequests', {
+    return _api.request('friends.deleteAllRequests', {
       ...?params,
     });
   }
@@ -81,7 +81,7 @@ class Friends {
   ///
   /// `list_id` *(integer)* ID of the friend list to delete., max: 24
   Future<Map> deleteList([Map<String, String> params]) async {
-    return this._api.request('friends.deleteList', {
+    return _api.request('friends.deleteList', {
       ...?params,
     });
   }
@@ -94,7 +94,7 @@ class Friends {
   ///
   /// `list_ids` *(array)* IDs of the friend lists to which to add the user.
   Future<Map> edit([Map<String, String> params]) async {
-    return this._api.request('friends.edit', {
+    return _api.request('friends.edit', {
       ...?params,
     });
   }
@@ -113,7 +113,7 @@ class Friends {
   ///
   /// `delete_user_ids` *(array)* (Applies if 'user_ids' parameter is not set.), User IDs to delete from the friend list.
   Future<Map> editList([Map<String, String> params]) async {
-    return this._api.request('friends.editList', {
+    return _api.request('friends.editList', {
       ...?params,
     });
   }
@@ -136,7 +136,7 @@ class Friends {
   ///
   /// `name_case` *(string)* Case for declension of user name and surname: , 'nom' — nominative (default) , 'gen' — genitive , 'dat' — dative , 'acc' — accusative , 'ins' — instrumental , 'abl' — prepositional
   Future<Map> get([Map<String, String> params]) async {
-    return this._api.request('friends.get', {
+    return _api.request('friends.get', {
       ...?params,
     });
   }
@@ -145,7 +145,7 @@ class Friends {
   ///
   /// Params: none
   Future<Map> getAppUsers([Map<String, String> params]) async {
-    return this._api.request('friends.getAppUsers', {
+    return _api.request('friends.getAppUsers', {
       ...?params,
     });
   }
@@ -158,7 +158,7 @@ class Friends {
   ///
   /// `fields` *(array)* Profile fields to return. Sample values: 'nickname', 'screen_name', 'sex', 'bdate' (birthdate), 'city', 'country', 'timezone', 'photo', 'photo_medium', 'photo_big', 'has_mobile', 'rate', 'contacts', 'education', 'online, counters'.
   Future<Map> getByPhones([Map<String, String> params]) async {
-    return this._api.request('friends.getByPhones', {
+    return _api.request('friends.getByPhones', {
       ...?params,
     });
   }
@@ -171,7 +171,7 @@ class Friends {
   ///
   /// `return_system` *(boolean)* '1' — to return system friend lists. By default: '0'.
   Future<Map> getLists([Map<String, String> params]) async {
-    return this._api.request('friends.getLists', {
+    return _api.request('friends.getLists', {
       ...?params,
     });
   }
@@ -192,7 +192,7 @@ class Friends {
   ///
   /// `offset` *(integer)* Offset needed to return a specific subset of mutual friends.
   Future<Map> getMutual([Map<String, String> params]) async {
-    return this._api.request('friends.getMutual', {
+    return _api.request('friends.getMutual', {
       ...?params,
     });
   }
@@ -213,7 +213,7 @@ class Friends {
   ///
   /// `offset` *(integer)* Offset needed to return a specific subset of friends.
   Future<Map> getOnline([Map<String, String> params]) async {
-    return this._api.request('friends.getOnline', {
+    return _api.request('friends.getOnline', {
       ...?params,
     });
   }
@@ -224,7 +224,7 @@ class Friends {
   ///
   /// `count` *(integer)* Number of recently added friends to return., default: 100, max: 1000
   Future<Map> getRecent([Map<String, String> params]) async {
-    return this._api.request('friends.getRecent', {
+    return _api.request('friends.getRecent', {
       ...?params,
     });
   }
@@ -249,7 +249,7 @@ class Friends {
   ///
   /// `suggested` *(boolean)* '1' — to return a list of suggested friends, '0' — to return friend requests (default)
   Future<Map> getRequests([Map<String, String> params]) async {
-    return this._api.request('friends.getRequests', {
+    return _api.request('friends.getRequests', {
       ...?params,
     });
   }
@@ -268,7 +268,7 @@ class Friends {
   ///
   /// `name_case` *(string)* Case for declension of user name and surname: , 'nom' — nominative (default) , 'gen' — genitive , 'dat' — dative , 'acc' — accusative , 'ins' — instrumental , 'abl' — prepositional
   Future<Map> getSuggestions([Map<String, String> params]) async {
-    return this._api.request('friends.getSuggestions', {
+    return _api.request('friends.getSuggestions', {
       ...?params,
     });
   }
@@ -289,7 +289,7 @@ class Friends {
   ///
   /// `count` *(integer)* Number of friends to return., default: 20, max: 1000
   Future<Map> search([Map<String, String> params]) async {
-    return this._api.request('friends.search', {
+    return _api.request('friends.search', {
       ...?params,
     });
   }

@@ -7,7 +7,7 @@ class Stats {
 
   /// Stats
   Stats(API api) {
-    this._api = api;
+    _api = api;
   }
 
   toString() {
@@ -36,7 +36,7 @@ class Stats {
   ///
   /// `extended` *(boolean)*, default: true
   Future<Map> get([Map<String, String> params]) async {
-    return this._api.request('stats.get', {
+    return _api.request('stats.get', {
       ...?params,
     });
   }
@@ -49,7 +49,7 @@ class Stats {
   ///
   /// `post_id` *(integer)* wall post id. Note that stats are available only for '300' last (newest) posts on a community wall.
   Future<Map> getPostReach([Map<String, String> params]) async {
-    return this._api.request('stats.getPostReach', {
+    return _api.request('stats.getPostReach', {
       ...?params,
     });
   }
@@ -58,7 +58,7 @@ class Stats {
   ///
   /// `id` *(string)*
   Future<Map> trackVisitor([Map<String, String> params]) async {
-    return this._api.request('stats.trackVisitor', {
+    return _api.request('stats.trackVisitor', {
       ...?params,
     });
   }

@@ -7,7 +7,7 @@ class Board {
 
   /// Board
   Board(API api) {
-    this._api = api;
+    _api = api;
   }
 
   toString() {
@@ -28,7 +28,7 @@ class Board {
   ///
   /// `attachments` *(array)* List of media objects attached to the topic, in the following format: "<owner_id>_<media_id>,<owner_id>_<media_id>", '' — Type of media object: 'photo' — photo, 'video' — video, 'audio' — audio, 'doc' — document, '<owner_id>' — ID of the media owner. '<media_id>' — Media ID. Example: "photo100172_166443618,photo66748_265827614", , "NOTE: If you try to attach more than one reference, an error will be thrown.",
   Future<Map> addTopic([Map<String, String> params]) async {
-    return this._api.request('board.addTopic', {
+    return _api.request('board.addTopic', {
       ...?params,
     });
   }
@@ -41,7 +41,7 @@ class Board {
   ///
   /// `topic_id` *(integer)* Topic ID.
   Future<Map> closeTopic([Map<String, String> params]) async {
-    return this._api.request('board.closeTopic', {
+    return _api.request('board.closeTopic', {
       ...?params,
     });
   }
@@ -64,7 +64,7 @@ class Board {
   ///
   /// `guid` *(string)* Unique identifier to avoid repeated comments.
   Future<Map> createComment([Map<String, String> params]) async {
-    return this._api.request('board.createComment', {
+    return _api.request('board.createComment', {
       ...?params,
     });
   }
@@ -79,7 +79,7 @@ class Board {
   ///
   /// `comment_id` *(integer)* Comment ID.
   Future<Map> deleteComment([Map<String, String> params]) async {
-    return this._api.request('board.deleteComment', {
+    return _api.request('board.deleteComment', {
       ...?params,
     });
   }
@@ -92,7 +92,7 @@ class Board {
   ///
   /// `topic_id` *(integer)* Topic ID.
   Future<Map> deleteTopic([Map<String, String> params]) async {
-    return this._api.request('board.deleteTopic', {
+    return _api.request('board.deleteTopic', {
       ...?params,
     });
   }
@@ -111,7 +111,7 @@ class Board {
   ///
   /// `attachments` *(array)* (Required if 'message' is not set.) List of media objects attached to the comment, in the following format: "<owner_id>_<media_id>,<owner_id>_<media_id>", '' — Type of media object: 'photo' — photo, 'video' — video, 'audio' — audio, 'doc' — document, '<owner_id>' — ID of the media owner. '<media_id>' — Media ID. Example: "photo100172_166443618,photo66748_265827614"
   Future<Map> editComment([Map<String, String> params]) async {
-    return this._api.request('board.editComment', {
+    return _api.request('board.editComment', {
       ...?params,
     });
   }
@@ -126,7 +126,7 @@ class Board {
   ///
   /// `title` *(string)* New title of the topic.
   Future<Map> editTopic([Map<String, String> params]) async {
-    return this._api.request('board.editTopic', {
+    return _api.request('board.editTopic', {
       ...?params,
     });
   }
@@ -139,7 +139,7 @@ class Board {
   ///
   /// `topic_id` *(integer)* Topic ID.
   Future<Map> fixTopic([Map<String, String> params]) async {
-    return this._api.request('board.fixTopic', {
+    return _api.request('board.fixTopic', {
       ...?params,
     });
   }
@@ -164,7 +164,7 @@ class Board {
   ///
   /// `sort` *(string)* Sort order: 'asc' — by creation date in chronological order, 'desc' — by creation date in reverse chronological order,
   Future<Map> getComments([Map<String, String> params]) async {
-    return this._api.request('board.getComments', {
+    return _api.request('board.getComments', {
       ...?params,
     });
   }
@@ -189,7 +189,7 @@ class Board {
   ///
   /// `preview_length` *(integer)* Number of characters after which to truncate the previewed comment. To preview the full comment, specify '0'., default: 90
   Future<Map> getTopics([Map<String, String> params]) async {
-    return this._api.request('board.getTopics', {
+    return _api.request('board.getTopics', {
       ...?params,
     });
   }
@@ -202,7 +202,7 @@ class Board {
   ///
   /// `topic_id` *(integer)* Topic ID.
   Future<Map> openTopic([Map<String, String> params]) async {
-    return this._api.request('board.openTopic', {
+    return _api.request('board.openTopic', {
       ...?params,
     });
   }
@@ -217,7 +217,7 @@ class Board {
   ///
   /// `comment_id` *(integer)* Comment ID.
   Future<Map> restoreComment([Map<String, String> params]) async {
-    return this._api.request('board.restoreComment', {
+    return _api.request('board.restoreComment', {
       ...?params,
     });
   }
@@ -230,7 +230,7 @@ class Board {
   ///
   /// `topic_id` *(integer)* Topic ID.
   Future<Map> unfixTopic([Map<String, String> params]) async {
-    return this._api.request('board.unfixTopic', {
+    return _api.request('board.unfixTopic', {
       ...?params,
     });
   }

@@ -7,7 +7,7 @@ class Fave {
 
   /// Fave
   Fave(API api) {
-    this._api = api;
+    _api = api;
   }
 
   toString() {
@@ -20,7 +20,7 @@ class Fave {
   ///
   /// `group_id` *(integer)* Community ID.
   Future<Map> addGroup([Map<String, String> params]) async {
-    return this._api.request('fave.addGroup', {
+    return _api.request('fave.addGroup', {
       ...?params,
     });
   }
@@ -31,7 +31,7 @@ class Fave {
   ///
   /// `link` *(string)* Link URL.
   Future<Map> addLink([Map<String, String> params]) async {
-    return this._api.request('fave.addLink', {
+    return _api.request('fave.addLink', {
       ...?params,
     });
   }
@@ -42,7 +42,7 @@ class Fave {
   ///
   /// `user_id` *(integer)* Profile ID.
   Future<Map> addUser([Map<String, String> params]) async {
-    return this._api.request('fave.addUser', {
+    return _api.request('fave.addUser', {
       ...?params,
     });
   }
@@ -55,7 +55,7 @@ class Fave {
   ///
   /// `count` *(integer)* Number of results to return., default: 50
   Future<Map> getLinks([Map<String, String> params]) async {
-    return this._api.request('fave.getLinks', {
+    return _api.request('fave.getLinks', {
       ...?params,
     });
   }
@@ -70,7 +70,7 @@ class Fave {
   ///
   /// `extended` *(boolean)* '1' – to return additional fields 'likes, can_comment, can_repost, photos'. By default: '0'.
   Future<Map> getMarketItems([Map<String, String> params]) async {
-    return this._api.request('fave.getMarketItems', {
+    return _api.request('fave.getMarketItems', {
       ...?params,
     });
   }
@@ -83,7 +83,7 @@ class Fave {
   ///
   /// `count` *(integer)* Number of photos to return., default: 50
   Future<Map> getPhotos([Map<String, String> params]) async {
-    return this._api.request('fave.getPhotos', {
+    return _api.request('fave.getPhotos', {
       ...?params,
     });
   }
@@ -98,7 +98,7 @@ class Fave {
   ///
   /// `extended` *(boolean)* '1' — to return additional 'wall', 'profiles', and 'groups' fields. By default: '0'.
   Future<Map> getPosts([Map<String, String> params]) async {
-    return this._api.request('fave.getPosts', {
+    return _api.request('fave.getPosts', {
       ...?params,
     });
   }
@@ -111,7 +111,7 @@ class Fave {
   ///
   /// `count` *(integer)* Number of users to return., default: 50
   Future<Map> getUsers([Map<String, String> params]) async {
-    return this._api.request('fave.getUsers', {
+    return _api.request('fave.getUsers', {
       ...?params,
     });
   }
@@ -126,7 +126,7 @@ class Fave {
   ///
   /// `extended` *(boolean)* Return an additional information about videos. Also returns all owners profiles and groups.
   Future<Map> getVideos([Map<String, String> params]) async {
-    return this._api.request('fave.getVideos', {
+    return _api.request('fave.getVideos', {
       ...?params,
     });
   }
@@ -137,7 +137,7 @@ class Fave {
   ///
   /// `group_id` *(integer)* Community ID.
   Future<Map> removeGroup([Map<String, String> params]) async {
-    return this._api.request('fave.removeGroup', {
+    return _api.request('fave.removeGroup', {
       ...?params,
     });
   }
@@ -148,7 +148,7 @@ class Fave {
   ///
   /// `link_id` *(string)* Link ID (can be obtained by [faves.getLinks](https://vk.com/dev/faves.getLinks) method).
   Future<Map> removeLink([Map<String, String> params]) async {
-    return this._api.request('fave.removeLink', {
+    return _api.request('fave.removeLink', {
       ...?params,
     });
   }
@@ -159,7 +159,7 @@ class Fave {
   ///
   /// `user_id` *(integer)* Profile ID.
   Future<Map> removeUser([Map<String, String> params]) async {
-    return this._api.request('fave.removeUser', {
+    return _api.request('fave.removeUser', {
       ...?params,
     });
   }

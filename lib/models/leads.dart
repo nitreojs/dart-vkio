@@ -7,7 +7,7 @@ class Leads {
 
   /// Leads
   Leads(API api) {
-    this._api = api;
+    _api = api;
   }
 
   toString() {
@@ -30,7 +30,7 @@ class Leads {
   ///
   /// `country` *(string)* User country code.
   Future<Map> checkUser([Map<String, String> params]) async {
-    return this._api.request('leads.checkUser', {
+    return _api.request('leads.checkUser', {
       ...?params,
     });
   }
@@ -45,7 +45,7 @@ class Leads {
   ///
   /// `comment` *(string)* Comment text.
   Future<Map> complete([Map<String, String> params]) async {
-    return this._api.request('leads.complete', {
+    return _api.request('leads.complete', {
       ...?params,
     });
   }
@@ -62,7 +62,7 @@ class Leads {
   ///
   /// `date_end` *(string)* Day to finish stats (YYYY_MM_DD, e.g.2011-09-17).
   Future<Map> getStats([Map<String, String> params]) async {
-    return this._api.request('leads.getStats', {
+    return _api.request('leads.getStats', {
       ...?params,
     });
   }
@@ -83,7 +83,7 @@ class Leads {
   ///
   /// `reverse` *(boolean)* Sort order. Possible values: *'1' — chronological,, *'0' — reverse chronological.
   Future<Map> getUsers([Map<String, String> params]) async {
-    return this._api.request('leads.getUsers', {
+    return _api.request('leads.getUsers', {
       ...?params,
     });
   }
@@ -94,7 +94,7 @@ class Leads {
   ///
   /// `data` *(string)* Metric data obtained in the lead interface.
   Future<Map> metricHit([Map<String, String> params]) async {
-    return this._api.request('leads.metricHit', {
+    return _api.request('leads.metricHit', {
       ...?params,
     });
   }
@@ -115,7 +115,7 @@ class Leads {
   ///
   /// `force` *(boolean)*
   Future<Map> start([Map<String, String> params]) async {
-    return this._api.request('leads.start', {
+    return _api.request('leads.start', {
       ...?params,
     });
   }

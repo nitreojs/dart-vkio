@@ -7,7 +7,7 @@ class Streaming {
 
   /// Streaming
   Streaming(API api) {
-    this._api = api;
+    _api = api;
   }
 
   toString() {
@@ -18,7 +18,7 @@ class Streaming {
   ///
   /// Params: none
   Future<Map> getServerUrl([Map<String, String> params]) async {
-    return this._api.request('streaming.getServerUrl', {
+    return _api.request('streaming.getServerUrl', {
       ...?params,
     });
   }
@@ -27,7 +27,7 @@ class Streaming {
   ///
   /// `monthly_tier` *(string)*
   Future<Map> setSettings([Map<String, String> params]) async {
-    return this._api.request('streaming.setSettings', {
+    return _api.request('streaming.setSettings', {
       ...?params,
     });
   }

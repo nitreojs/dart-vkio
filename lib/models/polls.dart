@@ -7,7 +7,7 @@ class Polls {
 
   /// Polls
   Polls(API api) {
-    this._api = api;
+    _api = api;
   }
 
   toString() {
@@ -26,7 +26,7 @@ class Polls {
   ///
   /// `is_board` *(boolean)*
   Future<Map> addVote([Map<String, String> params]) async {
-    return this._api.request('polls.addVote', {
+    return _api.request('polls.addVote', {
       ...?params,
     });
   }
@@ -51,7 +51,7 @@ class Polls {
   ///
   /// `background_id` *(string)*
   Future<Map> create([Map<String, String> params]) async {
-    return this._api.request('polls.create', {
+    return _api.request('polls.create', {
       ...?params,
     });
   }
@@ -68,7 +68,7 @@ class Polls {
   ///
   /// `is_board` *(boolean)*
   Future<Map> deleteVote([Map<String, String> params]) async {
-    return this._api.request('polls.deleteVote', {
+    return _api.request('polls.deleteVote', {
       ...?params,
     });
   }
@@ -95,7 +95,7 @@ class Polls {
   ///
   /// `background_id` *(string)*
   Future<Map> edit([Map<String, String> params]) async {
-    return this._api.request('polls.edit', {
+    return _api.request('polls.edit', {
       ...?params,
     });
   }
@@ -118,7 +118,7 @@ class Polls {
   ///
   /// `name_case` *(string)*, default: nom
   Future<Map> getById([Map<String, String> params]) async {
-    return this._api.request('polls.getById', {
+    return _api.request('polls.getById', {
       ...?params,
     });
   }
@@ -145,7 +145,7 @@ class Polls {
   ///
   /// `name_case` *(string)* Case for declension of user name and surname: , 'nom' — nominative (default) , 'gen' — genitive , 'dat' — dative , 'acc' — accusative , 'ins' — instrumental , 'abl' — prepositional
   Future<Map> getVoters([Map<String, String> params]) async {
-    return this._api.request('polls.getVoters', {
+    return _api.request('polls.getVoters', {
       ...?params,
     });
   }

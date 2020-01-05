@@ -7,7 +7,7 @@ class Widgets {
 
   /// Widgets
   Widgets(API api) {
-    this._api = api;
+    _api = api;
   }
 
   toString() {
@@ -32,7 +32,7 @@ class Widgets {
   ///
   /// `count` *(integer)*, default: 10, min: 10, max: 200
   Future<Map> getComments([Map<String, String> params]) async {
-    return this._api.request('widgets.getComments', {
+    return _api.request('widgets.getComments', {
       ...?params,
     });
   }
@@ -51,7 +51,7 @@ class Widgets {
   ///
   /// `count` *(integer)*, default: 10, min: 10, max: 200
   Future<Map> getPages([Map<String, String> params]) async {
-    return this._api.request('widgets.getPages', {
+    return _api.request('widgets.getPages', {
       ...?params,
     });
   }

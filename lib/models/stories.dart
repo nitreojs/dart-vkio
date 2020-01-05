@@ -7,7 +7,7 @@ class Stories {
 
   /// Stories
   Stories(API api) {
-    this._api = api;
+    _api = api;
   }
 
   toString() {
@@ -20,7 +20,7 @@ class Stories {
   ///
   /// `owners_ids` *(array)* List of sources IDs
   Future<Map> banOwner([Map<String, String> params]) async {
-    return this._api.request('stories.banOwner', {
+    return _api.request('stories.banOwner', {
       ...?params,
     });
   }
@@ -33,7 +33,7 @@ class Stories {
   ///
   /// `story_id` *(integer)* Story ID.
   Future<Map> delete([Map<String, String> params]) async {
-    return this._api.request('stories.delete', {
+    return _api.request('stories.delete', {
       ...?params,
     });
   }
@@ -46,7 +46,7 @@ class Stories {
   ///
   /// `extended` *(boolean)* '1' — to return additional fields for users and communities. Default value is 0.
   Future<Map> get([Map<String, String> params]) async {
-    return this._api.request('stories.get', {
+    return _api.request('stories.get', {
       ...?params,
     });
   }
@@ -59,7 +59,7 @@ class Stories {
   ///
   /// `fields` *(array)* Additional fields to return
   Future<Map> getBanned([Map<String, String> params]) async {
-    return this._api.request('stories.getBanned', {
+    return _api.request('stories.getBanned', {
       ...?params,
     });
   }
@@ -74,7 +74,7 @@ class Stories {
   ///
   /// `fields` *(array)* Additional fields to return
   Future<Map> getById([Map<String, String> params]) async {
-    return this._api.request('stories.getById', {
+    return _api.request('stories.getById', {
       ...?params,
     });
   }
@@ -95,7 +95,7 @@ class Stories {
   ///
   /// `group_id` *(integer)* ID of the community to upload the story (should be verified or with the "fire" icon).
   Future<Map> getPhotoUploadServer([Map<String, String> params]) async {
-    return this._api.request('stories.getPhotoUploadServer', {
+    return _api.request('stories.getPhotoUploadServer', {
       ...?params,
     });
   }
@@ -114,7 +114,7 @@ class Stories {
   ///
   /// `fields` *(array)* Additional fields to return
   Future<Map> getReplies([Map<String, String> params]) async {
-    return this._api.request('stories.getReplies', {
+    return _api.request('stories.getReplies', {
       ...?params,
     });
   }
@@ -127,7 +127,7 @@ class Stories {
   ///
   /// `story_id` *(integer)* Story ID.
   Future<Map> getStats([Map<String, String> params]) async {
-    return this._api.request('stories.getStats', {
+    return _api.request('stories.getStats', {
       ...?params,
     });
   }
@@ -148,7 +148,7 @@ class Stories {
   ///
   /// `group_id` *(integer)* ID of the community to upload the story (should be verified or with the "fire" icon).
   Future<Map> getVideoUploadServer([Map<String, String> params]) async {
-    return this._api.request('stories.getVideoUploadServer', {
+    return _api.request('stories.getVideoUploadServer', {
       ...?params,
     });
   }
@@ -167,7 +167,7 @@ class Stories {
   ///
   /// `extended` *(boolean)* '1' — to return detailed information about photos
   Future<Map> getViewers([Map<String, String> params]) async {
-    return this._api.request('stories.getViewers', {
+    return _api.request('stories.getViewers', {
       ...?params,
     });
   }
@@ -180,7 +180,7 @@ class Stories {
   ///
   /// `group_id` *(integer)*
   Future<Map> hideAllReplies([Map<String, String> params]) async {
-    return this._api.request('stories.hideAllReplies', {
+    return _api.request('stories.hideAllReplies', {
       ...?params,
     });
   }
@@ -195,7 +195,7 @@ class Stories {
   ///
   /// `access_key` *(string)* Access key for the private object.
   Future<Map> hideReply([Map<String, String> params]) async {
-    return this._api.request('stories.hideReply', {
+    return _api.request('stories.hideReply', {
       ...?params,
     });
   }
@@ -206,7 +206,7 @@ class Stories {
   ///
   /// `owners_ids` *(array)* List of hidden sources to show stories from.
   Future<Map> unbanOwner([Map<String, String> params]) async {
-    return this._api.request('stories.unbanOwner', {
+    return _api.request('stories.unbanOwner', {
       ...?params,
     });
   }

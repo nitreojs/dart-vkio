@@ -7,7 +7,7 @@ class Video {
 
   /// Video
   Video(API api) {
-    this._api = api;
+    _api = api;
   }
 
   toString() {
@@ -24,7 +24,7 @@ class Video {
   ///
   /// `owner_id` *(integer)* ID of the user or community that owns the video. Use a negative value to designate a community ID.
   Future<Map> add([Map<String, String> params]) async {
-    return this._api.request('video.add', {
+    return _api.request('video.add', {
       ...?params,
     });
   }
@@ -39,7 +39,7 @@ class Video {
   ///
   /// `privacy` *(array)* new access permissions for the album. Possible values: , *'0' – all users,, *'1' – friends only,, *'2' – friends and friends of friends,, *'3' – "only me".
   Future<Map> addAlbum([Map<String, String> params]) async {
-    return this._api.request('video.addAlbum', {
+    return _api.request('video.addAlbum', {
       ...?params,
     });
   }
@@ -56,7 +56,7 @@ class Video {
   ///
   /// `video_id` *(integer)*
   Future<Map> addToAlbum([Map<String, String> params]) async {
-    return this._api.request('video.addToAlbum', {
+    return _api.request('video.addToAlbum', {
       ...?params,
     });
   }
@@ -81,7 +81,7 @@ class Video {
   ///
   /// `guid` *(string)*
   Future<Map> createComment([Map<String, String> params]) async {
-    return this._api.request('video.createComment', {
+    return _api.request('video.createComment', {
       ...?params,
     });
   }
@@ -96,7 +96,7 @@ class Video {
   ///
   /// `target_id` *(integer)*
   Future<Map> delete([Map<String, String> params]) async {
-    return this._api.request('video.delete', {
+    return _api.request('video.delete', {
       ...?params,
     });
   }
@@ -109,7 +109,7 @@ class Video {
   ///
   /// `album_id` *(integer)* Album ID.
   Future<Map> deleteAlbum([Map<String, String> params]) async {
-    return this._api.request('video.deleteAlbum', {
+    return _api.request('video.deleteAlbum', {
       ...?params,
     });
   }
@@ -122,7 +122,7 @@ class Video {
   ///
   /// `comment_id` *(integer)* ID of the comment to be deleted.
   Future<Map> deleteComment([Map<String, String> params]) async {
-    return this._api.request('video.deleteComment', {
+    return _api.request('video.deleteComment', {
       ...?params,
     });
   }
@@ -147,7 +147,7 @@ class Video {
   ///
   /// `repeat` *(boolean)* '1' — to repeat the playback of the video, '0' — to play the video once,
   Future<Map> edit([Map<String, String> params]) async {
-    return this._api.request('video.edit', {
+    return _api.request('video.edit', {
       ...?params,
     });
   }
@@ -164,7 +164,7 @@ class Video {
   ///
   /// `privacy` *(array)* new access permissions for the album. Possible values: , *'0' – all users,, *'1' – friends only,, *'2' – friends and friends of friends,, *'3' – "only me".
   Future<Map> editAlbum([Map<String, String> params]) async {
-    return this._api.request('video.editAlbum', {
+    return _api.request('video.editAlbum', {
       ...?params,
     });
   }
@@ -181,7 +181,7 @@ class Video {
   ///
   /// `attachments` *(array)* List of objects attached to the comment, in the following format: "<owner_id>_<media_id>,<owner_id>_<media_id>", '' — Type of media attachment: 'photo' — photo, 'video' — video, 'audio' — audio, 'doc' — document, '<owner_id>' — ID of the media attachment owner. '<media_id>' — Media attachment ID. Example: "photo100172_166443618,photo66748_265827614"
   Future<Map> editComment([Map<String, String> params]) async {
-    return this._api.request('video.editComment', {
+    return _api.request('video.editComment', {
       ...?params,
     });
   }
@@ -202,7 +202,7 @@ class Video {
   ///
   /// `extended` *(boolean)* '1' — to return an extended response with additional fields
   Future<Map> get([Map<String, String> params]) async {
-    return this._api.request('video.get', {
+    return _api.request('video.get', {
       ...?params,
     });
   }
@@ -215,7 +215,7 @@ class Video {
   ///
   /// `album_id` *(integer)* Album ID.
   Future<Map> getAlbumById([Map<String, String> params]) async {
-    return this._api.request('video.getAlbumById', {
+    return _api.request('video.getAlbumById', {
       ...?params,
     });
   }
@@ -234,7 +234,7 @@ class Video {
   ///
   /// `need_system` *(boolean)*
   Future<Map> getAlbums([Map<String, String> params]) async {
-    return this._api.request('video.getAlbums', {
+    return _api.request('video.getAlbums', {
       ...?params,
     });
   }
@@ -249,7 +249,7 @@ class Video {
   ///
   /// `extended` *(boolean)*
   Future<Map> getAlbumsByVideo([Map<String, String> params]) async {
-    return this._api.request('video.getAlbumsByVideo', {
+    return _api.request('video.getAlbumsByVideo', {
       ...?params,
     });
   }
@@ -276,7 +276,7 @@ class Video {
   ///
   /// `fields` *(array)*
   Future<Map> getComments([Map<String, String> params]) async {
-    return this._api.request('video.getComments', {
+    return _api.request('video.getComments', {
       ...?params,
     });
   }
@@ -293,7 +293,7 @@ class Video {
   ///
   /// `video_id` *(integer)*
   Future<Map> removeFromAlbum([Map<String, String> params]) async {
-    return this._api.request('video.removeFromAlbum', {
+    return _api.request('video.removeFromAlbum', {
       ...?params,
     });
   }
@@ -310,7 +310,7 @@ class Video {
   ///
   /// `after` *(integer)* ID of the album after which the album in question shall be placed.
   Future<Map> reorderAlbums([Map<String, String> params]) async {
-    return this._api.request('video.reorderAlbums', {
+    return _api.request('video.reorderAlbums', {
       ...?params,
     });
   }
@@ -335,7 +335,7 @@ class Video {
   ///
   /// `after_video_id` *(integer)* ID of the video after which the photo in question shall be placed.
   Future<Map> reorderVideos([Map<String, String> params]) async {
-    return this._api.request('video.reorderVideos', {
+    return _api.request('video.reorderVideos', {
       ...?params,
     });
   }
@@ -354,7 +354,7 @@ class Video {
   ///
   /// `search_query` *(string)* (If the video was found in search results.) Search query string.
   Future<Map> report([Map<String, String> params]) async {
-    return this._api.request('video.report', {
+    return _api.request('video.report', {
       ...?params,
     });
   }
@@ -369,7 +369,7 @@ class Video {
   ///
   /// `reason` *(integer)* Reason for the complaint: , 0 – spam , 1 – child pornography , 2 – extremism , 3 – violence , 4 – drug propaganda , 5 – adult material , 6 – insult, abuse
   Future<Map> reportComment([Map<String, String> params]) async {
-    return this._api.request('video.reportComment', {
+    return _api.request('video.reportComment', {
       ...?params,
     });
   }
@@ -382,7 +382,7 @@ class Video {
   ///
   /// `owner_id` *(integer)* ID of the user or community that owns the video.
   Future<Map> restore([Map<String, String> params]) async {
-    return this._api.request('video.restore', {
+    return _api.request('video.restore', {
       ...?params,
     });
   }
@@ -395,7 +395,7 @@ class Video {
   ///
   /// `comment_id` *(integer)* ID of the deleted comment.
   Future<Map> restoreComment([Map<String, String> params]) async {
-    return this._api.request('video.restoreComment', {
+    return _api.request('video.restoreComment', {
       ...?params,
     });
   }
@@ -428,7 +428,7 @@ class Video {
   ///
   /// `compression` *(boolean)*
   Future<Map> save([Map<String, String> params]) async {
-    return this._api.request('video.save', {
+    return _api.request('video.save', {
       ...?params,
     });
   }
@@ -459,7 +459,7 @@ class Video {
   ///
   /// `extended` *(boolean)*
   Future<Map> search([Map<String, String> params]) async {
-    return this._api.request('video.search', {
+    return _api.request('video.search', {
       ...?params,
     });
   }

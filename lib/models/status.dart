@@ -7,7 +7,7 @@ class Status {
 
   /// Status
   Status(API api) {
-    this._api = api;
+    _api = api;
   }
 
   toString() {
@@ -22,7 +22,7 @@ class Status {
   ///
   /// `group_id` *(integer)*
   Future<Map> get([Map<String, String> params]) async {
-    return this._api.request('status.get', {
+    return _api.request('status.get', {
       ...?params,
     });
   }
@@ -35,7 +35,7 @@ class Status {
   ///
   /// `group_id` *(integer)* Identifier of a community to set a status in. If left blank the status is set to current user.
   Future<Map> set([Map<String, String> params]) async {
-    return this._api.request('status.set', {
+    return _api.request('status.set', {
       ...?params,
     });
   }
