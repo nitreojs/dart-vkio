@@ -443,7 +443,8 @@ class Groups {
   /// Params:
   ///
   /// `group_id` *(integer)* Community ID.
-  Future<dynamic> getCallbackConfirmationCode([Map<String, dynamic> params]) async {
+  Future<dynamic> getCallbackConfirmationCode(
+      [Map<String, dynamic> params]) async {
     return _api.request('groups.getCallbackConfirmationCode', {
       ...?params,
     });

@@ -202,7 +202,8 @@ class API {
     return 'API';
   }
 
-  Future<dynamic> request(String method, [Map<String, dynamic> rawParams]) async {
+  Future<dynamic> request(String method,
+      [Map<String, dynamic> rawParams]) async {
     var params = {...?rawParams};
 
     for (var item in params.entries) {
@@ -218,7 +219,7 @@ class API {
     }
 
     if (params['random_id'] == null) {
-      int random_id = Random().nextInt(4294967296);
+      var random_id = Random().nextInt(4294967296);
 
       params['random_id'] = '$random_id';
     }

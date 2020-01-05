@@ -376,7 +376,8 @@ class Photos {
   /// Params:
   ///
   /// `group_id` *(integer)* Community ID.
-  Future<dynamic> getMarketAlbumUploadServer([Map<String, dynamic> params]) async {
+  Future<dynamic> getMarketAlbumUploadServer(
+      [Map<String, dynamic> params]) async {
     return _api.request('photos.getMarketAlbumUploadServer', {
       ...?params,
     });
@@ -438,7 +439,8 @@ class Photos {
   /// `crop_x2` *(integer)* X coordinate of the right-bottom corner, default: 795
   ///
   /// `crop_y2` *(integer)* Y coordinate of the right-bottom corner, default: 200
-  Future<dynamic> getOwnerCoverPhotoUploadServer([Map<String, dynamic> params]) async {
+  Future<dynamic> getOwnerCoverPhotoUploadServer(
+      [Map<String, dynamic> params]) async {
     return _api.request('photos.getOwnerCoverPhotoUploadServer', {
       ...?params,
     });
@@ -449,7 +451,8 @@ class Photos {
   /// Params:
   ///
   /// `owner_id` *(integer)* identifier of a community or current user. "Note that community id must be negative. 'owner_id=1' – user, 'owner_id=-1' – community, "
-  Future<dynamic> getOwnerPhotoUploadServer([Map<String, dynamic> params]) async {
+  Future<dynamic> getOwnerPhotoUploadServer(
+      [Map<String, dynamic> params]) async {
     return _api.request('photos.getOwnerPhotoUploadServer', {
       ...?params,
     });

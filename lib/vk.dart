@@ -4,7 +4,7 @@ import 'models/authorization.dart';
 import 'types.dart';
 
 class VK {
-  List<String> _languages = [
+  final List<String> _languages = [
     'ru',
     'uk',
     'be',

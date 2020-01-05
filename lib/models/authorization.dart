@@ -31,7 +31,7 @@ class Authorization {
   Authorization(VK vk) : _vk = vk;
 
   String _getParamsString(Map<String, String> params) {
-    String paramsString = '';
+    var paramsString = '';
 
     final Iterable iterable = params.entries;
 
@@ -48,7 +48,7 @@ class Authorization {
     String password,
     int code,
   }) {
-    Map<String, String> params = {
+    var params = {
       'grant_type': 'password',
       'scope': 'all',
       'client_id': '${client['id']}',
@@ -71,7 +71,7 @@ class Authorization {
     String password,
     int code,
   }) {
-    Map<String, dynamic> client = _clients[clientName];
+    var client = _clients[clientName];
 
     final params = _getParams(
       client: client,
@@ -80,13 +80,13 @@ class Authorization {
       code: code,
     );
 
-    String paramsString = _getParamsString(params);
+    var paramsString = _getParamsString(params);
 
     return _request(paramsString);
   }
 
   Future<Map> _request(String paramsString) async {
-    var response = await http.get("https://oauth.vk.com/token?$paramsString");
+    var response = await http.get('https://oauth.vk.com/token?$paramsString');
     Map json = jsonDecode(response.body);
 
     if (json['error'] == null) {
