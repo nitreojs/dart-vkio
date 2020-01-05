@@ -40,3 +40,15 @@ Add missing types for methods
 Convert all params into `Map<String, dynamic>` for better usability
 
 Some API and VK changes
+
+## 1.2.1
+
+Convert all `Future<Map>` responses into `Future<dynamic>` for better usability and for better responses
+
+Add language support
+
+## 1.2.2
+
+Add `authorization` class
+
+Change export logic

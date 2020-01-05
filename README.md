@@ -1,4 +1,4 @@
-# vkio v1.2.0
+# vkio v1.2.2
 
 A package which allows you to access to the [VK API](https://vk.com/dev).
 

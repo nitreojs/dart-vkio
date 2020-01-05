@@ -1,6 +1,6 @@
 name: vkio
 description: VK API SDK is a Dart package allows you to access to all VK API methods such as Messages, Groups, Utils, etc.
-version: 1.2.0
+version: 1.2.2
 author: nitrojs <n1trojscoding@gmail.com>
 homepage: https://github.com/nitreojs/dart-vkio
 issue_tracker: https://github.com/nitreojs/dart-vkio/issues
