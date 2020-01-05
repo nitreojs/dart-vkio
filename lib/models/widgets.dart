@@ -37,7 +37,7 @@ class Widgets {
     });
   }
 
-  /// Gets a list of application/site pages where the [Like widget](https://vk.com/dev/Comments|Comments widget] or [vk.com/dev/Like) is installed.
+  /// Gets a list of application/site pages where the [Comments widget](https://vk.com/dev/Comments) or [Like Widget](https://vk.com/dev/Like) is installed.
   ///
   /// Params:
   ///

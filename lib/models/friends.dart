@@ -126,7 +126,7 @@ class Friends {
   ///
   /// `order` *(string)* Sort order: , 'name' — by name (enabled only if the 'fields' parameter is used), 'hints' — by rating, similar to how friends are sorted in My friends section, , This parameter is available only for [desktop applications](https://vk.com/dev/standalone).
   ///
-  /// `list_id` *(integer)* ID of the friend list returned by the [desktop applications](https://vk.com/dev/friends.getLists|friends.getLists] method to be used as the source. This parameter is taken into account only when the uid parameter is set to the current user ID. This parameter is available only for [vk.com/dev/standalone).
+  /// `list_id` *(integer)* ID of the friend list returned by the desktop applications
   ///
   /// `count` *(integer)* Number of friends to return., default: 5000
   ///
