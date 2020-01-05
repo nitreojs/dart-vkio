@@ -203,7 +203,7 @@ class API {
   }
 
   Future<Map> request(String method, [Map<String, dynamic> rawParams]) async {
-    Map params = {...?rawParams};
+    var params = {...?rawParams};
 
     for (var item in params.entries) {
       dynamic value = item.value;
@@ -227,7 +227,7 @@ class API {
       ...?params,
     };
 
-    http.Response response = await http.post(
+    var response = await http.post(
       _baseUrl + '/$method',
       body: body,
     );
