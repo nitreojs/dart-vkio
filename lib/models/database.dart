@@ -1,4 +1,4 @@
-import './api.dart';
+import 'api.dart';
 
 /// Database class
 class Database {

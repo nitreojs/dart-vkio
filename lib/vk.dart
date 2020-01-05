@@ -1,4 +1,4 @@
-import './models/api.dart';
+import 'models/api.dart';
 
 class VK {
   Map<String, dynamic> options;

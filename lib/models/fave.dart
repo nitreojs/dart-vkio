@@ -1,4 +1,4 @@
-import './api.dart';
+import 'api.dart';
 
 /// Fave class
 class Fave {

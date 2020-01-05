@@ -1,4 +1,4 @@
-import './api.dart';
+import 'api.dart';
 
 /// Newsfeed class
 class Newsfeed {

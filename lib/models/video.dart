@@ -1,4 +1,4 @@
-import './api.dart';
+import 'api.dart';
 
 /// Video class
 class Video {
