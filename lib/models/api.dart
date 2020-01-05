@@ -202,7 +202,7 @@ class API {
   }
 
   Future<Map> request(String method, [Map<String, dynamic> rawParams]) async {
-    Map params = { ...?rawParams };
+    Map params = {...?rawParams};
 
     for (var item in params.entries) {
       dynamic value = item.value;
