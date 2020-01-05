@@ -5,8 +5,14 @@ import 'types.dart';
 
 class VK {
   List<String> _languages = [
-    'ru', 'uk', 'be', 'en',
-    'es', 'fi', 'de', 'it',
+    'ru',
+    'uk',
+    'be',
+    'en',
+    'es',
+    'fi',
+    'de',
+    'it',
   ];
 
   Map<String, dynamic> options;
@@ -33,10 +39,10 @@ class VK {
     String version = '5.103',
     LanguageType language = LanguageType.EN,
   }) : this(
-    token: token,
-    version: version,
-    language: language,
-  );
+          token: token,
+          version: version,
+          language: language,
+        );
 
   @override
   String toString() {

@@ -438,8 +438,7 @@ class Photos {
   /// `crop_x2` *(integer)* X coordinate of the right-bottom corner, default: 795
   ///
   /// `crop_y2` *(integer)* Y coordinate of the right-bottom corner, default: 200
-  Future<dynamic> getOwnerCoverPhotoUploadServer(
-      [Map<String, dynamic> params]) async {
+  Future<dynamic> getOwnerCoverPhotoUploadServer([Map<String, dynamic> params]) async {
     return _api.request('photos.getOwnerCoverPhotoUploadServer', {
       ...?params,
     });

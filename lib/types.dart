@@ -1,4 +1,10 @@
 enum LanguageType {
-  RU, UK, BE, EN,
-  ES, FI, DE, IT,
+  RU,
+  UK,
+  BE,
+  EN,
+  ES,
+  FI,
+  DE,
+  IT,
 }

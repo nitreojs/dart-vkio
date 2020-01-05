@@ -17,13 +17,13 @@ enum ClientType {
 /// Authorization class
 class Authorization {
   final Map<ClientType, Map<String, dynamic>> _clients = {
-    ClientType.ANDROID: { 'id': 2274003, 'secret': 'hHbZxrka2uZ6jB1inYsH' },
-    ClientType.IPHONE: { 'id': 3140623, 'secret': 'VeWdmVclDCtn6ihuP1nt' },
-    ClientType.IPAD: { 'id': 3682744, 'secret': 'mY6CDUswIVdJLCD3j15n' },
-    ClientType.WINDOWS_PHONE: { 'id': 3502557, 'secret': 'PEObAuQi6KloPM4T30DV' },
-    ClientType.VK_ME: { 'id': 5027722, 'secret': 'Skg1Tn1r2qEbbZIAJMx3' },
-    ClientType.KATE: { 'id': 2685278, 'secret': 'lxhD8OD7dMsqtXIm5IUY' },
-    ClientType.WINDOWS: { 'id': 3697615, 'secret': 'AlVXZFMUqyrnABp8ncuU' },
+    ClientType.ANDROID: {'id': 2274003, 'secret': 'hHbZxrka2uZ6jB1inYsH'},
+    ClientType.IPHONE: {'id': 3140623, 'secret': 'VeWdmVclDCtn6ihuP1nt'},
+    ClientType.IPAD: {'id': 3682744, 'secret': 'mY6CDUswIVdJLCD3j15n'},
+    ClientType.WINDOWS_PHONE: {'id': 3502557, 'secret': 'PEObAuQi6KloPM4T30DV'},
+    ClientType.VK_ME: {'id': 5027722, 'secret': 'Skg1Tn1r2qEbbZIAJMx3'},
+    ClientType.KATE: {'id': 2685278, 'secret': 'lxhD8OD7dMsqtXIm5IUY'},
+    ClientType.WINDOWS: {'id': 3697615, 'secret': 'AlVXZFMUqyrnABp8ncuU'},
   };
 
   final VK _vk;
@@ -97,13 +97,13 @@ class Authorization {
   }
 
   /// Authorizes via Android.
-  /// 
+  ///
   /// Params:
-  /// 
+  ///
   /// `username` *(string)* User's phone or email.
-  /// 
+  ///
   /// `password` *(string)* User's password.
-  /// 
+  ///
   /// `code` *(integer)* 2FA code.
   Future<dynamic> android({
     String username,
@@ -119,13 +119,13 @@ class Authorization {
   }
 
   /// Authorizes via iPhone.
-  /// 
+  ///
   /// Params:
-  /// 
+  ///
   /// `username` *(string)* User's phone or email.
-  /// 
+  ///
   /// `password` *(string)* User's password.
-  /// 
+  ///
   /// `code` *(integer)* 2FA code.
   Future<dynamic> iphone({
     String username,
@@ -141,13 +141,13 @@ class Authorization {
   }
 
   /// Authorizes via iPad.
-  /// 
+  ///
   /// Params:
-  /// 
+  ///
   /// `username` *(string)* User's phone or email.
-  /// 
+  ///
   /// `password` *(string)* User's password.
-  /// 
+  ///
   /// `code` *(integer)* 2FA code.
   Future<dynamic> ipad({
     String username,
@@ -163,13 +163,13 @@ class Authorization {
   }
 
   /// Authorizes via Windows Phone.
-  /// 
+  ///
   /// Params:
-  /// 
+  ///
   /// `username` *(string)* User's phone or email.
-  /// 
+  ///
   /// `password` *(string)* User's password.
-  /// 
+  ///
   /// `code` *(integer)* 2FA code.
   Future<dynamic> windowsPhone({
     String username,
@@ -185,13 +185,13 @@ class Authorization {
   }
 
   /// Authorizes via VK Messenger.
-  /// 
+  ///
   /// Params:
-  /// 
+  ///
   /// `username` *(string)* User's phone or email.
-  /// 
+  ///
   /// `password` *(string)* User's password.
-  /// 
+  ///
   /// `code` *(integer)* 2FA code.
   Future<dynamic> vkMe({
     String username,
@@ -207,13 +207,13 @@ class Authorization {
   }
 
   /// Authorizes via Kate Mobile.
-  /// 
+  ///
   /// Params:
-  /// 
+  ///
   /// `username` *(string)* User's phone or email.
-  /// 
+  ///
   /// `password` *(string)* User's password.
-  /// 
+  ///
   /// `code` *(integer)* 2FA code.
   Future<dynamic> kate({
     String username,
@@ -229,13 +229,13 @@ class Authorization {
   }
 
   /// Authorizes via Windows (web version).
-  /// 
+  ///
   /// Params:
-  /// 
+  ///
   /// `username` *(string)* User's phone or email.
-  /// 
+  ///
   /// `password` *(string)* User's password.
-  /// 
+  ///
   /// `code` *(integer)* 2FA code.
   Future<dynamic> windows({
     String username,
