@@ -12,8 +12,8 @@ class VK {
       'version': version,
     };
 
-    api = new API(this);
-    // updates = new Updates(this);
+    api = API(this);
+    // updates = Updates(this);
   }
 
   VK.create(String token, [String version = '5.98'])

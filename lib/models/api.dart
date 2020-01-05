@@ -158,41 +158,41 @@ class API {
   API(VK vk) {
     _vk = vk;
 
-    account = new Account(this);
-    ads = new Ads(this);
-    apps = new Apps(this);
-    auth = new Auth(this);
-    board = new Board(this);
-    database = new Database(this);
-    docs = new Docs(this);
-    fave = new Fave(this);
-    friends = new Friends(this);
-    gifts = new Gifts(this);
-    groups = new Groups(this);
-    leads = new Leads(this);
-    likes = new Likes(this);
-    market = new Market(this);
-    messages = new Messages(this);
-    newsfeed = new Newsfeed(this);
-    notes = new Notes(this);
-    notifications = new Notifications(this);
-    orders = new Orders(this);
-    pages = new Pages(this);
-    photos = new Photos(this);
-    polls = new Polls(this);
-    prettyCards = new PrettyCards(this);
-    search = new Search(this);
-    secure = new Secure(this);
-    stats = new Stats(this);
-    status = new Status(this);
-    storage = new Storage(this);
-    stories = new Stories(this);
-    streaming = new Streaming(this);
-    users = new Users(this);
-    utils = new Utils(this);
-    video = new Video(this);
-    wall = new Wall(this);
-    widgets = new Widgets(this);
+    account = Account(this);
+    ads = Ads(this);
+    apps = Apps(this);
+    auth = Auth(this);
+    board = Board(this);
+    database = Database(this);
+    docs = Docs(this);
+    fave = Fave(this);
+    friends = Friends(this);
+    gifts = Gifts(this);
+    groups = Groups(this);
+    leads = Leads(this);
+    likes = Likes(this);
+    market = Market(this);
+    messages = Messages(this);
+    newsfeed = Newsfeed(this);
+    notes = Notes(this);
+    notifications = Notifications(this);
+    orders = Orders(this);
+    pages = Pages(this);
+    photos = Photos(this);
+    polls = Polls(this);
+    prettyCards = PrettyCards(this);
+    search = Search(this);
+    secure = Secure(this);
+    stats = Stats(this);
+    status = Status(this);
+    storage = Storage(this);
+    stories = Stories(this);
+    streaming = Streaming(this);
+    users = Users(this);
+    utils = Utils(this);
+    video = Video(this);
+    wall = Wall(this);
+    widgets = Widgets(this);
   }
 
   toString() {
@@ -216,7 +216,7 @@ class API {
     if (json['error'] != null) {
       Map error = json['error'];
 
-      throw new APIException(
+      throw APIException(
         error['error_msg'],
         code: error['error_code'],
       ).error;
