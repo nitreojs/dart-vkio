@@ -44,7 +44,7 @@ import 'apiexception.dart';
 /// VK API class
 class API {
   /// Base API request url
-  String _baseUrl = 'https://api.vk.com/method';
+  final String _baseUrl = 'https://api.vk.com/method';
 
   /// VK class
   VK _vk;
