@@ -218,7 +218,7 @@ class API {
 
       throw APIException(
         error['error_msg'],
-        code: error['error_code'],
+        error['error_code'],
       ).error;
     }
 

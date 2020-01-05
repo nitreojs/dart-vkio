@@ -90,11 +90,7 @@ class Messages {
   /// `user_id` *(integer)* User ID. To clear a chat history use 'chat_id'
   ///
   /// `peer_id` *(integer)* Destination ID. "For user: 'User ID', e.g. '12345'. For chat: '2000000000' + 'chat_id', e.g. '2000000001'. For community: '- community ID', e.g. '-12345'. "
-  ///
-  /// `offset` *(integer)* Offset needed to delete a specific subset of conversations.
-  ///
-  /// `count` *(integer)* Number of conversations to delete. "NOTE: If the number of messages exceeds the maximum, the method shall be called several times.", max: 10000
-  ///
+  /// 
   /// `group_id` *(integer)* Group ID (for group messages with user access token)
   Future<Map> deleteConversation([Map<String, String> params]) async {
     return _api.request('messages.deleteConversation', {

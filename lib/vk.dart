@@ -4,7 +4,7 @@ class VK {
   Map options;
   API api;
 
-  VK({String token, String version = '5.98'}) {
+  VK({String token, String version = '5.103'}) {
     options = {
       'token': token,
       'version': version,
@@ -13,7 +13,7 @@ class VK {
     api = API(this);
   }
 
-  VK.create(String token, [String version = '5.98'])
+  VK.create(String token, [String version = '5.103'])
       : this(token: token, version: version);
 
   String toString() {
