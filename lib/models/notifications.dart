@@ -10,7 +10,7 @@ class Notifications {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Notifications';
   }
 

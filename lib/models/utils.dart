@@ -10,7 +10,7 @@ class Utils {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Utils';
   }
 

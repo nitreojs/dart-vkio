@@ -10,7 +10,7 @@ class Widgets {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Widgets';
   }
 

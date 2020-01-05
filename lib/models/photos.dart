@@ -10,7 +10,7 @@ class Photos {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Photos';
   }
 

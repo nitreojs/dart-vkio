@@ -10,7 +10,7 @@ class Streaming {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Streaming';
   }
 

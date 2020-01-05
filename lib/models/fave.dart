@@ -10,7 +10,7 @@ class Fave {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Fave';
   }
 

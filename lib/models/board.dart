@@ -10,7 +10,7 @@ class Board {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Board';
   }
 

@@ -10,7 +10,7 @@ class Likes {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Likes';
   }
 

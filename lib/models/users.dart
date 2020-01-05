@@ -10,7 +10,7 @@ class Users {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Users';
   }
 

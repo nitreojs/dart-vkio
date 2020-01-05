@@ -10,7 +10,7 @@ class Stories {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Stories';
   }
 

@@ -10,7 +10,7 @@ class PrettyCards {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'PrettyCards';
   }
 

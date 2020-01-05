@@ -10,7 +10,7 @@ class Gifts {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Gifts';
   }
 

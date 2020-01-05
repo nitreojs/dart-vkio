@@ -10,7 +10,7 @@ class Video {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Video';
   }
 

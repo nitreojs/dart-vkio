@@ -10,7 +10,7 @@ class Storage {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Storage';
   }
 

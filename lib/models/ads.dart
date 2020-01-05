@@ -10,7 +10,7 @@ class Ads {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Ads';
   }
 

@@ -10,7 +10,7 @@ class Leads {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Leads';
   }
 

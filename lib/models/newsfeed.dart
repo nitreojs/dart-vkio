@@ -10,7 +10,7 @@ class Newsfeed {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Newsfeed';
   }
 

@@ -10,7 +10,7 @@ class Auth {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Auth';
   }
 

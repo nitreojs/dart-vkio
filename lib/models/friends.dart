@@ -10,7 +10,7 @@ class Friends {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Friends';
   }
 

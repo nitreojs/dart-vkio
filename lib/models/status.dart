@@ -10,7 +10,7 @@ class Status {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Status';
   }
 

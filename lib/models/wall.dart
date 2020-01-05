@@ -10,7 +10,7 @@ class Wall {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Wall';
   }
 

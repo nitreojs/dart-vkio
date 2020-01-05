@@ -10,7 +10,7 @@ class Secure {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Secure';
   }
 

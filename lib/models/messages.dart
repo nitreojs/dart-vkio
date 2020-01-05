@@ -10,7 +10,7 @@ class Messages {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Messages';
   }
 

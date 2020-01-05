@@ -10,7 +10,7 @@ class Groups {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Groups';
   }
 

@@ -16,7 +16,7 @@ class VK {
   VK.create(String token, [String version = '5.98'])
       : this(token: token, version: version);
 
-  toString() {
+  String toString() {
     return 'VK';
   }
 }

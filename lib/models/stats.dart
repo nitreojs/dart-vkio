@@ -10,7 +10,7 @@ class Stats {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Stats';
   }
 

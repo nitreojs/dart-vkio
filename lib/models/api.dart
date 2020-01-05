@@ -195,7 +195,7 @@ class API {
     widgets = Widgets(this);
   }
 
-  toString() {
+  String toString() {
     return 'API';
   }
 

@@ -10,7 +10,7 @@ class Pages {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Pages';
   }
 

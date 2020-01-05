@@ -10,7 +10,7 @@ class Account {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Account';
   }
 

@@ -10,7 +10,7 @@ class Market {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Market';
   }
 

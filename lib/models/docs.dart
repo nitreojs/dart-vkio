@@ -10,7 +10,7 @@ class Docs {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Docs';
   }
 

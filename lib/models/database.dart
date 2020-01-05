@@ -10,7 +10,7 @@ class Database {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Database';
   }
 

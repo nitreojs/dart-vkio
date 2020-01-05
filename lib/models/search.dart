@@ -10,7 +10,7 @@ class Search {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Search';
   }
 

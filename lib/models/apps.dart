@@ -10,7 +10,7 @@ class Apps {
     _api = api;
   }
 
-  toString() {
+  String toString() {
     return 'Apps';
   }
 
