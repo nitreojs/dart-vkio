@@ -18,7 +18,7 @@ class Streaming {
   /// Allows to receive data for the connection to Streaming API.
   ///
   /// Params: none
-  Future<Map> getServerUrl([Map<String, dynamic> params]) async {
+  Future<dynamic> getServerUrl([Map<String, dynamic> params]) async {
     return _api.request('streaming.getServerUrl', {
       ...?params,
     });
@@ -27,7 +27,7 @@ class Streaming {
   /// Params:
   ///
   /// `monthly_tier` *(string)*
-  Future<Map> setSettings([Map<String, dynamic> params]) async {
+  Future<dynamic> setSettings([Map<String, dynamic> params]) async {
     return _api.request('streaming.setSettings', {
       ...?params,
     });

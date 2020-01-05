@@ -22,7 +22,7 @@ class Messages {
   /// `chat_id` *(integer)* Chat ID., max: 100000000
   ///
   /// `user_id` *(integer)* ID of the user to be added to the chat.
-  Future<Map> addChatUser([Map<String, dynamic> params]) async {
+  Future<dynamic> addChatUser([Map<String, dynamic> params]) async {
     return _api.request('messages.addChatUser', {
       ...?params,
     });
@@ -35,7 +35,7 @@ class Messages {
   /// `group_id` *(integer)* Group ID.
   ///
   /// `key` *(string)*
-  Future<Map> allowMessagesFromGroup([Map<String, dynamic> params]) async {
+  Future<dynamic> allowMessagesFromGroup([Map<String, dynamic> params]) async {
     return _api.request('messages.allowMessagesFromGroup', {
       ...?params,
     });
@@ -48,7 +48,7 @@ class Messages {
   /// `user_ids` *(array)* IDs of the users to be added to the chat.
   ///
   /// `title` *(string)* Chat title.
-  Future<Map> createChat([Map<String, dynamic> params]) async {
+  Future<dynamic> createChat([Map<String, dynamic> params]) async {
     return _api.request('messages.createChat', {
       ...?params,
     });
@@ -65,7 +65,7 @@ class Messages {
   /// `group_id` *(integer)* Group ID (for group messages with user access token)
   ///
   /// `delete_for_all` *(boolean)* '1' — delete message for for all.
-  Future<Map> delete([Map<String, dynamic> params]) async {
+  Future<dynamic> delete([Map<String, dynamic> params]) async {
     return _api.request('messages.delete', {
       ...?params,
     });
@@ -78,7 +78,7 @@ class Messages {
   /// `chat_id` *(integer)* Chat ID., max: 100000000
   ///
   /// `group_id` *(integer)*
-  Future<Map> deleteChatPhoto([Map<String, dynamic> params]) async {
+  Future<dynamic> deleteChatPhoto([Map<String, dynamic> params]) async {
     return _api.request('messages.deleteChatPhoto', {
       ...?params,
     });
@@ -93,7 +93,7 @@ class Messages {
   /// `peer_id` *(integer)* Destination ID. "For user: 'User ID', e.g. '12345'. For chat: '2000000000' + 'chat_id', e.g. '2000000001'. For community: '- community ID', e.g. '-12345'. "
   ///
   /// `group_id` *(integer)* Group ID (for group messages with user access token)
-  Future<Map> deleteConversation([Map<String, dynamic> params]) async {
+  Future<dynamic> deleteConversation([Map<String, dynamic> params]) async {
     return _api.request('messages.deleteConversation', {
       ...?params,
     });
@@ -104,7 +104,7 @@ class Messages {
   /// Params:
   ///
   /// `group_id` *(integer)* Group ID.
-  Future<Map> denyMessagesFromGroup([Map<String, dynamic> params]) async {
+  Future<dynamic> denyMessagesFromGroup([Map<String, dynamic> params]) async {
     return _api.request('messages.denyMessagesFromGroup', {
       ...?params,
     });
@@ -133,7 +133,7 @@ class Messages {
   /// `group_id` *(integer)* Group ID (for group messages with user access token)
   ///
   /// `dont_parse_links` *(boolean)*
-  Future<Map> edit([Map<String, dynamic> params]) async {
+  Future<dynamic> edit([Map<String, dynamic> params]) async {
     return _api.request('messages.edit', {
       ...?params,
     });
@@ -146,7 +146,7 @@ class Messages {
   /// `chat_id` *(integer)* Chat ID., max: 100000000
   ///
   /// `title` *(string)* New title of the chat.
-  Future<Map> editChat([Map<String, dynamic> params]) async {
+  Future<dynamic> editChat([Map<String, dynamic> params]) async {
     return _api.request('messages.editChat', {
       ...?params,
     });
@@ -165,7 +165,7 @@ class Messages {
   /// `fields` *(array)* Profile fields to return.
   ///
   /// `group_id` *(integer)* Group ID (for group messages with group access token)
-  Future<Map> getByConversationMessageId([Map<String, dynamic> params]) async {
+  Future<dynamic> getByConversationMessageId([Map<String, dynamic> params]) async {
     return _api.request('messages.getByConversationMessageId', {
       ...?params,
     });
@@ -184,7 +184,7 @@ class Messages {
   /// `fields` *(array)* Profile fields to return.
   ///
   /// `group_id` *(integer)* Group ID (for group messages with group access token)
-  Future<Map> getById([Map<String, dynamic> params]) async {
+  Future<dynamic> getById([Map<String, dynamic> params]) async {
     return _api.request('messages.getById', {
       ...?params,
     });
@@ -197,7 +197,7 @@ class Messages {
   /// `link` *(string)* Invitation link.
   ///
   /// `fields` *(array)* Profile fields to return.
-  Future<Map> getChatPreview([Map<String, dynamic> params]) async {
+  Future<dynamic> getChatPreview([Map<String, dynamic> params]) async {
     return _api.request('messages.getChatPreview', {
       ...?params,
     });
@@ -212,7 +212,7 @@ class Messages {
   /// `fields` *(array)* Profile fields to return.
   ///
   /// `group_id` *(integer)* Group ID (for group messages with group access token)
-  Future<Map> getConversationMembers([Map<String, dynamic> params]) async {
+  Future<dynamic> getConversationMembers([Map<String, dynamic> params]) async {
     return _api.request('messages.getConversationMembers', {
       ...?params,
     });
@@ -235,7 +235,7 @@ class Messages {
   /// `fields` *(array)* Profile and communities fields to return.
   ///
   /// `group_id` *(integer)* Group ID (for group messages with group access token)
-  Future<Map> getConversations([Map<String, dynamic> params]) async {
+  Future<dynamic> getConversations([Map<String, dynamic> params]) async {
     return _api.request('messages.getConversations', {
       ...?params,
     });
@@ -252,7 +252,7 @@ class Messages {
   /// `fields` *(array)* Profile and communities fields to return.
   ///
   /// `group_id` *(integer)* Group ID (for group messages with group access token)
-  Future<Map> getConversationsById([Map<String, dynamic> params]) async {
+  Future<dynamic> getConversationsById([Map<String, dynamic> params]) async {
     return _api.request('messages.getConversationsById', {
       ...?params,
     });
@@ -279,7 +279,7 @@ class Messages {
   /// `fields` *(array)* Profile fields to return.
   ///
   /// `group_id` *(integer)* Group ID (for group messages with group access token)
-  Future<Map> getHistory([Map<String, dynamic> params]) async {
+  Future<dynamic> getHistory([Map<String, dynamic> params]) async {
     return _api.request('messages.getHistory', {
       ...?params,
     });
@@ -306,7 +306,7 @@ class Messages {
   /// `preserve_order` *(boolean)*
   ///
   /// `max_forwards_level` *(integer)*, default: 45, max: 45
-  Future<Map> getHistoryAttachments([Map<String, dynamic> params]) async {
+  Future<dynamic> getHistoryAttachments([Map<String, dynamic> params]) async {
     return _api.request('messages.getHistoryAttachments', {
       ...?params,
     });
@@ -319,7 +319,7 @@ class Messages {
   /// `reset` *(boolean)* 1 — to generate new link (revoke previous), 0 — to return previous link.
   ///
   /// `group_id` *(integer)* Group ID
-  Future<Map> getInviteLink([Map<String, dynamic> params]) async {
+  Future<dynamic> getInviteLink([Map<String, dynamic> params]) async {
     return _api.request('messages.getInviteLink', {
       ...?params,
     });
@@ -330,7 +330,7 @@ class Messages {
   /// Params:
   ///
   /// `user_id` *(integer)* User ID.
-  Future<Map> getLastActivity([Map<String, dynamic> params]) async {
+  Future<dynamic> getLastActivity([Map<String, dynamic> params]) async {
     return _api.request('messages.getLastActivity', {
       ...?params,
     });
@@ -363,7 +363,7 @@ class Messages {
   /// `last_n` *(integer)*, max: 2000
   ///
   /// `credentials` *(boolean)*
-  Future<Map> getLongPollHistory([Map<String, dynamic> params]) async {
+  Future<dynamic> getLongPollHistory([Map<String, dynamic> params]) async {
     return _api.request('messages.getLongPollHistory', {
       ...?params,
     });
@@ -378,7 +378,7 @@ class Messages {
   /// `group_id` *(integer)* Group ID (for group messages with user access token)
   ///
   /// `lp_version` *(integer)* Long poll version
-  Future<Map> getLongPollServer([Map<String, dynamic> params]) async {
+  Future<dynamic> getLongPollServer([Map<String, dynamic> params]) async {
     return _api.request('messages.getLongPollServer', {
       ...?params,
     });
@@ -391,7 +391,7 @@ class Messages {
   /// `group_id` *(integer)* Group ID.
   ///
   /// `user_id` *(integer)* User ID.
-  Future<Map> isMessagesFromGroupAllowed([Map<String, dynamic> params]) async {
+  Future<dynamic> isMessagesFromGroupAllowed([Map<String, dynamic> params]) async {
     return _api.request('messages.isMessagesFromGroupAllowed', {
       ...?params,
     });
@@ -400,7 +400,7 @@ class Messages {
   /// Params:
   ///
   /// `link` *(string)* Invitation link.
-  Future<Map> joinChatByInviteLink([Map<String, dynamic> params]) async {
+  Future<dynamic> joinChatByInviteLink([Map<String, dynamic> params]) async {
     return _api.request('messages.joinChatByInviteLink', {
       ...?params,
     });
@@ -415,7 +415,7 @@ class Messages {
   /// `answered` *(boolean)* '1' — to mark as answered, '0' — to remove the mark, default: 1
   ///
   /// `group_id` *(integer)* Group ID (for group messages with group access token)
-  Future<Map> markAsAnsweredConversation([Map<String, dynamic> params]) async {
+  Future<dynamic> markAsAnsweredConversation([Map<String, dynamic> params]) async {
     return _api.request('messages.markAsAnsweredConversation', {
       ...?params,
     });
@@ -428,7 +428,7 @@ class Messages {
   /// `message_ids` *(array)* IDs of messages to mark as important., default:
   ///
   /// `important` *(integer)* '1' — to add a star (mark as important), '0' — to remove the star
-  Future<Map> markAsImportant([Map<String, dynamic> params]) async {
+  Future<dynamic> markAsImportant([Map<String, dynamic> params]) async {
     return _api.request('messages.markAsImportant', {
       ...?params,
     });
@@ -443,7 +443,7 @@ class Messages {
   /// `important` *(boolean)* '1' — to add a star (mark as important), '0' — to remove the star, default: 1
   ///
   /// `group_id` *(integer)* Group ID (for group messages with group access token)
-  Future<Map> markAsImportantConversation([Map<String, dynamic> params]) async {
+  Future<dynamic> markAsImportantConversation([Map<String, dynamic> params]) async {
     return _api.request('messages.markAsImportantConversation', {
       ...?params,
     });
@@ -458,7 +458,7 @@ class Messages {
   /// `start_message_id` *(integer)* Message ID to start from.
   ///
   /// `group_id` *(integer)* Group ID (for group messages with user access token)
-  Future<Map> markAsRead([Map<String, dynamic> params]) async {
+  Future<dynamic> markAsRead([Map<String, dynamic> params]) async {
     return _api.request('messages.markAsRead', {
       ...?params,
     });
@@ -471,7 +471,7 @@ class Messages {
   /// `peer_id` *(integer)* Destination ID. "For user: 'User ID', e.g. '12345'. For chat: '2000000000' + 'Chat ID', e.g. '2000000001'. For community: '- Community ID', e.g. '-12345'. "
   ///
   /// `message_id` *(integer)*
-  Future<Map> pin([Map<String, dynamic> params]) async {
+  Future<dynamic> pin([Map<String, dynamic> params]) async {
     return _api.request('messages.pin', {
       ...?params,
     });
@@ -486,7 +486,7 @@ class Messages {
   /// `user_id` *(integer)* ID of the user to be removed from the chat.
   ///
   /// `member_id` *(integer)*
-  Future<Map> removeChatUser([Map<String, dynamic> params]) async {
+  Future<dynamic> removeChatUser([Map<String, dynamic> params]) async {
     return _api.request('messages.removeChatUser', {
       ...?params,
     });
@@ -499,7 +499,7 @@ class Messages {
   /// `message_id` *(integer)* ID of a previously-deleted message to restore.
   ///
   /// `group_id` *(integer)* Group ID (for group messages with user access token)
-  Future<Map> restore([Map<String, dynamic> params]) async {
+  Future<dynamic> restore([Map<String, dynamic> params]) async {
     return _api.request('messages.restore', {
       ...?params,
     });
@@ -526,7 +526,7 @@ class Messages {
   /// `fields` *(array)*
   ///
   /// `group_id` *(integer)* Group ID (for group messages with group access token)
-  Future<Map> search([Map<String, dynamic> params]) async {
+  Future<dynamic> search([Map<String, dynamic> params]) async {
     return _api.request('messages.search', {
       ...?params,
     });
@@ -545,7 +545,7 @@ class Messages {
   /// `fields` *(array)* Profile fields to return.
   ///
   /// `group_id` *(integer)* Group ID (for group messages with user access token)
-  Future<Map> searchConversations([Map<String, dynamic> params]) async {
+  Future<dynamic> searchConversations([Map<String, dynamic> params]) async {
     return _api.request('messages.searchConversations', {
       ...?params,
     });
@@ -590,7 +590,7 @@ class Messages {
   /// `dont_parse_links` *(boolean)*
   ///
   /// `disable_mentions` *(boolean)*
-  Future<Map> send([Map<String, dynamic> params]) async {
+  Future<dynamic> send([Map<String, dynamic> params]) async {
     return _api.request('messages.send', {
       ...?params,
     });
@@ -607,7 +607,7 @@ class Messages {
   /// `peer_id` *(integer)* Destination ID. "For user: 'User ID', e.g. '12345'. For chat: '2000000000' + 'chat_id', e.g. '2000000001'. For community: '- community ID', e.g. '-12345'. "
   ///
   /// `group_id` *(integer)* Group ID (for group messages with group access token)
-  Future<Map> setActivity([Map<String, dynamic> params]) async {
+  Future<dynamic> setActivity([Map<String, dynamic> params]) async {
     return _api.request('messages.setActivity', {
       ...?params,
     });
@@ -618,7 +618,7 @@ class Messages {
   /// Params:
   ///
   /// `file` *(string)* Upload URL from the 'response' field returned by the [photos.getChatUploadServer](https://vk.com/dev/photos.getChatUploadServer) method upon successfully uploading an image.
-  Future<Map> setChatPhoto([Map<String, dynamic> params]) async {
+  Future<dynamic> setChatPhoto([Map<String, dynamic> params]) async {
     return _api.request('messages.setChatPhoto', {
       ...?params,
     });
@@ -629,7 +629,7 @@ class Messages {
   /// `peer_id` *(integer)*
   ///
   /// `group_id` *(integer)*
-  Future<Map> unpin([Map<String, dynamic> params]) async {
+  Future<dynamic> unpin([Map<String, dynamic> params]) async {
     return _api.request('messages.unpin', {
       ...?params,
     });

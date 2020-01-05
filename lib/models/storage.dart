@@ -26,7 +26,7 @@ class Storage {
   /// `user_id` *(integer)*
   ///
   /// `global` *(boolean)*
-  Future<Map> get([Map<String, dynamic> params]) async {
+  Future<dynamic> get([Map<String, dynamic> params]) async {
     return _api.request('storage.get', {
       ...?params,
     });
@@ -43,7 +43,7 @@ class Storage {
   /// `offset` *(integer)*
   ///
   /// `count` *(integer)* amount of variable names the info needs to be collected from., default: 100, max: 1000
-  Future<Map> getKeys([Map<String, dynamic> params]) async {
+  Future<dynamic> getKeys([Map<String, dynamic> params]) async {
     return _api.request('storage.getKeys', {
       ...?params,
     });
@@ -60,7 +60,7 @@ class Storage {
   /// `user_id` *(integer)*
   ///
   /// `global` *(boolean)*
-  Future<Map> set([Map<String, dynamic> params]) async {
+  Future<dynamic> set([Map<String, dynamic> params]) async {
     return _api.request('storage.set', {
       ...?params,
     });

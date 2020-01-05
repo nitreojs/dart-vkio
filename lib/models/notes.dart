@@ -26,7 +26,7 @@ class Notes {
   /// `privacy_view` *(array)*, default: all
   ///
   /// `privacy_comment` *(array)*, default: all
-  Future<Map> add([Map<String, dynamic> params]) async {
+  Future<dynamic> add([Map<String, dynamic> params]) async {
     return _api.request('notes.add', {
       ...?params,
     });
@@ -45,7 +45,7 @@ class Notes {
   /// `message` *(string)* Comment text.
   ///
   /// `guid` *(string)*
-  Future<Map> createComment([Map<String, dynamic> params]) async {
+  Future<dynamic> createComment([Map<String, dynamic> params]) async {
     return _api.request('notes.createComment', {
       ...?params,
     });
@@ -56,7 +56,7 @@ class Notes {
   /// Params:
   ///
   /// `note_id` *(integer)* Note ID.
-  Future<Map> delete([Map<String, dynamic> params]) async {
+  Future<dynamic> delete([Map<String, dynamic> params]) async {
     return _api.request('notes.delete', {
       ...?params,
     });
@@ -69,7 +69,7 @@ class Notes {
   /// `comment_id` *(integer)* Comment ID.
   ///
   /// `owner_id` *(integer)* Note owner ID.
-  Future<Map> deleteComment([Map<String, dynamic> params]) async {
+  Future<dynamic> deleteComment([Map<String, dynamic> params]) async {
     return _api.request('notes.deleteComment', {
       ...?params,
     });
@@ -88,7 +88,7 @@ class Notes {
   /// `privacy_view` *(array)*, default: all
   ///
   /// `privacy_comment` *(array)*, default: all
-  Future<Map> edit([Map<String, dynamic> params]) async {
+  Future<dynamic> edit([Map<String, dynamic> params]) async {
     return _api.request('notes.edit', {
       ...?params,
     });
@@ -103,7 +103,7 @@ class Notes {
   /// `owner_id` *(integer)* Note owner ID.
   ///
   /// `message` *(string)* New comment text.
-  Future<Map> editComment([Map<String, dynamic> params]) async {
+  Future<dynamic> editComment([Map<String, dynamic> params]) async {
     return _api.request('notes.editComment', {
       ...?params,
     });
@@ -122,7 +122,7 @@ class Notes {
   /// `count` *(integer)* Number of notes to return., default: 20, max: 100
   ///
   /// `sort` *(integer)*
-  Future<Map> get([Map<String, dynamic> params]) async {
+  Future<dynamic> get([Map<String, dynamic> params]) async {
     return _api.request('notes.get', {
       ...?params,
     });
@@ -137,7 +137,7 @@ class Notes {
   /// `owner_id` *(integer)* Note owner ID.
   ///
   /// `need_wiki` *(boolean)*
-  Future<Map> getById([Map<String, dynamic> params]) async {
+  Future<dynamic> getById([Map<String, dynamic> params]) async {
     return _api.request('notes.getById', {
       ...?params,
     });
@@ -156,7 +156,7 @@ class Notes {
   /// `offset` *(integer)*
   ///
   /// `count` *(integer)* Number of comments to return., default: 20, max: 100
-  Future<Map> getComments([Map<String, dynamic> params]) async {
+  Future<dynamic> getComments([Map<String, dynamic> params]) async {
     return _api.request('notes.getComments', {
       ...?params,
     });
@@ -169,7 +169,7 @@ class Notes {
   /// `comment_id` *(integer)* Comment ID.
   ///
   /// `owner_id` *(integer)* Note owner ID.
-  Future<Map> restoreComment([Map<String, dynamic> params]) async {
+  Future<dynamic> restoreComment([Map<String, dynamic> params]) async {
     return _api.request('notes.restoreComment', {
       ...?params,
     });

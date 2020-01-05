@@ -20,7 +20,7 @@ class Stories {
   /// Params:
   ///
   /// `owners_ids` *(array)* List of sources IDs
-  Future<Map> banOwner([Map<String, dynamic> params]) async {
+  Future<dynamic> banOwner([Map<String, dynamic> params]) async {
     return _api.request('stories.banOwner', {
       ...?params,
     });
@@ -33,7 +33,7 @@ class Stories {
   /// `owner_id` *(integer)* Story owner's ID. Current user id is used by default.
   ///
   /// `story_id` *(integer)* Story ID.
-  Future<Map> delete([Map<String, dynamic> params]) async {
+  Future<dynamic> delete([Map<String, dynamic> params]) async {
     return _api.request('stories.delete', {
       ...?params,
     });
@@ -46,7 +46,7 @@ class Stories {
   /// `owner_id` *(integer)* Owner ID.
   ///
   /// `extended` *(boolean)* '1' — to return additional fields for users and communities. Default value is 0.
-  Future<Map> get([Map<String, dynamic> params]) async {
+  Future<dynamic> get([Map<String, dynamic> params]) async {
     return _api.request('stories.get', {
       ...?params,
     });
@@ -59,7 +59,7 @@ class Stories {
   /// `extended` *(boolean)* '1' — to return additional fields for users and communities. Default value is 0.
   ///
   /// `fields` *(array)* Additional fields to return
-  Future<Map> getBanned([Map<String, dynamic> params]) async {
+  Future<dynamic> getBanned([Map<String, dynamic> params]) async {
     return _api.request('stories.getBanned', {
       ...?params,
     });
@@ -74,7 +74,7 @@ class Stories {
   /// `extended` *(boolean)* '1' — to return additional fields for users and communities. Default value is 0.
   ///
   /// `fields` *(array)* Additional fields to return
-  Future<Map> getById([Map<String, dynamic> params]) async {
+  Future<dynamic> getById([Map<String, dynamic> params]) async {
     return _api.request('stories.getById', {
       ...?params,
     });
@@ -95,7 +95,7 @@ class Stories {
   /// `link_url` *(string)* Link URL. Internal links on https://vk.com only.
   ///
   /// `group_id` *(integer)* ID of the community to upload the story (should be verified or with the "fire" icon).
-  Future<Map> getPhotoUploadServer([Map<String, dynamic> params]) async {
+  Future<dynamic> getPhotoUploadServer([Map<String, dynamic> params]) async {
     return _api.request('stories.getPhotoUploadServer', {
       ...?params,
     });
@@ -114,7 +114,7 @@ class Stories {
   /// `extended` *(boolean)* '1' — to return additional fields for users and communities. Default value is 0.
   ///
   /// `fields` *(array)* Additional fields to return
-  Future<Map> getReplies([Map<String, dynamic> params]) async {
+  Future<dynamic> getReplies([Map<String, dynamic> params]) async {
     return _api.request('stories.getReplies', {
       ...?params,
     });
@@ -127,7 +127,7 @@ class Stories {
   /// `owner_id` *(integer)* Story owner ID.
   ///
   /// `story_id` *(integer)* Story ID.
-  Future<Map> getStats([Map<String, dynamic> params]) async {
+  Future<dynamic> getStats([Map<String, dynamic> params]) async {
     return _api.request('stories.getStats', {
       ...?params,
     });
@@ -148,7 +148,7 @@ class Stories {
   /// `link_url` *(string)* Link URL. Internal links on https://vk.com only.
   ///
   /// `group_id` *(integer)* ID of the community to upload the story (should be verified or with the "fire" icon).
-  Future<Map> getVideoUploadServer([Map<String, dynamic> params]) async {
+  Future<dynamic> getVideoUploadServer([Map<String, dynamic> params]) async {
     return _api.request('stories.getVideoUploadServer', {
       ...?params,
     });
@@ -167,7 +167,7 @@ class Stories {
   /// `offset` *(integer)* Offset needed to return a specific subset of results.
   ///
   /// `extended` *(boolean)* '1' — to return detailed information about photos
-  Future<Map> getViewers([Map<String, dynamic> params]) async {
+  Future<dynamic> getViewers([Map<String, dynamic> params]) async {
     return _api.request('stories.getViewers', {
       ...?params,
     });
@@ -180,7 +180,7 @@ class Stories {
   /// `owner_id` *(integer)* ID of the user whose replies should be hidden.
   ///
   /// `group_id` *(integer)*
-  Future<Map> hideAllReplies([Map<String, dynamic> params]) async {
+  Future<dynamic> hideAllReplies([Map<String, dynamic> params]) async {
     return _api.request('stories.hideAllReplies', {
       ...?params,
     });
@@ -195,7 +195,7 @@ class Stories {
   /// `story_id` *(integer)* Story ID.
   ///
   /// `access_key` *(string)* Access key for the private object.
-  Future<Map> hideReply([Map<String, dynamic> params]) async {
+  Future<dynamic> hideReply([Map<String, dynamic> params]) async {
     return _api.request('stories.hideReply', {
       ...?params,
     });
@@ -206,7 +206,7 @@ class Stories {
   /// Params:
   ///
   /// `owners_ids` *(array)* List of hidden sources to show stories from.
-  Future<Map> unbanOwner([Map<String, dynamic> params]) async {
+  Future<dynamic> unbanOwner([Map<String, dynamic> params]) async {
     return _api.request('stories.unbanOwner', {
       ...?params,
     });

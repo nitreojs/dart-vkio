@@ -22,7 +22,7 @@ class Newsfeed {
   /// `user_ids` *(array)*
   ///
   /// `group_ids` *(array)*
-  Future<Map> addBan([Map<String, dynamic> params]) async {
+  Future<dynamic> addBan([Map<String, dynamic> params]) async {
     return _api.request('newsfeed.addBan', {
       ...?params,
     });
@@ -35,7 +35,7 @@ class Newsfeed {
   /// `user_ids` *(array)*
   ///
   /// `group_ids` *(array)*
-  Future<Map> deleteBan([Map<String, dynamic> params]) async {
+  Future<dynamic> deleteBan([Map<String, dynamic> params]) async {
     return _api.request('newsfeed.deleteBan', {
       ...?params,
     });
@@ -44,7 +44,7 @@ class Newsfeed {
   /// Params:
   ///
   /// `list_id` *(integer)*
-  Future<Map> deleteList([Map<String, dynamic> params]) async {
+  Future<dynamic> deleteList([Map<String, dynamic> params]) async {
     return _api.request('newsfeed.deleteList', {
       ...?params,
     });
@@ -73,7 +73,7 @@ class Newsfeed {
   /// `fields` *(array)* Additional fields of [communities](https://vk.com/dev/fields|profiles] and [vk.com/dev/fields_groups) to return.
   ///
   /// `section` *(string)*
-  Future<Map> get([Map<String, dynamic> params]) async {
+  Future<dynamic> get([Map<String, dynamic> params]) async {
     return _api.request('newsfeed.get', {
       ...?params,
     });
@@ -88,7 +88,7 @@ class Newsfeed {
   /// `fields` *(array)* Profile fields to return.
   ///
   /// `name_case` *(string)* Case for declension of user name and surname: 'nom' — nominative (default), 'gen' — genitive , 'dat' — dative, 'acc' — accusative , 'ins' — instrumental , 'abl' — prepositional
-  Future<Map> getBanned([Map<String, dynamic> params]) async {
+  Future<dynamic> getBanned([Map<String, dynamic> params]) async {
     return _api.request('newsfeed.getBanned', {
       ...?params,
     });
@@ -113,7 +113,7 @@ class Newsfeed {
   /// `start_from` *(string)* Identificator needed to return the next page with results. Value for this parameter returns in 'next_from' field.
   ///
   /// `fields` *(array)* Additional fields of [communities](https://vk.com/dev/fields|profiles] and [vk.com/dev/fields_groups) to return.
-  Future<Map> getComments([Map<String, dynamic> params]) async {
+  Future<dynamic> getComments([Map<String, dynamic> params]) async {
     return _api.request('newsfeed.getComments', {
       ...?params,
     });
@@ -126,7 +126,7 @@ class Newsfeed {
   /// `list_ids` *(array)* numeric list identifiers.
   ///
   /// `extended` *(boolean)* Return additional list info
-  Future<Map> getLists([Map<String, dynamic> params]) async {
+  Future<dynamic> getLists([Map<String, dynamic> params]) async {
     return _api.request('newsfeed.getLists', {
       ...?params,
     });
@@ -145,7 +145,7 @@ class Newsfeed {
   /// `offset` *(integer)* Offset needed to return a specific subset of posts.
   ///
   /// `count` *(integer)* Number of posts to return., default: 20, max: 50
-  Future<Map> getMentions([Map<String, dynamic> params]) async {
+  Future<dynamic> getMentions([Map<String, dynamic> params]) async {
     return _api.request('newsfeed.getMentions', {
       ...?params,
     });
@@ -166,7 +166,7 @@ class Newsfeed {
   /// `count` *(integer)* Number of news items to return.
   ///
   /// `fields` *(array)* Additional fields of [communities](https://vk.com/dev/fields|profiles] and [vk.com/dev/fields_groups) to return.
-  Future<Map> getRecommended([Map<String, dynamic> params]) async {
+  Future<dynamic> getRecommended([Map<String, dynamic> params]) async {
     return _api.request('newsfeed.getRecommended', {
       ...?params,
     });
@@ -183,7 +183,7 @@ class Newsfeed {
   /// `shuffle` *(boolean)* shuffle the returned list or not.
   ///
   /// `fields` *(array)* list of extra fields to be returned. See available fields for [communities](https://vk.com/dev/fields|users] and [vk.com/dev/fields_groups).
-  Future<Map> getSuggestedSources([Map<String, dynamic> params]) async {
+  Future<dynamic> getSuggestedSources([Map<String, dynamic> params]) async {
     return _api.request('newsfeed.getSuggestedSources', {
       ...?params,
     });
@@ -198,7 +198,7 @@ class Newsfeed {
   /// `owner_id` *(integer)* Item owner's identifier (user or community), "Note that community id must be negative. 'owner_id=1' – user , 'owner_id=-1' – community "
   ///
   /// `item_id` *(integer)* Item identifier
-  Future<Map> ignoreItem([Map<String, dynamic> params]) async {
+  Future<dynamic> ignoreItem([Map<String, dynamic> params]) async {
     return _api.request('newsfeed.ignoreItem', {
       ...?params,
     });
@@ -215,7 +215,7 @@ class Newsfeed {
   /// `source_ids` *(array)* users and communities identifiers to be added to the list. Community identifiers must be negative numbers.
   ///
   /// `no_reposts` *(boolean)* reposts display on and off ('1' is for off).
-  Future<Map> saveList([Map<String, dynamic> params]) async {
+  Future<dynamic> saveList([Map<String, dynamic> params]) async {
     return _api.request('newsfeed.saveList', {
       ...?params,
     });
@@ -242,7 +242,7 @@ class Newsfeed {
   /// `start_from` *(string)*
   ///
   /// `fields` *(array)* Additional fields of [communities](https://vk.com/dev/fields|profiles] and [vk.com/dev/fields_groups) to return.
-  Future<Map> search([Map<String, dynamic> params]) async {
+  Future<dynamic> search([Map<String, dynamic> params]) async {
     return _api.request('newsfeed.search', {
       ...?params,
     });
@@ -257,7 +257,7 @@ class Newsfeed {
   /// `owner_id` *(integer)* Item owner's identifier (user or community), "Note that community id must be negative. 'owner_id=1' – user , 'owner_id=-1' – community "
   ///
   /// `item_id` *(integer)* Item identifier
-  Future<Map> unignoreItem([Map<String, dynamic> params]) async {
+  Future<dynamic> unignoreItem([Map<String, dynamic> params]) async {
     return _api.request('newsfeed.unignoreItem', {
       ...?params,
     });
@@ -272,7 +272,7 @@ class Newsfeed {
   /// `owner_id` *(integer)* Object owner ID.
   ///
   /// `item_id` *(integer)* Object ID.
-  Future<Map> unsubscribe([Map<String, dynamic> params]) async {
+  Future<dynamic> unsubscribe([Map<String, dynamic> params]) async {
     return _api.request('newsfeed.unsubscribe', {
       ...?params,
     });

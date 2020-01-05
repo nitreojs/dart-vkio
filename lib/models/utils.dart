@@ -20,7 +20,7 @@ class Utils {
   /// Params:
   ///
   /// `url` *(string)* Link to check (e.g., 'http://google.com').
-  Future<Map> checkLink([Map<String, dynamic> params]) async {
+  Future<dynamic> checkLink([Map<String, dynamic> params]) async {
     return _api.request('utils.checkLink', {
       ...?params,
     });
@@ -31,7 +31,7 @@ class Utils {
   /// Params:
   ///
   /// `key` *(string)* Link key (characters after vk.cc/).
-  Future<Map> deleteFromLastShortened([Map<String, dynamic> params]) async {
+  Future<dynamic> deleteFromLastShortened([Map<String, dynamic> params]) async {
     return _api.request('utils.deleteFromLastShortened', {
       ...?params,
     });
@@ -44,7 +44,7 @@ class Utils {
   /// `count` *(integer)* Number of links to return., default: 10
   ///
   /// `offset` *(integer)* Offset needed to return a specific subset of links.
-  Future<Map> getLastShortenedLinks([Map<String, dynamic> params]) async {
+  Future<dynamic> getLastShortenedLinks([Map<String, dynamic> params]) async {
     return _api.request('utils.getLastShortenedLinks', {
       ...?params,
     });
@@ -65,7 +65,7 @@ class Utils {
   /// `intervals_count` *(integer)* Number of intervals to return., default: 1, max: 100
   ///
   /// `extended` *(boolean)* 1 — to return extended stats data (sex, age, geo). 0 — to return views number only.
-  Future<Map> getLinkStats([Map<String, dynamic> params]) async {
+  Future<dynamic> getLinkStats([Map<String, dynamic> params]) async {
     return _api.request('utils.getLinkStats', {
       ...?params,
     });
@@ -74,7 +74,7 @@ class Utils {
   /// Returns the current time of the VK server.
   ///
   /// Params: none
-  Future<Map> getServerTime([Map<String, dynamic> params]) async {
+  Future<dynamic> getServerTime([Map<String, dynamic> params]) async {
     return _api.request('utils.getServerTime', {
       ...?params,
     });
@@ -87,7 +87,7 @@ class Utils {
   /// `url` *(string)* URL to be shortened.
   ///
   /// `private` *(boolean)* 1 — private stats, 0 — public stats.
-  Future<Map> getShortLink([Map<String, dynamic> params]) async {
+  Future<dynamic> getShortLink([Map<String, dynamic> params]) async {
     return _api.request('utils.getShortLink', {
       ...?params,
     });
@@ -98,7 +98,7 @@ class Utils {
   /// Params:
   ///
   /// `screen_name` *(string)* Screen name of the user, community (e.g., 'apiclub,' 'andrew', or 'rules_of_war'), or application.
-  Future<Map> resolveScreenName([Map<String, dynamic> params]) async {
+  Future<dynamic> resolveScreenName([Map<String, dynamic> params]) async {
     return _api.request('utils.resolveScreenName', {
       ...?params,
     });

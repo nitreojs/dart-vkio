@@ -24,7 +24,7 @@ class Video {
   /// `video_id` *(integer)* Video ID.
   ///
   /// `owner_id` *(integer)* ID of the user or community that owns the video. Use a negative value to designate a community ID.
-  Future<Map> add([Map<String, dynamic> params]) async {
+  Future<dynamic> add([Map<String, dynamic> params]) async {
     return _api.request('video.add', {
       ...?params,
     });
@@ -39,7 +39,7 @@ class Video {
   /// `title` *(string)* Album title.
   ///
   /// `privacy` *(array)* new access permissions for the album. Possible values: , *'0' – all users,, *'1' – friends only,, *'2' – friends and friends of friends,, *'3' – "only me".
-  Future<Map> addAlbum([Map<String, dynamic> params]) async {
+  Future<dynamic> addAlbum([Map<String, dynamic> params]) async {
     return _api.request('video.addAlbum', {
       ...?params,
     });
@@ -56,7 +56,7 @@ class Video {
   /// `owner_id` *(integer)*
   ///
   /// `video_id` *(integer)*
-  Future<Map> addToAlbum([Map<String, dynamic> params]) async {
+  Future<dynamic> addToAlbum([Map<String, dynamic> params]) async {
     return _api.request('video.addToAlbum', {
       ...?params,
     });
@@ -81,7 +81,7 @@ class Video {
   /// `sticker_id` *(integer)*
   ///
   /// `guid` *(string)*
-  Future<Map> createComment([Map<String, dynamic> params]) async {
+  Future<dynamic> createComment([Map<String, dynamic> params]) async {
     return _api.request('video.createComment', {
       ...?params,
     });
@@ -96,7 +96,7 @@ class Video {
   /// `owner_id` *(integer)* ID of the user or community that owns the video.
   ///
   /// `target_id` *(integer)*
-  Future<Map> delete([Map<String, dynamic> params]) async {
+  Future<dynamic> delete([Map<String, dynamic> params]) async {
     return _api.request('video.delete', {
       ...?params,
     });
@@ -109,7 +109,7 @@ class Video {
   /// `group_id` *(integer)* Community ID (if the album is owned by a community).
   ///
   /// `album_id` *(integer)* Album ID.
-  Future<Map> deleteAlbum([Map<String, dynamic> params]) async {
+  Future<dynamic> deleteAlbum([Map<String, dynamic> params]) async {
     return _api.request('video.deleteAlbum', {
       ...?params,
     });
@@ -122,7 +122,7 @@ class Video {
   /// `owner_id` *(integer)* ID of the user or community that owns the video.
   ///
   /// `comment_id` *(integer)* ID of the comment to be deleted.
-  Future<Map> deleteComment([Map<String, dynamic> params]) async {
+  Future<dynamic> deleteComment([Map<String, dynamic> params]) async {
     return _api.request('video.deleteComment', {
       ...?params,
     });
@@ -147,7 +147,7 @@ class Video {
   /// `no_comments` *(boolean)* Disable comments for the group video.
   ///
   /// `repeat` *(boolean)* '1' — to repeat the playback of the video, '0' — to play the video once,
-  Future<Map> edit([Map<String, dynamic> params]) async {
+  Future<dynamic> edit([Map<String, dynamic> params]) async {
     return _api.request('video.edit', {
       ...?params,
     });
@@ -164,7 +164,7 @@ class Video {
   /// `title` *(string)* New album title.
   ///
   /// `privacy` *(array)* new access permissions for the album. Possible values: , *'0' – all users,, *'1' – friends only,, *'2' – friends and friends of friends,, *'3' – "only me".
-  Future<Map> editAlbum([Map<String, dynamic> params]) async {
+  Future<dynamic> editAlbum([Map<String, dynamic> params]) async {
     return _api.request('video.editAlbum', {
       ...?params,
     });
@@ -181,7 +181,7 @@ class Video {
   /// `message` *(string)* New comment text.
   ///
   /// `attachments` *(array)* List of objects attached to the comment, in the following format: "<owner_id>_<media_id>,<owner_id>_<media_id>", '' — Type of media attachment: 'photo' — photo, 'video' — video, 'audio' — audio, 'doc' — document, '<owner_id>' — ID of the media attachment owner. '<media_id>' — Media attachment ID. Example: "photo100172_166443618,photo66748_265827614"
-  Future<Map> editComment([Map<String, dynamic> params]) async {
+  Future<dynamic> editComment([Map<String, dynamic> params]) async {
     return _api.request('video.editComment', {
       ...?params,
     });
@@ -202,7 +202,7 @@ class Video {
   /// `offset` *(integer)* Offset needed to return a specific subset of videos.
   ///
   /// `extended` *(boolean)* '1' — to return an extended response with additional fields
-  Future<Map> get([Map<String, dynamic> params]) async {
+  Future<dynamic> get([Map<String, dynamic> params]) async {
     return _api.request('video.get', {
       ...?params,
     });
@@ -215,7 +215,7 @@ class Video {
   /// `owner_id` *(integer)* identifier of a user or community to add a video to. Use a negative value to designate a community ID.
   ///
   /// `album_id` *(integer)* Album ID.
-  Future<Map> getAlbumById([Map<String, dynamic> params]) async {
+  Future<dynamic> getAlbumById([Map<String, dynamic> params]) async {
     return _api.request('video.getAlbumById', {
       ...?params,
     });
@@ -234,7 +234,7 @@ class Video {
   /// `extended` *(boolean)* '1' — to return additional information about album privacy settings for the current user
   ///
   /// `need_system` *(boolean)*
-  Future<Map> getAlbums([Map<String, dynamic> params]) async {
+  Future<dynamic> getAlbums([Map<String, dynamic> params]) async {
     return _api.request('video.getAlbums', {
       ...?params,
     });
@@ -249,7 +249,7 @@ class Video {
   /// `video_id` *(integer)*
   ///
   /// `extended` *(boolean)*
-  Future<Map> getAlbumsByVideo([Map<String, dynamic> params]) async {
+  Future<dynamic> getAlbumsByVideo([Map<String, dynamic> params]) async {
     return _api.request('video.getAlbumsByVideo', {
       ...?params,
     });
@@ -276,7 +276,7 @@ class Video {
   /// `extended` *(boolean)*
   ///
   /// `fields` *(array)*
-  Future<Map> getComments([Map<String, dynamic> params]) async {
+  Future<dynamic> getComments([Map<String, dynamic> params]) async {
     return _api.request('video.getComments', {
       ...?params,
     });
@@ -293,7 +293,7 @@ class Video {
   /// `owner_id` *(integer)*
   ///
   /// `video_id` *(integer)*
-  Future<Map> removeFromAlbum([Map<String, dynamic> params]) async {
+  Future<dynamic> removeFromAlbum([Map<String, dynamic> params]) async {
     return _api.request('video.removeFromAlbum', {
       ...?params,
     });
@@ -310,7 +310,7 @@ class Video {
   /// `before` *(integer)* ID of the album before which the album in question shall be placed.
   ///
   /// `after` *(integer)* ID of the album after which the album in question shall be placed.
-  Future<Map> reorderAlbums([Map<String, dynamic> params]) async {
+  Future<dynamic> reorderAlbums([Map<String, dynamic> params]) async {
     return _api.request('video.reorderAlbums', {
       ...?params,
     });
@@ -335,7 +335,7 @@ class Video {
   /// `after_owner_id` *(integer)* ID of the user or community that owns the video after which the photo in question shall be placed.
   ///
   /// `after_video_id` *(integer)* ID of the video after which the photo in question shall be placed.
-  Future<Map> reorderVideos([Map<String, dynamic> params]) async {
+  Future<dynamic> reorderVideos([Map<String, dynamic> params]) async {
     return _api.request('video.reorderVideos', {
       ...?params,
     });
@@ -354,7 +354,7 @@ class Video {
   /// `comment` *(string)* Comment describing the complaint.
   ///
   /// `search_query` *(string)* (If the video was found in search results.) Search query string.
-  Future<Map> report([Map<String, dynamic> params]) async {
+  Future<dynamic> report([Map<String, dynamic> params]) async {
     return _api.request('video.report', {
       ...?params,
     });
@@ -369,7 +369,7 @@ class Video {
   /// `comment_id` *(integer)* ID of the comment being reported.
   ///
   /// `reason` *(integer)* Reason for the complaint: , 0 – spam , 1 – child pornography , 2 – extremism , 3 – violence , 4 – drug propaganda , 5 – adult material , 6 – insult, abuse
-  Future<Map> reportComment([Map<String, dynamic> params]) async {
+  Future<dynamic> reportComment([Map<String, dynamic> params]) async {
     return _api.request('video.reportComment', {
       ...?params,
     });
@@ -382,7 +382,7 @@ class Video {
   /// `video_id` *(integer)* Video ID.
   ///
   /// `owner_id` *(integer)* ID of the user or community that owns the video.
-  Future<Map> restore([Map<String, dynamic> params]) async {
+  Future<dynamic> restore([Map<String, dynamic> params]) async {
     return _api.request('video.restore', {
       ...?params,
     });
@@ -395,7 +395,7 @@ class Video {
   /// `owner_id` *(integer)* ID of the user or community that owns the video.
   ///
   /// `comment_id` *(integer)* ID of the deleted comment.
-  Future<Map> restoreComment([Map<String, dynamic> params]) async {
+  Future<dynamic> restoreComment([Map<String, dynamic> params]) async {
     return _api.request('video.restoreComment', {
       ...?params,
     });
@@ -428,7 +428,7 @@ class Video {
   /// `repeat` *(boolean)* '1' — to repeat the playback of the video, '0' — to play the video once,
   ///
   /// `compression` *(boolean)*
-  Future<Map> save([Map<String, dynamic> params]) async {
+  Future<dynamic> save([Map<String, dynamic> params]) async {
     return _api.request('video.save', {
       ...?params,
     });
@@ -459,7 +459,7 @@ class Video {
   /// `count` *(integer)* Number of videos to return., default: 20, max: 200
   ///
   /// `extended` *(boolean)*
-  Future<Map> search([Map<String, dynamic> params]) async {
+  Future<dynamic> search([Map<String, dynamic> params]) async {
     return _api.request('video.search', {
       ...?params,
     });

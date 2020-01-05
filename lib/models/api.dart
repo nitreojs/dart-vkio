@@ -202,7 +202,7 @@ class API {
     return 'API';
   }
 
-  Future<Map> request(String method, [Map<String, dynamic> rawParams]) async {
+  Future<dynamic> request(String method, [Map<String, dynamic> rawParams]) async {
     var params = {...?rawParams};
 
     for (var item in params.entries) {
@@ -243,18 +243,18 @@ class API {
       ).error;
     }
 
-    return json;
+    return json['response'];
   }
 
   /// Call an API [method] with [params]
-  Future<Map> call(String method, [Map<String, dynamic> params]) async {
+  Future<dynamic> call(String method, [Map<String, dynamic> params]) async {
     return request(method, {
       ...?params,
     });
   }
 
   /// Execute [code]
-  Future<Map> execute(String code) async {
+  Future<dynamic> execute(String code) async {
     return call('execute', {
       'code': code,
     });

@@ -26,7 +26,7 @@ class Auth {
   /// `client_secret` *(string)*
   ///
   /// `auth_by_phone` *(boolean)*
-  Future<Map> checkPhone([Map<String, dynamic> params]) async {
+  Future<dynamic> checkPhone([Map<String, dynamic> params]) async {
     return _api.request('auth.checkPhone', {
       ...?params,
     });
@@ -39,7 +39,7 @@ class Auth {
   /// `phone` *(string)* User phone number.
   ///
   /// `last_name` *(string)* User last name.
-  Future<Map> restore([Map<String, dynamic> params]) async {
+  Future<dynamic> restore([Map<String, dynamic> params]) async {
     return _api.request('auth.restore', {
       ...?params,
     });

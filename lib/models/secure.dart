@@ -24,7 +24,7 @@ class Secure {
   /// `activity_id` *(integer)* there are 2 default activities: , * 1 – level. Works similar to ,, * 2 – points, saves points amount, Any other value is for saving completed missions
   ///
   /// `value` *(integer)* depends on activity_id: * 1 – number, current level number,, * 2 – number, current user's points amount, , Any other value is ignored
-  Future<Map> addAppEvent([Map<String, dynamic> params]) async {
+  Future<dynamic> addAppEvent([Map<String, dynamic> params]) async {
     return _api.request('secure.addAppEvent', {
       ...?params,
     });
@@ -37,7 +37,7 @@ class Secure {
   /// `token` *(string)* client 'access_token'
   ///
   /// `ip` *(string)* user 'ip address'. Note that user may access using the 'ipv6' address, in this case it is required to transmit the 'ipv6' address. If not transmitted, the address will not be checked.
-  Future<Map> checkToken([Map<String, dynamic> params]) async {
+  Future<dynamic> checkToken([Map<String, dynamic> params]) async {
     return _api.request('secure.checkToken', {
       ...?params,
     });
@@ -46,7 +46,7 @@ class Secure {
   /// Returns payment balance of the application in hundredth of a vote.
   ///
   /// Params: none
-  Future<Map> getAppBalance([Map<String, dynamic> params]) async {
+  Future<dynamic> getAppBalance([Map<String, dynamic> params]) async {
     return _api.request('secure.getAppBalance', {
       ...?params,
     });
@@ -63,7 +63,7 @@ class Secure {
   /// `date_to` *(integer)* filter by end date. It is set as UNIX-time.
   ///
   /// `limit` *(integer)* number of returned posts. By default — 1000., default: 1000, max: 1000
-  Future<Map> getSMSHistory([Map<String, dynamic> params]) async {
+  Future<dynamic> getSMSHistory([Map<String, dynamic> params]) async {
     return _api.request('secure.getSMSHistory', {
       ...?params,
     });
@@ -84,7 +84,7 @@ class Secure {
   /// `date_to` *(integer)*
   ///
   /// `limit` *(integer)*, default: 1000, max: 1000
-  Future<Map> getTransactionsHistory([Map<String, dynamic> params]) async {
+  Future<dynamic> getTransactionsHistory([Map<String, dynamic> params]) async {
     return _api.request('secure.getTransactionsHistory', {
       ...?params,
     });
@@ -95,7 +95,7 @@ class Secure {
   /// Params:
   ///
   /// `user_ids` *(array)*
-  Future<Map> getUserLevel([Map<String, dynamic> params]) async {
+  Future<dynamic> getUserLevel([Map<String, dynamic> params]) async {
     return _api.request('secure.getUserLevel', {
       ...?params,
     });
@@ -108,7 +108,7 @@ class Secure {
   /// `user_ids` *(array)*
   ///
   /// `achievement_id` *(integer)*
-  Future<Map> giveEventSticker([Map<String, dynamic> params]) async {
+  Future<dynamic> giveEventSticker([Map<String, dynamic> params]) async {
     return _api.request('secure.giveEventSticker', {
       ...?params,
     });
@@ -123,7 +123,7 @@ class Secure {
   /// `user_id` *(integer)*
   ///
   /// `message` *(string)* notification text which should be sent in 'UTF-8' encoding ('254' characters maximum).
-  Future<Map> sendNotification([Map<String, dynamic> params]) async {
+  Future<dynamic> sendNotification([Map<String, dynamic> params]) async {
     return _api.request('secure.sendNotification', {
       ...?params,
     });
@@ -136,7 +136,7 @@ class Secure {
   /// `user_id` *(integer)* ID of the user to whom SMS notification is sent. The user shall allow the application to send him/her notifications (, +1).
   ///
   /// `message` *(string)* 'SMS' text to be sent in 'UTF-8' encoding. Only Latin letters and numbers are allowed. Maximum size is '160' characters.
-  Future<Map> sendSMSNotification([Map<String, dynamic> params]) async {
+  Future<dynamic> sendSMSNotification([Map<String, dynamic> params]) async {
     return _api.request('secure.sendSMSNotification', {
       ...?params,
     });
@@ -153,7 +153,7 @@ class Secure {
   /// `counter` *(integer)* counter value.
   ///
   /// `increment` *(boolean)*
-  Future<Map> setCounter([Map<String, dynamic> params]) async {
+  Future<dynamic> setCounter([Map<String, dynamic> params]) async {
     return _api.request('secure.setCounter', {
       ...?params,
     });

@@ -22,7 +22,7 @@ class Orders {
   /// `subscription_id` *(integer)*
   ///
   /// `pending_cancel` *(boolean)*
-  Future<Map> cancelSubscription([Map<String, dynamic> params]) async {
+  Future<dynamic> cancelSubscription([Map<String, dynamic> params]) async {
     return _api.request('orders.cancelSubscription', {
       ...?params,
     });
@@ -39,7 +39,7 @@ class Orders {
   /// `app_order_id` *(integer)* internal ID of the order in the application.
   ///
   /// `test_mode` *(boolean)* if this parameter is set to 1, this method returns a list of test mode orders. By default — 0.
-  Future<Map> changeState([Map<String, dynamic> params]) async {
+  Future<dynamic> changeState([Map<String, dynamic> params]) async {
     return _api.request('orders.changeState', {
       ...?params,
     });
@@ -54,7 +54,7 @@ class Orders {
   /// `count` *(integer)* number of returned orders., default: 100, max: 1000
   ///
   /// `test_mode` *(boolean)* if this parameter is set to 1, this method returns a list of test mode orders. By default — 0.
-  Future<Map> get([Map<String, dynamic> params]) async {
+  Future<dynamic> get([Map<String, dynamic> params]) async {
     return _api.request('orders.get', {
       ...?params,
     });
@@ -65,7 +65,7 @@ class Orders {
   /// `user_id` *(integer)*
   ///
   /// `votes` *(array)*
-  Future<Map> getAmount([Map<String, dynamic> params]) async {
+  Future<dynamic> getAmount([Map<String, dynamic> params]) async {
     return _api.request('orders.getAmount', {
       ...?params,
     });
@@ -80,7 +80,7 @@ class Orders {
   /// `order_ids` *(array)* order IDs (when information about several orders is requested).
   ///
   /// `test_mode` *(boolean)* if this parameter is set to 1, this method returns a list of test mode orders. By default — 0.
-  Future<Map> getById([Map<String, dynamic> params]) async {
+  Future<dynamic> getById([Map<String, dynamic> params]) async {
     return _api.request('orders.getById', {
       ...?params,
     });
@@ -91,7 +91,7 @@ class Orders {
   /// `user_id` *(integer)*
   ///
   /// `subscription_id` *(integer)*
-  Future<Map> getUserSubscriptionById([Map<String, dynamic> params]) async {
+  Future<dynamic> getUserSubscriptionById([Map<String, dynamic> params]) async {
     return _api.request('orders.getUserSubscriptionById', {
       ...?params,
     });
@@ -100,7 +100,7 @@ class Orders {
   /// Params:
   ///
   /// `user_id` *(integer)*
-  Future<Map> getUserSubscriptions([Map<String, dynamic> params]) async {
+  Future<dynamic> getUserSubscriptions([Map<String, dynamic> params]) async {
     return _api.request('orders.getUserSubscriptions', {
       ...?params,
     });
@@ -113,7 +113,7 @@ class Orders {
   /// `subscription_id` *(integer)*
   ///
   /// `price` *(integer)*
-  Future<Map> updateSubscription([Map<String, dynamic> params]) async {
+  Future<dynamic> updateSubscription([Map<String, dynamic> params]) async {
     return _api.request('orders.updateSubscription', {
       ...?params,
     });

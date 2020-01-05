@@ -30,7 +30,7 @@ class PrettyCards {
   /// `price_old` *(string)*
   ///
   /// `button` *(string)*
-  Future<Map> create([Map<String, dynamic> params]) async {
+  Future<dynamic> create([Map<String, dynamic> params]) async {
     return _api.request('prettycards.create', {
       ...?params,
     });
@@ -41,7 +41,7 @@ class PrettyCards {
   /// `owner_id` *(integer)*
   ///
   /// `card_id` *(integer)*
-  Future<Map> delete([Map<String, dynamic> params]) async {
+  Future<dynamic> delete([Map<String, dynamic> params]) async {
     return _api.request('prettycards.delete', {
       ...?params,
     });
@@ -64,7 +64,7 @@ class PrettyCards {
   /// `price_old` *(string)*
   ///
   /// `button` *(string)*
-  Future<Map> edit([Map<String, dynamic> params]) async {
+  Future<dynamic> edit([Map<String, dynamic> params]) async {
     return _api.request('prettycards.edit', {
       ...?params,
     });
@@ -77,7 +77,7 @@ class PrettyCards {
   /// `offset` *(integer)*
   ///
   /// `count` *(integer)*, default: 10, max: 100
-  Future<Map> get([Map<String, dynamic> params]) async {
+  Future<dynamic> get([Map<String, dynamic> params]) async {
     return _api.request('prettycards.get', {
       ...?params,
     });
@@ -88,14 +88,14 @@ class PrettyCards {
   /// `owner_id` *(integer)*
   ///
   /// `card_ids` *(array)*
-  Future<Map> getById([Map<String, dynamic> params]) async {
+  Future<dynamic> getById([Map<String, dynamic> params]) async {
     return _api.request('prettycards.getById', {
       ...?params,
     });
   }
 
   /// Params: none
-  Future<Map> getUploadURL([Map<String, dynamic> params]) async {
+  Future<dynamic> getUploadURL([Map<String, dynamic> params]) async {
     return _api.request('prettycards.getUploadURL', {
       ...?params,
     });

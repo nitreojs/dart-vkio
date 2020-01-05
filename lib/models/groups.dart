@@ -42,7 +42,7 @@ class Groups {
   /// `timetable` *(string)*
   ///
   /// `is_main_address` *(boolean)*
-  Future<Map> addAddress([Map<String, dynamic> params]) async {
+  Future<dynamic> addAddress([Map<String, dynamic> params]) async {
     return _api.request('groups.addAddress', {
       ...?params,
     });
@@ -57,7 +57,7 @@ class Groups {
   /// `title` *(string)*
   ///
   /// `secret_key` *(string)*
-  Future<Map> addCallbackServer([Map<String, dynamic> params]) async {
+  Future<dynamic> addCallbackServer([Map<String, dynamic> params]) async {
     return _api.request('groups.addCallbackServer', {
       ...?params,
     });
@@ -72,7 +72,7 @@ class Groups {
   /// `link` *(string)* Link URL.
   ///
   /// `text` *(string)* Description text for the link.
-  Future<Map> addLink([Map<String, dynamic> params]) async {
+  Future<dynamic> addLink([Map<String, dynamic> params]) async {
     return _api.request('groups.addLink', {
       ...?params,
     });
@@ -85,7 +85,7 @@ class Groups {
   /// `group_id` *(integer)* Community ID.
   ///
   /// `user_id` *(integer)* User ID.
-  Future<Map> approveRequest([Map<String, dynamic> params]) async {
+  Future<dynamic> approveRequest([Map<String, dynamic> params]) async {
     return _api.request('groups.approveRequest', {
       ...?params,
     });
@@ -104,7 +104,7 @@ class Groups {
   /// `comment` *(string)*
   ///
   /// `comment_visible` *(boolean)*
-  Future<Map> ban([Map<String, dynamic> params]) async {
+  Future<dynamic> ban([Map<String, dynamic> params]) async {
     return _api.request('groups.ban', {
       ...?params,
     });
@@ -123,7 +123,7 @@ class Groups {
   /// `public_category` *(integer)* Category ID (for 'type' = 'public' only).
   ///
   /// `subtype` *(integer)* Public page subtype. Possible values: *'1' – place or small business,, *'2' – company, organization or website,, *'3' – famous person or group of people,, *'4' – product or work of art.
-  Future<Map> create([Map<String, dynamic> params]) async {
+  Future<dynamic> create([Map<String, dynamic> params]) async {
     return _api.request('groups.create', {
       ...?params,
     });
@@ -134,7 +134,7 @@ class Groups {
   /// `group_id` *(integer)*
   ///
   /// `server_id` *(integer)*
-  Future<Map> deleteCallbackServer([Map<String, dynamic> params]) async {
+  Future<dynamic> deleteCallbackServer([Map<String, dynamic> params]) async {
     return _api.request('groups.deleteCallbackServer', {
       ...?params,
     });
@@ -147,7 +147,7 @@ class Groups {
   /// `group_id` *(integer)* Community ID.
   ///
   /// `link_id` *(integer)* Link ID.
-  Future<Map> deleteLink([Map<String, dynamic> params]) async {
+  Future<dynamic> deleteLink([Map<String, dynamic> params]) async {
     return _api.request('groups.deleteLink', {
       ...?params,
     });
@@ -156,7 +156,7 @@ class Groups {
   /// Params:
   ///
   /// `group_id` *(integer)*
-  Future<Map> disableOnline([Map<String, dynamic> params]) async {
+  Future<dynamic> disableOnline([Map<String, dynamic> params]) async {
     return _api.request('groups.disableOnline', {
       ...?params,
     });
@@ -255,7 +255,7 @@ class Groups {
   /// `country` *(integer)* Country of the community.
   ///
   /// `city` *(integer)* City of the community.
-  Future<Map> edit([Map<String, dynamic> params]) async {
+  Future<dynamic> edit([Map<String, dynamic> params]) async {
     return _api.request('groups.edit', {
       ...?params,
     });
@@ -290,7 +290,7 @@ class Groups {
   /// `timetable` *(string)*
   ///
   /// `is_main_address` *(boolean)*
-  Future<Map> editAddress([Map<String, dynamic> params]) async {
+  Future<dynamic> editAddress([Map<String, dynamic> params]) async {
     return _api.request('groups.editAddress', {
       ...?params,
     });
@@ -307,7 +307,7 @@ class Groups {
   /// `title` *(string)*
   ///
   /// `secret_key` *(string)*
-  Future<Map> editCallbackServer([Map<String, dynamic> params]) async {
+  Future<dynamic> editCallbackServer([Map<String, dynamic> params]) async {
     return _api.request('groups.editCallbackServer', {
       ...?params,
     });
@@ -322,7 +322,7 @@ class Groups {
   /// `link_id` *(integer)* Link ID.
   ///
   /// `text` *(string)* New description text for the link.
-  Future<Map> editLink([Map<String, dynamic> params]) async {
+  Future<dynamic> editLink([Map<String, dynamic> params]) async {
     return _api.request('groups.editLink', {
       ...?params,
     });
@@ -345,7 +345,7 @@ class Groups {
   /// `contact_phone` *(string)* Contact phone.
   ///
   /// `contact_email` *(string)* Contact e-mail.
-  Future<Map> editManager([Map<String, dynamic> params]) async {
+  Future<dynamic> editManager([Map<String, dynamic> params]) async {
     return _api.request('groups.editManager', {
       ...?params,
     });
@@ -354,7 +354,7 @@ class Groups {
   /// Params:
   ///
   /// `group_id` *(integer)*
-  Future<Map> enableOnline([Map<String, dynamic> params]) async {
+  Future<dynamic> enableOnline([Map<String, dynamic> params]) async {
     return _api.request('groups.enableOnline', {
       ...?params,
     });
@@ -375,7 +375,7 @@ class Groups {
   /// `offset` *(integer)* Offset needed to return a specific subset of communities.
   ///
   /// `count` *(integer)* Number of communities to return., max: 1000
-  Future<Map> get([Map<String, dynamic> params]) async {
+  Future<dynamic> get([Map<String, dynamic> params]) async {
     return _api.request('groups.get', {
       ...?params,
     });
@@ -398,7 +398,7 @@ class Groups {
   /// `count` *(integer)* Number of community addresses to return., default: 10
   ///
   /// `fields` *(array)* Address fields, default: id,title,address,additional_address,country_id,city_id,metro_station_id,latitude,longitude,distance,work_info_status,timetable,phone,time_offset
-  Future<Map> getAddresses([Map<String, dynamic> params]) async {
+  Future<dynamic> getAddresses([Map<String, dynamic> params]) async {
     return _api.request('groups.getAddresses', {
       ...?params,
     });
@@ -417,7 +417,7 @@ class Groups {
   /// `fields` *(array)*
   ///
   /// `owner_id` *(integer)*
-  Future<Map> getBanned([Map<String, dynamic> params]) async {
+  Future<dynamic> getBanned([Map<String, dynamic> params]) async {
     return _api.request('groups.getBanned', {
       ...?params,
     });
@@ -432,7 +432,7 @@ class Groups {
   /// `group_id` *(string)* ID or screen name of the community.
   ///
   /// `fields` *(array)* Group fields to return.
-  Future<Map> getById([Map<String, dynamic> params]) async {
+  Future<dynamic> getById([Map<String, dynamic> params]) async {
     return _api.request('groups.getById', {
       ...?params,
     });
@@ -443,7 +443,7 @@ class Groups {
   /// Params:
   ///
   /// `group_id` *(integer)* Community ID.
-  Future<Map> getCallbackConfirmationCode([Map<String, dynamic> params]) async {
+  Future<dynamic> getCallbackConfirmationCode([Map<String, dynamic> params]) async {
     return _api.request('groups.getCallbackConfirmationCode', {
       ...?params,
     });
@@ -454,7 +454,7 @@ class Groups {
   /// `group_id` *(integer)*
   ///
   /// `server_ids` *(array)*
-  Future<Map> getCallbackServers([Map<String, dynamic> params]) async {
+  Future<dynamic> getCallbackServers([Map<String, dynamic> params]) async {
     return _api.request('groups.getCallbackServers', {
       ...?params,
     });
@@ -467,7 +467,7 @@ class Groups {
   /// `group_id` *(integer)* Community ID.
   ///
   /// `server_id` *(integer)* Server ID.
-  Future<Map> getCallbackSettings([Map<String, dynamic> params]) async {
+  Future<dynamic> getCallbackSettings([Map<String, dynamic> params]) async {
     return _api.request('groups.getCallbackSettings', {
       ...?params,
     });
@@ -480,7 +480,7 @@ class Groups {
   /// `category_id` *(integer)* Category id received from [groups.getCatalogInfo](https://vk.com/dev/groups.getCatalogInfo).
   ///
   /// `subcategory_id` *(integer)* Subcategory id received from [groups.getCatalogInfo](https://vk.com/dev/groups.getCatalogInfo)., max: 99
-  Future<Map> getCatalog([Map<String, dynamic> params]) async {
+  Future<dynamic> getCatalog([Map<String, dynamic> params]) async {
     return _api.request('groups.getCatalog', {
       ...?params,
     });
@@ -493,7 +493,7 @@ class Groups {
   /// `extended` *(boolean)* 1 – to return communities count and three communities for preview. By default: 0.
   ///
   /// `subcategories` *(boolean)* 1 – to return subcategories info. By default: 0.
-  Future<Map> getCatalogInfo([Map<String, dynamic> params]) async {
+  Future<dynamic> getCatalogInfo([Map<String, dynamic> params]) async {
     return _api.request('groups.getCatalogInfo', {
       ...?params,
     });
@@ -512,7 +512,7 @@ class Groups {
   /// `fields` *(array)* List of additional fields to be returned. Available values: 'sex, bdate, city, country, photo_50, photo_100, photo_200_orig, photo_200, photo_400_orig, photo_max, photo_max_orig, online, online_mobile, lists, domain, has_mobile, contacts, connections, site, education, universities, schools, can_post, can_see_all_posts, can_see_audio, can_write_private_message, status, last_seen, common_count, relation, relatives, counters'.
   ///
   /// `name_case` *(string)* Case for declension of user name and surname. Possible values: *'nom' — nominative (default),, *'gen' — genitive,, *'dat' — dative,, *'acc' — accusative, , *'ins' — instrumental,, *'abl' — prepositional.
-  Future<Map> getInvitedUsers([Map<String, dynamic> params]) async {
+  Future<dynamic> getInvitedUsers([Map<String, dynamic> params]) async {
     return _api.request('groups.getInvitedUsers', {
       ...?params,
     });
@@ -527,7 +527,7 @@ class Groups {
   /// `count` *(integer)* Number of invitations to return., default: 20
   ///
   /// `extended` *(boolean)* '1' — to return additional [fields](https://vk.com/dev/fields_groups) for communities..
-  Future<Map> getInvites([Map<String, dynamic> params]) async {
+  Future<dynamic> getInvites([Map<String, dynamic> params]) async {
     return _api.request('groups.getInvites', {
       ...?params,
     });
@@ -538,7 +538,7 @@ class Groups {
   /// Params:
   ///
   /// `group_id` *(integer)* Community ID
-  Future<Map> getLongPollServer([Map<String, dynamic> params]) async {
+  Future<dynamic> getLongPollServer([Map<String, dynamic> params]) async {
     return _api.request('groups.getLongPollServer', {
       ...?params,
     });
@@ -549,7 +549,7 @@ class Groups {
   /// Params:
   ///
   /// `group_id` *(integer)* Community ID.
-  Future<Map> getLongPollSettings([Map<String, dynamic> params]) async {
+  Future<dynamic> getLongPollSettings([Map<String, dynamic> params]) async {
     return _api.request('groups.getLongPollSettings', {
       ...?params,
     });
@@ -570,7 +570,7 @@ class Groups {
   /// `fields` *(array)* List of additional fields to be returned. Available values: 'sex, bdate, city, country, photo_50, photo_100, photo_200_orig, photo_200, photo_400_orig, photo_max, photo_max_orig, online, online_mobile, lists, domain, has_mobile, contacts, connections, site, education, universities, schools, can_post, can_see_all_posts, can_see_audio, can_write_private_message, status, last_seen, common_count, relation, relatives, counters'.
   ///
   /// `filter` *(string)* *'friends' – only friends in this community will be returned,, *'unsure' – only those who pressed 'I may attend' will be returned (if it's an event).
-  Future<Map> getMembers([Map<String, dynamic> params]) async {
+  Future<dynamic> getMembers([Map<String, dynamic> params]) async {
     return _api.request('groups.getMembers', {
       ...?params,
     });
@@ -587,7 +587,7 @@ class Groups {
   /// `count` *(integer)* Number of results to return., default: 20, max: 200
   ///
   /// `fields` *(array)* Profile fields to return.
-  Future<Map> getRequests([Map<String, dynamic> params]) async {
+  Future<dynamic> getRequests([Map<String, dynamic> params]) async {
     return _api.request('groups.getRequests', {
       ...?params,
     });
@@ -598,14 +598,14 @@ class Groups {
   /// Params:
   ///
   /// `group_id` *(integer)* Community ID.
-  Future<Map> getSettings([Map<String, dynamic> params]) async {
+  Future<dynamic> getSettings([Map<String, dynamic> params]) async {
     return _api.request('groups.getSettings', {
       ...?params,
     });
   }
 
   /// Params: none
-  Future<Map> getTokenPermissions([Map<String, dynamic> params]) async {
+  Future<dynamic> getTokenPermissions([Map<String, dynamic> params]) async {
     return _api.request('groups.getTokenPermissions', {
       ...?params,
     });
@@ -618,7 +618,7 @@ class Groups {
   /// `group_id` *(integer)* Community ID.
   ///
   /// `user_id` *(integer)* User ID.
-  Future<Map> invite([Map<String, dynamic> params]) async {
+  Future<dynamic> invite([Map<String, dynamic> params]) async {
     return _api.request('groups.invite', {
       ...?params,
     });
@@ -635,7 +635,7 @@ class Groups {
   /// `user_ids` *(array)* User IDs.
   ///
   /// `extended` *(boolean)* '1' — to return an extended response with additional fields. By default: '0'.
-  Future<Map> isMember([Map<String, dynamic> params]) async {
+  Future<dynamic> isMember([Map<String, dynamic> params]) async {
     return _api.request('groups.isMember', {
       ...?params,
     });
@@ -648,7 +648,7 @@ class Groups {
   /// `group_id` *(integer)* ID or screen name of the community.
   ///
   /// `not_sure` *(string)* Optional parameter which is taken into account when 'gid' belongs to the event: '1' — Perhaps I will attend, '0' — I will be there for sure (default), ,
-  Future<Map> join([Map<String, dynamic> params]) async {
+  Future<dynamic> join([Map<String, dynamic> params]) async {
     return _api.request('groups.join', {
       ...?params,
     });
@@ -659,7 +659,7 @@ class Groups {
   /// Params:
   ///
   /// `group_id` *(integer)* ID or screen name of the community.
-  Future<Map> leave([Map<String, dynamic> params]) async {
+  Future<dynamic> leave([Map<String, dynamic> params]) async {
     return _api.request('groups.leave', {
       ...?params,
     });
@@ -672,7 +672,7 @@ class Groups {
   /// `group_id` *(integer)* Community ID.
   ///
   /// `user_id` *(integer)* User ID.
-  Future<Map> removeUser([Map<String, dynamic> params]) async {
+  Future<dynamic> removeUser([Map<String, dynamic> params]) async {
     return _api.request('groups.removeUser', {
       ...?params,
     });
@@ -687,7 +687,7 @@ class Groups {
   /// `link_id` *(integer)* Link ID.
   ///
   /// `after` *(integer)* ID of the link after which to place the link with 'link_id'.
-  Future<Map> reorderLink([Map<String, dynamic> params]) async {
+  Future<dynamic> reorderLink([Map<String, dynamic> params]) async {
     return _api.request('groups.reorderLink', {
       ...?params,
     });
@@ -714,7 +714,7 @@ class Groups {
   /// `offset` *(integer)* Offset needed to return a specific subset of results.
   ///
   /// `count` *(integer)* Number of communities to return. "Note that you can not receive more than first thousand of results, regardless of 'count' and 'offset' values.", default: 20, max: 1000
-  Future<Map> search([Map<String, dynamic> params]) async {
+  Future<dynamic> search([Map<String, dynamic> params]) async {
     return _api.request('groups.search', {
       ...?params,
     });
@@ -807,7 +807,7 @@ class Groups {
   /// `user_unblock` *(boolean)* User removed from community blacklist
   ///
   /// `lead_forms_new` *(boolean)* New form in lead forms
-  Future<Map> setCallbackSettings([Map<String, dynamic> params]) async {
+  Future<dynamic> setCallbackSettings([Map<String, dynamic> params]) async {
     return _api.request('groups.setCallbackSettings', {
       ...?params,
     });
@@ -900,7 +900,7 @@ class Groups {
   /// `user_block` *(boolean)* User added to community blacklist
   ///
   /// `user_unblock` *(boolean)* User removed from community blacklist
-  Future<Map> setLongPollSettings([Map<String, dynamic> params]) async {
+  Future<dynamic> setLongPollSettings([Map<String, dynamic> params]) async {
     return _api.request('groups.setLongPollSettings', {
       ...?params,
     });
@@ -911,7 +911,7 @@ class Groups {
   /// `group_id` *(integer)*
   ///
   /// `owner_id` *(integer)*
-  Future<Map> unban([Map<String, dynamic> params]) async {
+  Future<dynamic> unban([Map<String, dynamic> params]) async {
     return _api.request('groups.unban', {
       ...?params,
     });
