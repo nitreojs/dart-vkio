@@ -226,7 +226,7 @@ class API {
   }
 
   /// Call an API [method] with [params]
-  Future<Map> call(String method, [Map<String, String> params]) async {
+  Future<Map> call(String method, [Map<String, dynamic> params]) async {
     return request(method, {
       ...?params,
     });

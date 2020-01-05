@@ -27,7 +27,7 @@ class Notifications {
   /// `start_time` *(integer)* Earliest timestamp (in Unix time) of a notification to return. By default, 24 hours ago.
   ///
   /// `end_time` *(integer)* Latest timestamp (in Unix time) of a notification to return. By default, the current time.
-  Future<Map> get([Map<String, String> params]) async {
+  Future<Map> get([Map<String, dynamic> params]) async {
     return _api.request('notifications.get', {
       ...?params,
     });
@@ -37,7 +37,7 @@ class Notifications {
   ///
   /// Params:
 
-  Future<Map> markAsViewed([Map<String, String> params]) async {
+  Future<Map> markAsViewed([Map<String, dynamic> params]) async {
     return _api.request('notifications.markAsViewed', {
       ...?params,
     });

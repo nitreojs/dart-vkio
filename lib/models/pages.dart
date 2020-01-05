@@ -19,7 +19,7 @@ class Pages {
   /// Params:
   ///
   /// `url` *(string)* Address of the page where you need to refesh the cached version
-  Future<Map> clearCache([Map<String, String> params]) async {
+  Future<Map> clearCache([Map<String, dynamic> params]) async {
     return _api.request('pages.clearCache', {
       ...?params,
     });
@@ -42,7 +42,7 @@ class Pages {
   /// `need_source` *(boolean)*
   ///
   /// `need_html` *(boolean)* '1' — to return the page as HTML,
-  Future<Map> get([Map<String, String> params]) async {
+  Future<Map> get([Map<String, dynamic> params]) async {
     return _api.request('pages.get', {
       ...?params,
     });
@@ -57,7 +57,7 @@ class Pages {
   /// `group_id` *(integer)* ID of the community that owns the wiki page.
   ///
   /// `user_id` *(integer)*
-  Future<Map> getHistory([Map<String, String> params]) async {
+  Future<Map> getHistory([Map<String, dynamic> params]) async {
     return _api.request('pages.getHistory', {
       ...?params,
     });
@@ -68,7 +68,7 @@ class Pages {
   /// Params:
   ///
   /// `group_id` *(integer)* ID of the community that owns the wiki page.
-  Future<Map> getTitles([Map<String, String> params]) async {
+  Future<Map> getTitles([Map<String, dynamic> params]) async {
     return _api.request('pages.getTitles', {
       ...?params,
     });
@@ -85,7 +85,7 @@ class Pages {
   /// `user_id` *(integer)*
   ///
   /// `need_html` *(boolean)* '1' — to return the page as HTML
-  Future<Map> getVersion([Map<String, String> params]) async {
+  Future<Map> getVersion([Map<String, dynamic> params]) async {
     return _api.request('pages.getVersion', {
       ...?params,
     });
@@ -98,7 +98,7 @@ class Pages {
   /// `text` *(string)* Text of the wiki page.
   ///
   /// `group_id` *(integer)* ID of the group in the context of which this markup is interpreted.
-  Future<Map> parseWiki([Map<String, String> params]) async {
+  Future<Map> parseWiki([Map<String, dynamic> params]) async {
     return _api.request('pages.parseWiki', {
       ...?params,
     });
@@ -117,7 +117,7 @@ class Pages {
   /// `user_id` *(integer)* User ID
   ///
   /// `title` *(string)* Wiki page title.
-  Future<Map> save([Map<String, String> params]) async {
+  Future<Map> save([Map<String, dynamic> params]) async {
     return _api.request('pages.save', {
       ...?params,
     });
@@ -136,7 +136,7 @@ class Pages {
   /// `view` *(integer)* Who can view the wiki page: '1' — only community members, '2' — all users can view the page, '0' — only community managers
   ///
   /// `edit` *(integer)* Who can edit the wiki page: '1' — only community members, '2' — all users can edit the page, '0' — only community managers
-  Future<Map> saveAccess([Map<String, String> params]) async {
+  Future<Map> saveAccess([Map<String, dynamic> params]) async {
     return _api.request('pages.saveAccess', {
       ...?params,
     });

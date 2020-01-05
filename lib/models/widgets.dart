@@ -31,7 +31,7 @@ class Widgets {
   /// `offset` *(integer)*
   ///
   /// `count` *(integer)*, default: 10, min: 10, max: 200
-  Future<Map> getComments([Map<String, String> params]) async {
+  Future<Map> getComments([Map<String, dynamic> params]) async {
     return _api.request('widgets.getComments', {
       ...?params,
     });
@@ -50,7 +50,7 @@ class Widgets {
   /// `offset` *(integer)*
   ///
   /// `count` *(integer)*, default: 10, min: 10, max: 200
-  Future<Map> getPages([Map<String, String> params]) async {
+  Future<Map> getPages([Map<String, dynamic> params]) async {
     return _api.request('widgets.getPages', {
       ...?params,
     });

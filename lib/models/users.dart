@@ -23,7 +23,7 @@ class Users {
   /// `fields` *(array)* Profile fields to return. Sample values: 'nickname', 'screen_name', 'sex', 'bdate' (birthdate), 'city', 'country', 'timezone', 'photo', 'photo_medium', 'photo_big', 'has_mobile', 'contacts', 'education', 'online', 'counters', 'relation', 'last_seen', 'activity', 'can_write_private_message', 'can_see_all_posts', 'can_post', 'universities',
   ///
   /// `name_case` *(string)* Case for declension of user name and surname: 'nom' — nominative (default), 'gen' — genitive , 'dat' — dative, 'acc' — accusative , 'ins' — instrumental , 'abl' — prepositional
-  Future<Map> get([Map<String, String> params]) async {
+  Future<Map> get([Map<String, dynamic> params]) async {
     return _api.request('users.get', {
       ...?params,
     });
@@ -42,7 +42,7 @@ class Users {
   /// `fields` *(array)* Profile fields to return. Sample values: 'nickname', 'screen_name', 'sex', 'bdate' (birthdate), 'city', 'country', 'timezone', 'photo', 'photo_medium', 'photo_big', 'has_mobile', 'rate', 'contacts', 'education', 'online'.
   ///
   /// `name_case` *(string)* Case for declension of user name and surname: 'nom' — nominative (default), 'gen' — genitive , 'dat' — dative, 'acc' — accusative , 'ins' — instrumental , 'abl' — prepositional
-  Future<Map> getFollowers([Map<String, String> params]) async {
+  Future<Map> getFollowers([Map<String, dynamic> params]) async {
     return _api.request('users.getFollowers', {
       ...?params,
     });
@@ -61,7 +61,7 @@ class Users {
   /// `count` *(integer)* Number of users and communities to return., default: 20, max: 200
   ///
   /// `fields` *(array)*
-  Future<Map> getSubscriptions([Map<String, String> params]) async {
+  Future<Map> getSubscriptions([Map<String, dynamic> params]) async {
     return _api.request('users.getSubscriptions', {
       ...?params,
     });
@@ -72,7 +72,7 @@ class Users {
   /// Params:
   ///
   /// `user_id` *(integer)*
-  Future<Map> isAppUser([Map<String, String> params]) async {
+  Future<Map> isAppUser([Map<String, dynamic> params]) async {
     return _api.request('users.isAppUser', {
       ...?params,
     });
@@ -87,7 +87,7 @@ class Users {
   /// `type` *(string)* Type of complaint: 'porn' – pornography, 'spam' – spamming, 'insult' – abusive behavior, 'advertisment' – disruptive advertisements
   ///
   /// `comment` *(string)* Comment describing the complaint.
-  Future<Map> report([Map<String, String> params]) async {
+  Future<Map> report([Map<String, dynamic> params]) async {
     return _api.request('users.report', {
       ...?params,
     });
@@ -162,7 +162,7 @@ class Users {
   /// `group_id` *(integer)* ID of a community to search in communities.
   ///
   /// `from_list` *(array)*
-  Future<Map> search([Map<String, String> params]) async {
+  Future<Map> search([Map<String, dynamic> params]) async {
     return _api.request('users.search', {
       ...?params,
     });

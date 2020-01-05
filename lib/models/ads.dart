@@ -21,7 +21,7 @@ class Ads {
   /// `account_id` *(integer)* Advertising account ID.
   ///
   /// `data` *(string)* Serialized JSON array of objects that describe added managers. Description of 'user_specification' objects see below.
-  Future<Map> addOfficeUsers([Map<String, String> params]) async {
+  Future<Map> addOfficeUsers([Map<String, dynamic> params]) async {
     return _api.request('ads.addOfficeUsers', {
       ...?params,
     });
@@ -38,7 +38,7 @@ class Ads {
   /// `link_url` *(string)* Object URL.
   ///
   /// `campaign_id` *(integer)* Campaign ID
-  Future<Map> checkLink([Map<String, String> params]) async {
+  Future<Map> checkLink([Map<String, dynamic> params]) async {
     return _api.request('ads.checkLink', {
       ...?params,
     });
@@ -51,7 +51,7 @@ class Ads {
   /// `account_id` *(integer)* Advertising account ID.
   ///
   /// `data` *(string)* Serialized JSON array of objects that describe created ads. Description of 'ad_specification' objects see below.
-  Future<Map> createAds([Map<String, String> params]) async {
+  Future<Map> createAds([Map<String, dynamic> params]) async {
     return _api.request('ads.createAds', {
       ...?params,
     });
@@ -64,7 +64,7 @@ class Ads {
   /// `account_id` *(integer)* Advertising account ID.
   ///
   /// `data` *(string)* Serialized JSON array of objects that describe created campaigns. Description of 'campaign_specification' objects see below.
-  Future<Map> createCampaigns([Map<String, String> params]) async {
+  Future<Map> createCampaigns([Map<String, dynamic> params]) async {
     return _api.request('ads.createCampaigns', {
       ...?params,
     });
@@ -77,7 +77,7 @@ class Ads {
   /// `account_id` *(integer)* Advertising account ID.
   ///
   /// `data` *(string)* Serialized JSON array of objects that describe created campaigns. Description of 'client_specification' objects see below.
-  Future<Map> createClients([Map<String, String> params]) async {
+  Future<Map> createClients([Map<String, dynamic> params]) async {
     return _api.request('ads.createClients', {
       ...?params,
     });
@@ -98,7 +98,7 @@ class Ads {
   /// `target_pixel_id` *(integer)*
   ///
   /// `target_pixel_rules` *(string)*
-  Future<Map> createTargetGroup([Map<String, String> params]) async {
+  Future<Map> createTargetGroup([Map<String, dynamic> params]) async {
     return _api.request('ads.createTargetGroup', {
       ...?params,
     });
@@ -111,7 +111,7 @@ class Ads {
   /// `account_id` *(integer)* Advertising account ID.
   ///
   /// `ids` *(string)* Serialized JSON array with ad IDs.
-  Future<Map> deleteAds([Map<String, String> params]) async {
+  Future<Map> deleteAds([Map<String, dynamic> params]) async {
     return _api.request('ads.deleteAds', {
       ...?params,
     });
@@ -124,7 +124,7 @@ class Ads {
   /// `account_id` *(integer)* Advertising account ID.
   ///
   /// `ids` *(string)* Serialized JSON array with IDs of deleted campaigns.
-  Future<Map> deleteCampaigns([Map<String, String> params]) async {
+  Future<Map> deleteCampaigns([Map<String, dynamic> params]) async {
     return _api.request('ads.deleteCampaigns', {
       ...?params,
     });
@@ -137,7 +137,7 @@ class Ads {
   /// `account_id` *(integer)* Advertising account ID.
   ///
   /// `ids` *(string)* Serialized JSON array with IDs of deleted clients.
-  Future<Map> deleteClients([Map<String, String> params]) async {
+  Future<Map> deleteClients([Map<String, dynamic> params]) async {
     return _api.request('ads.deleteClients', {
       ...?params,
     });
@@ -152,7 +152,7 @@ class Ads {
   /// `client_id` *(integer)* 'Only for advertising agencies.' , ID of the client with the advertising account where the group will be created.
   ///
   /// `target_group_id` *(integer)* Group ID.
-  Future<Map> deleteTargetGroup([Map<String, String> params]) async {
+  Future<Map> deleteTargetGroup([Map<String, dynamic> params]) async {
     return _api.request('ads.deleteTargetGroup', {
       ...?params,
     });
@@ -161,7 +161,7 @@ class Ads {
   /// Returns a list of advertising accounts.
   ///
   /// Params: none
-  Future<Map> getAccounts([Map<String, String> params]) async {
+  Future<Map> getAccounts([Map<String, dynamic> params]) async {
     return _api.request('ads.getAccounts', {
       ...?params,
     });
@@ -184,7 +184,7 @@ class Ads {
   /// `limit` *(integer)* Limit of number of returned ads. Used only if ad_ids parameter is null, and 'campaign_ids' parameter contains ID of only one campaign.
   ///
   /// `offset` *(integer)* Offset. Used in the same cases as 'limit' parameter.
-  Future<Map> getAds([Map<String, String> params]) async {
+  Future<Map> getAds([Map<String, dynamic> params]) async {
     return _api.request('ads.getAds', {
       ...?params,
     });
@@ -207,7 +207,7 @@ class Ads {
   /// `limit` *(integer)* Limit of number of returned ads. Used only if 'ad_ids' parameter is null, and 'campaign_ids' parameter contains ID of only one campaign.
   ///
   /// `offset` *(integer)* Offset. Used in the same cases as 'limit' parameter.
-  Future<Map> getAdsLayout([Map<String, String> params]) async {
+  Future<Map> getAdsLayout([Map<String, dynamic> params]) async {
     return _api.request('ads.getAdsLayout', {
       ...?params,
     });
@@ -230,7 +230,7 @@ class Ads {
   /// `limit` *(integer)* Limit of number of returned ads. Used only if 'ad_ids' parameter is null, and 'campaign_ids' parameter contains ID of only one campaign.
   ///
   /// `offset` *(integer)* Offset needed to return a specific subset of results.
-  Future<Map> getAdsTargeting([Map<String, String> params]) async {
+  Future<Map> getAdsTargeting([Map<String, dynamic> params]) async {
     return _api.request('ads.getAdsTargeting', {
       ...?params,
     });
@@ -241,7 +241,7 @@ class Ads {
   /// Params:
   ///
   /// `account_id` *(integer)* Advertising account ID.
-  Future<Map> getBudget([Map<String, String> params]) async {
+  Future<Map> getBudget([Map<String, dynamic> params]) async {
     return _api.request('ads.getBudget', {
       ...?params,
     });
@@ -258,7 +258,7 @@ class Ads {
   /// `include_deleted` *(boolean)* Flag that specifies whether archived ads shall be shown. *0 — show only active campaigns,, *1 — show all campaigns.
   ///
   /// `campaign_ids` *(string)* Filter of advertising campaigns to show. Serialized JSON array with campaign IDs. Only campaigns that exist in 'campaign_ids' and belong to the specified advertising account will be shown. If the parameter is null, all campaigns will be shown.
-  Future<Map> getCampaigns([Map<String, String> params]) async {
+  Future<Map> getCampaigns([Map<String, dynamic> params]) async {
     return _api.request('ads.getCampaigns', {
       ...?params,
     });
@@ -269,7 +269,7 @@ class Ads {
   /// Params:
   ///
   /// `lang` *(string)* Language. The full list of supported languages is [here](https://vk.com/dev/api_requests).
-  Future<Map> getCategories([Map<String, String> params]) async {
+  Future<Map> getCategories([Map<String, dynamic> params]) async {
     return _api.request('ads.getCategories', {
       ...?params,
     });
@@ -280,7 +280,7 @@ class Ads {
   /// Params:
   ///
   /// `account_id` *(integer)* Advertising account ID.
-  Future<Map> getClients([Map<String, String> params]) async {
+  Future<Map> getClients([Map<String, dynamic> params]) async {
     return _api.request('ads.getClients', {
       ...?params,
     });
@@ -301,7 +301,7 @@ class Ads {
   /// `date_from` *(string)* Date to show statistics from. For different value of 'period' different date format is used: *day: YYYY-MM-DD, example: 2011-09-27 — September 27, 2011, **0 — day it was created on,, *month: YYYY-MM, example: 2011-09 — September 2011, **0 — month it was created in,, *overall: 0.
   ///
   /// `date_to` *(string)* Date to show statistics to. For different value of 'period' different date format is used: *day: YYYY-MM-DD, example: 2011-09-27 — September 27, 2011, **0 — current day,, *month: YYYY-MM, example: 2011-09 — September 2011, **0 — current month,, *overall: 0.
-  Future<Map> getDemographics([Map<String, String> params]) async {
+  Future<Map> getDemographics([Map<String, dynamic> params]) async {
     return _api.request('ads.getDemographics', {
       ...?params,
     });
@@ -312,7 +312,7 @@ class Ads {
   /// Params:
   ///
   /// `account_id` *(integer)* Advertising account ID.
-  Future<Map> getFloodStats([Map<String, String> params]) async {
+  Future<Map> getFloodStats([Map<String, dynamic> params]) async {
     return _api.request('ads.getFloodStats', {
       ...?params,
     });
@@ -323,7 +323,7 @@ class Ads {
   /// Params:
   ///
   /// `account_id` *(integer)* Advertising account ID.
-  Future<Map> getOfficeUsers([Map<String, String> params]) async {
+  Future<Map> getOfficeUsers([Map<String, dynamic> params]) async {
     return _api.request('ads.getOfficeUsers', {
       ...?params,
     });
@@ -338,7 +338,7 @@ class Ads {
   /// `ids_type` *(string)* Type of requested objects listed in 'ids' parameter: *ad — ads,, *campaign — campaigns.
   ///
   /// `ids` *(string)* IDs requested ads or campaigns, separated with a comma, depending on the value set in 'ids_type'. Maximum 100 objects.
-  Future<Map> getPostsReach([Map<String, String> params]) async {
+  Future<Map> getPostsReach([Map<String, dynamic> params]) async {
     return _api.request('ads.getPostsReach', {
       ...?params,
     });
@@ -351,7 +351,7 @@ class Ads {
   /// `account_id` *(integer)* Advertising account ID.
   ///
   /// `ad_id` *(integer)* Ad ID.
-  Future<Map> getRejectionReason([Map<String, String> params]) async {
+  Future<Map> getRejectionReason([Map<String, dynamic> params]) async {
     return _api.request('ads.getRejectionReason', {
       ...?params,
     });
@@ -372,7 +372,7 @@ class Ads {
   /// `date_from` *(string)* Date to show statistics from. For different value of 'period' different date format is used: *day: YYYY-MM-DD, example: 2011-09-27 — September 27, 2011, **0 — day it was created on,, *month: YYYY-MM, example: 2011-09 — September 2011, **0 — month it was created in,, *overall: 0.
   ///
   /// `date_to` *(string)* Date to show statistics to. For different value of 'period' different date format is used: *day: YYYY-MM-DD, example: 2011-09-27 — September 27, 2011, **0 — current day,, *month: YYYY-MM, example: 2011-09 — September 2011, **0 — current month,, *overall: 0.
-  Future<Map> getStatistics([Map<String, String> params]) async {
+  Future<Map> getStatistics([Map<String, dynamic> params]) async {
     return _api.request('ads.getStatistics', {
       ...?params,
     });
@@ -393,7 +393,7 @@ class Ads {
   /// `cities` *(string)* IDs of cities where objects are searched in, separated with a comma.
   ///
   /// `lang` *(string)* Language of the returned string values. Supported languages: *ru — Russian,, *ua — Ukrainian,, *en — English.
-  Future<Map> getSuggestions([Map<String, String> params]) async {
+  Future<Map> getSuggestions([Map<String, dynamic> params]) async {
     return _api.request('ads.getSuggestions', {
       ...?params,
     });
@@ -408,7 +408,7 @@ class Ads {
   /// `client_id` *(integer)* 'Only for advertising agencies.', ID of the client with the advertising account where the group will be created.
   ///
   /// `extended` *(boolean)* '1' — to return pixel code.
-  Future<Map> getTargetGroups([Map<String, String> params]) async {
+  Future<Map> getTargetGroups([Map<String, dynamic> params]) async {
     return _api.request('ads.getTargetGroups', {
       ...?params,
     });
@@ -437,7 +437,7 @@ class Ads {
   /// `link_url` *(string)* URL for the advertised object.
   ///
   /// `link_domain` *(string)* Domain of the advertised object.
-  Future<Map> getTargetingStats([Map<String, String> params]) async {
+  Future<Map> getTargetingStats([Map<String, dynamic> params]) async {
     return _api.request('ads.getTargetingStats', {
       ...?params,
     });
@@ -450,7 +450,7 @@ class Ads {
   /// `ad_format` *(integer)* Ad format: *1 — image and text,, *2 — big image,, *3 — exclusive format,, *4 — community, square image,, *7 — special app format.
   ///
   /// `icon` *(integer)*
-  Future<Map> getUploadURL([Map<String, String> params]) async {
+  Future<Map> getUploadURL([Map<String, dynamic> params]) async {
     return _api.request('ads.getUploadURL', {
       ...?params,
     });
@@ -459,7 +459,7 @@ class Ads {
   /// Returns URL to upload an ad video to.
   ///
   /// Params: none
-  Future<Map> getVideoUploadURL([Map<String, String> params]) async {
+  Future<Map> getVideoUploadURL([Map<String, dynamic> params]) async {
     return _api.request('ads.getVideoUploadURL', {
       ...?params,
     });
@@ -476,7 +476,7 @@ class Ads {
   /// `target_group_id` *(integer)* Target group ID.
   ///
   /// `contacts` *(string)* List of phone numbers, emails or user IDs separated with a comma.
-  Future<Map> importTargetContacts([Map<String, String> params]) async {
+  Future<Map> importTargetContacts([Map<String, dynamic> params]) async {
     return _api.request('ads.importTargetContacts', {
       ...?params,
     });
@@ -489,7 +489,7 @@ class Ads {
   /// `account_id` *(integer)* Advertising account ID.
   ///
   /// `ids` *(string)* Serialized JSON array with IDs of deleted managers.
-  Future<Map> removeOfficeUsers([Map<String, String> params]) async {
+  Future<Map> removeOfficeUsers([Map<String, dynamic> params]) async {
     return _api.request('ads.removeOfficeUsers', {
       ...?params,
     });
@@ -502,7 +502,7 @@ class Ads {
   /// `account_id` *(integer)* Advertising account ID.
   ///
   /// `data` *(string)* Serialized JSON array of objects that describe changes in ads. Description of 'ad_edit_specification' objects see below.
-  Future<Map> updateAds([Map<String, String> params]) async {
+  Future<Map> updateAds([Map<String, dynamic> params]) async {
     return _api.request('ads.updateAds', {
       ...?params,
     });
@@ -515,7 +515,7 @@ class Ads {
   /// `account_id` *(integer)* Advertising account ID.
   ///
   /// `data` *(string)* Serialized JSON array of objects that describe changes in campaigns. Description of 'campaign_mod' objects see below.
-  Future<Map> updateCampaigns([Map<String, String> params]) async {
+  Future<Map> updateCampaigns([Map<String, dynamic> params]) async {
     return _api.request('ads.updateCampaigns', {
       ...?params,
     });
@@ -528,7 +528,7 @@ class Ads {
   /// `account_id` *(integer)* Advertising account ID.
   ///
   /// `data` *(string)* Serialized JSON array of objects that describe changes in clients. Description of 'client_mod' objects see below.
-  Future<Map> updateClients([Map<String, String> params]) async {
+  Future<Map> updateClients([Map<String, dynamic> params]) async {
     return _api.request('ads.updateClients', {
       ...?params,
     });
@@ -553,7 +553,7 @@ class Ads {
   /// `target_pixel_id` *(integer)*
   ///
   /// `target_pixel_rules` *(string)*
-  Future<Map> updateTargetGroup([Map<String, String> params]) async {
+  Future<Map> updateTargetGroup([Map<String, dynamic> params]) async {
     return _api.request('ads.updateTargetGroup', {
       ...?params,
     });

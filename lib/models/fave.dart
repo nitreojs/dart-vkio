@@ -19,7 +19,7 @@ class Fave {
   /// Params:
   ///
   /// `group_id` *(integer)* Community ID.
-  Future<Map> addGroup([Map<String, String> params]) async {
+  Future<Map> addGroup([Map<String, dynamic> params]) async {
     return _api.request('fave.addGroup', {
       ...?params,
     });
@@ -30,7 +30,7 @@ class Fave {
   /// Params:
   ///
   /// `link` *(string)* Link URL.
-  Future<Map> addLink([Map<String, String> params]) async {
+  Future<Map> addLink([Map<String, dynamic> params]) async {
     return _api.request('fave.addLink', {
       ...?params,
     });
@@ -41,7 +41,7 @@ class Fave {
   /// Params:
   ///
   /// `user_id` *(integer)* Profile ID.
-  Future<Map> addUser([Map<String, String> params]) async {
+  Future<Map> addUser([Map<String, dynamic> params]) async {
     return _api.request('fave.addUser', {
       ...?params,
     });
@@ -54,7 +54,7 @@ class Fave {
   /// `offset` *(integer)* Offset needed to return a specific subset of users.
   ///
   /// `count` *(integer)* Number of results to return., default: 50
-  Future<Map> getLinks([Map<String, String> params]) async {
+  Future<Map> getLinks([Map<String, dynamic> params]) async {
     return _api.request('fave.getLinks', {
       ...?params,
     });
@@ -69,7 +69,7 @@ class Fave {
   /// `offset` *(integer)*
   ///
   /// `extended` *(boolean)* '1' – to return additional fields 'likes, can_comment, can_repost, photos'. By default: '0'.
-  Future<Map> getMarketItems([Map<String, String> params]) async {
+  Future<Map> getMarketItems([Map<String, dynamic> params]) async {
     return _api.request('fave.getMarketItems', {
       ...?params,
     });
@@ -82,7 +82,7 @@ class Fave {
   /// `offset` *(integer)* Offset needed to return a specific subset of photos.
   ///
   /// `count` *(integer)* Number of photos to return., default: 50
-  Future<Map> getPhotos([Map<String, String> params]) async {
+  Future<Map> getPhotos([Map<String, dynamic> params]) async {
     return _api.request('fave.getPhotos', {
       ...?params,
     });
@@ -97,7 +97,7 @@ class Fave {
   /// `count` *(integer)* Number of posts to return., default: 50
   ///
   /// `extended` *(boolean)* '1' — to return additional 'wall', 'profiles', and 'groups' fields. By default: '0'.
-  Future<Map> getPosts([Map<String, String> params]) async {
+  Future<Map> getPosts([Map<String, dynamic> params]) async {
     return _api.request('fave.getPosts', {
       ...?params,
     });
@@ -110,7 +110,7 @@ class Fave {
   /// `offset` *(integer)* Offset needed to return a specific subset of users.
   ///
   /// `count` *(integer)* Number of users to return., default: 50
-  Future<Map> getUsers([Map<String, String> params]) async {
+  Future<Map> getUsers([Map<String, dynamic> params]) async {
     return _api.request('fave.getUsers', {
       ...?params,
     });
@@ -125,7 +125,7 @@ class Fave {
   /// `count` *(integer)* Number of videos to return., default: 50
   ///
   /// `extended` *(boolean)* Return an additional information about videos. Also returns all owners profiles and groups.
-  Future<Map> getVideos([Map<String, String> params]) async {
+  Future<Map> getVideos([Map<String, dynamic> params]) async {
     return _api.request('fave.getVideos', {
       ...?params,
     });
@@ -136,7 +136,7 @@ class Fave {
   /// Params:
   ///
   /// `group_id` *(integer)* Community ID.
-  Future<Map> removeGroup([Map<String, String> params]) async {
+  Future<Map> removeGroup([Map<String, dynamic> params]) async {
     return _api.request('fave.removeGroup', {
       ...?params,
     });
@@ -147,7 +147,7 @@ class Fave {
   /// Params:
   ///
   /// `link_id` *(string)* Link ID (can be obtained by [faves.getLinks](https://vk.com/dev/faves.getLinks) method).
-  Future<Map> removeLink([Map<String, String> params]) async {
+  Future<Map> removeLink([Map<String, dynamic> params]) async {
     return _api.request('fave.removeLink', {
       ...?params,
     });
@@ -158,7 +158,7 @@ class Fave {
   /// Params:
   ///
   /// `user_id` *(integer)* Profile ID.
-  Future<Map> removeUser([Map<String, String> params]) async {
+  Future<Map> removeUser([Map<String, dynamic> params]) async {
     return _api.request('fave.removeUser', {
       ...?params,
     });

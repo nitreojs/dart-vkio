@@ -35,7 +35,7 @@ class Market {
   /// `photo_ids` *(array)* IDs of additional photos.
   ///
   /// `url` *(string)* Url for button in market item.
-  Future<Map> add([Map<String, String> params]) async {
+  Future<Map> add([Map<String, dynamic> params]) async {
     return _api.request('market.add', {
       ...?params,
     });
@@ -52,7 +52,7 @@ class Market {
   /// `photo_id` *(integer)* Cover photo ID.
   ///
   /// `main_album` *(boolean)* Set as main ('1' – set, '0' – no).
-  Future<Map> addAlbum([Map<String, String> params]) async {
+  Future<Map> addAlbum([Map<String, dynamic> params]) async {
     return _api.request('market.addAlbum', {
       ...?params,
     });
@@ -67,7 +67,7 @@ class Market {
   /// `item_id` *(integer)* Item ID.
   ///
   /// `album_ids` *(array)* Collections IDs to add item to.
-  Future<Map> addToAlbum([Map<String, String> params]) async {
+  Future<Map> addToAlbum([Map<String, dynamic> params]) async {
     return _api.request('market.addToAlbum', {
       ...?params,
     });
@@ -92,7 +92,7 @@ class Market {
   /// `sticker_id` *(integer)* Sticker ID.
   ///
   /// `guid` *(string)* Random value to avoid resending one comment.
-  Future<Map> createComment([Map<String, String> params]) async {
+  Future<Map> createComment([Map<String, dynamic> params]) async {
     return _api.request('market.createComment', {
       ...?params,
     });
@@ -105,7 +105,7 @@ class Market {
   /// `owner_id` *(integer)* ID of an item owner community.
   ///
   /// `item_id` *(integer)* Item ID.
-  Future<Map> delete([Map<String, String> params]) async {
+  Future<Map> delete([Map<String, dynamic> params]) async {
     return _api.request('market.delete', {
       ...?params,
     });
@@ -118,7 +118,7 @@ class Market {
   /// `owner_id` *(integer)* ID of an collection owner community.
   ///
   /// `album_id` *(integer)* Collection ID.
-  Future<Map> deleteAlbum([Map<String, String> params]) async {
+  Future<Map> deleteAlbum([Map<String, dynamic> params]) async {
     return _api.request('market.deleteAlbum', {
       ...?params,
     });
@@ -131,7 +131,7 @@ class Market {
   /// `owner_id` *(integer)* identifier of an item owner community, "Note that community id in the 'owner_id' parameter should be negative number. For example 'owner_id'=-1 matches the [VK API](https://vk.com/apiclub) community "
   ///
   /// `comment_id` *(integer)* comment id
-  Future<Map> deleteComment([Map<String, String> params]) async {
+  Future<Map> deleteComment([Map<String, dynamic> params]) async {
     return _api.request('market.deleteComment', {
       ...?params,
     });
@@ -160,7 +160,7 @@ class Market {
   /// `photo_ids` *(array)* IDs of additional photos.
   ///
   /// `url` *(string)* Url for button in market item.
-  Future<Map> edit([Map<String, String> params]) async {
+  Future<Map> edit([Map<String, dynamic> params]) async {
     return _api.request('market.edit', {
       ...?params,
     });
@@ -179,7 +179,7 @@ class Market {
   /// `photo_id` *(integer)* Cover photo id
   ///
   /// `main_album` *(boolean)* Set as main ('1' – set, '0' – no).
-  Future<Map> editAlbum([Map<String, String> params]) async {
+  Future<Map> editAlbum([Map<String, dynamic> params]) async {
     return _api.request('market.editAlbum', {
       ...?params,
     });
@@ -196,7 +196,7 @@ class Market {
   /// `message` *(string)* New comment text (required if 'attachments' are not specified), , 2048 symbols maximum.
   ///
   /// `attachments` *(array)* Comma-separated list of objects attached to a comment. The field is submitted the following way: , "'<owner_id>_<media_id>,<owner_id>_<media_id>'", , '' - media attachment type: "'photo' - photo, 'video' - video, 'audio' - audio, 'doc' - document", , '<owner_id>' - media owner id, '<media_id>' - media attachment id, , For example: "photo100172_166443618,photo66748_265827614",
-  Future<Map> editComment([Map<String, String> params]) async {
+  Future<Map> editComment([Map<String, dynamic> params]) async {
     return _api.request('market.editComment', {
       ...?params,
     });
@@ -215,7 +215,7 @@ class Market {
   /// `offset` *(integer)* Offset needed to return a specific subset of results.
   ///
   /// `extended` *(boolean)* '1' – method will return additional fields: 'likes, can_comment, car_repost, photos'. These parameters are not returned by default.
-  Future<Map> get([Map<String, String> params]) async {
+  Future<Map> get([Map<String, dynamic> params]) async {
     return _api.request('market.get', {
       ...?params,
     });
@@ -228,7 +228,7 @@ class Market {
   /// `owner_id` *(integer)* identifier of an album owner community, "Note that community id in the 'owner_id' parameter should be negative number. For example 'owner_id'=-1 matches the [VK API](https://vk.com/apiclub) community "
   ///
   /// `album_ids` *(array)* collections identifiers to obtain data from
-  Future<Map> getAlbumById([Map<String, String> params]) async {
+  Future<Map> getAlbumById([Map<String, dynamic> params]) async {
     return _api.request('market.getAlbumById', {
       ...?params,
     });
@@ -243,7 +243,7 @@ class Market {
   /// `offset` *(integer)* Offset needed to return a specific subset of results.
   ///
   /// `count` *(integer)* Number of items to return., default: 50, max: 100
-  Future<Map> getAlbums([Map<String, String> params]) async {
+  Future<Map> getAlbums([Map<String, dynamic> params]) async {
     return _api.request('market.getAlbums', {
       ...?params,
     });
@@ -256,7 +256,7 @@ class Market {
   /// `item_ids` *(array)* Comma-separated ids list: {user id}_{item id}. If an item belongs to a community -{community id} is used. " 'Videos' value example: , '-4363_136089719,13245770_137352259'"
   ///
   /// `extended` *(boolean)* '1' – to return additional fields: 'likes, can_comment, car_repost, photos'. By default: '0'.
-  Future<Map> getById([Map<String, String> params]) async {
+  Future<Map> getById([Map<String, dynamic> params]) async {
     return _api.request('market.getById', {
       ...?params,
     });
@@ -269,7 +269,7 @@ class Market {
   /// `count` *(integer)* Number of results to return., default: 10, max: 1000
   ///
   /// `offset` *(integer)* Offset needed to return a specific subset of results.
-  Future<Map> getCategories([Map<String, String> params]) async {
+  Future<Map> getCategories([Map<String, dynamic> params]) async {
     return _api.request('market.getCategories', {
       ...?params,
     });
@@ -296,7 +296,7 @@ class Market {
   /// `extended` *(boolean)* '1' — comments will be returned as numbered objects, in addition lists of 'profiles' and 'groups' objects will be returned.
   ///
   /// `fields` *(array)* List of additional profile fields to return. See the [details](https://vk.com/dev/fields)
-  Future<Map> getComments([Map<String, String> params]) async {
+  Future<Map> getComments([Map<String, dynamic> params]) async {
     return _api.request('market.getComments', {
       ...?params,
     });
@@ -311,7 +311,7 @@ class Market {
   /// `item_id` *(integer)* Item ID.
   ///
   /// `album_ids` *(array)* Collections IDs to remove item from.
-  Future<Map> removeFromAlbum([Map<String, String> params]) async {
+  Future<Map> removeFromAlbum([Map<String, dynamic> params]) async {
     return _api.request('market.removeFromAlbum', {
       ...?params,
     });
@@ -328,7 +328,7 @@ class Market {
   /// `before` *(integer)* ID of a collection to place current collection before it.
   ///
   /// `after` *(integer)* ID of a collection to place current collection after it.
-  Future<Map> reorderAlbums([Map<String, String> params]) async {
+  Future<Map> reorderAlbums([Map<String, dynamic> params]) async {
     return _api.request('market.reorderAlbums', {
       ...?params,
     });
@@ -347,7 +347,7 @@ class Market {
   /// `before` *(integer)* ID of an item to place current item before it.
   ///
   /// `after` *(integer)* ID of an item to place current item after it.
-  Future<Map> reorderItems([Map<String, String> params]) async {
+  Future<Map> reorderItems([Map<String, dynamic> params]) async {
     return _api.request('market.reorderItems', {
       ...?params,
     });
@@ -362,7 +362,7 @@ class Market {
   /// `item_id` *(integer)* Item ID.
   ///
   /// `reason` *(integer)* Complaint reason. Possible values: *'0' — spam,, *'1' — child porn,, *'2' — extremism,, *'3' — violence,, *'4' — drugs propaganda,, *'5' — adult materials,, *'6' — insult.
-  Future<Map> report([Map<String, String> params]) async {
+  Future<Map> report([Map<String, dynamic> params]) async {
     return _api.request('market.report', {
       ...?params,
     });
@@ -377,7 +377,7 @@ class Market {
   /// `comment_id` *(integer)* Comment ID.
   ///
   /// `reason` *(integer)* Complaint reason. Possible values: *'0' — spam,, *'1' — child porn,, *'2' — extremism,, *'3' — violence,, *'4' — drugs propaganda,, *'5' — adult materials,, *'6' — insult.
-  Future<Map> reportComment([Map<String, String> params]) async {
+  Future<Map> reportComment([Map<String, dynamic> params]) async {
     return _api.request('market.reportComment', {
       ...?params,
     });
@@ -390,7 +390,7 @@ class Market {
   /// `owner_id` *(integer)* ID of an item owner community.
   ///
   /// `item_id` *(integer)* Deleted item ID.
-  Future<Map> restore([Map<String, String> params]) async {
+  Future<Map> restore([Map<String, dynamic> params]) async {
     return _api.request('market.restore', {
       ...?params,
     });
@@ -403,7 +403,7 @@ class Market {
   /// `owner_id` *(integer)* identifier of an item owner community, "Note that community id in the 'owner_id' parameter should be negative number. For example 'owner_id'=-1 matches the [VK API](https://vk.com/apiclub) community "
   ///
   /// `comment_id` *(integer)* deleted comment id
-  Future<Map> restoreComment([Map<String, String> params]) async {
+  Future<Map> restoreComment([Map<String, dynamic> params]) async {
     return _api.request('market.restoreComment', {
       ...?params,
     });
@@ -436,7 +436,7 @@ class Market {
   /// `extended` *(boolean)* '1' – to return additional fields: 'likes, can_comment, car_repost, photos'. By default: '0'., default: 0
   ///
   /// `status` *(integer)*
-  Future<Map> search([Map<String, String> params]) async {
+  Future<Map> search([Map<String, dynamic> params]) async {
     return _api.request('market.search', {
       ...?params,
     });

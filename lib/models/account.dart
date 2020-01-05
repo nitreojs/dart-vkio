@@ -17,7 +17,7 @@ class Account {
   /// Params:
   ///
   /// `owner_id` *(integer)*
-  Future<Map> ban([Map<String, String> params]) async {
+  Future<Map> ban([Map<String, dynamic> params]) async {
     return _api.request('account.ban', {
       ...?params,
     });
@@ -34,7 +34,7 @@ class Account {
   /// `old_password` *(string)* Current user password.
   ///
   /// `new_password` *(string)* New password that will be set as a current
-  Future<Map> changePassword([Map<String, String> params]) async {
+  Future<Map> changePassword([Map<String, dynamic> params]) async {
     return _api.request('account.changePassword', {
       ...?params,
     });
@@ -47,7 +47,7 @@ class Account {
   /// `offset` *(integer)*
   ///
   /// `count` *(integer)* Number of results to return., default: 100, max: 100
-  Future<Map> getActiveOffers([Map<String, String> params]) async {
+  Future<Map> getActiveOffers([Map<String, dynamic> params]) async {
     return _api.request('account.getActiveOffers', {
       ...?params,
     });
@@ -58,7 +58,7 @@ class Account {
   /// Params:
   ///
   /// `user_id` *(integer)* User ID whose settings information shall be got. By default: current user.
-  Future<Map> getAppPermissions([Map<String, String> params]) async {
+  Future<Map> getAppPermissions([Map<String, dynamic> params]) async {
     return _api.request('account.getAppPermissions', {
       ...?params,
     });
@@ -71,7 +71,7 @@ class Account {
   /// `offset` *(integer)* Offset needed to return a specific subset of results.
   ///
   /// `count` *(integer)* Number of results to return., default: 20, max: 200
-  Future<Map> getBanned([Map<String, String> params]) async {
+  Future<Map> getBanned([Map<String, dynamic> params]) async {
     return _api.request('account.getBanned', {
       ...?params,
     });
@@ -82,7 +82,7 @@ class Account {
   /// Params:
   ///
   /// `filter` *(array)* Counters to be returned.
-  Future<Map> getCounters([Map<String, String> params]) async {
+  Future<Map> getCounters([Map<String, dynamic> params]) async {
     return _api.request('account.getCounters', {
       ...?params,
     });
@@ -93,7 +93,7 @@ class Account {
   /// Params:
   ///
   /// `fields` *(array)* Fields to return. Possible values: *'country' — user country,, *'https_required' — is "HTTPS only" option enabled,, *'own_posts_default' — is "Show my posts only" option is enabled,, *'no_wall_replies' — are wall replies disabled or not,, *'intro' — is intro passed by user or not,, *'lang' — user language. By default: all.
-  Future<Map> getInfo([Map<String, String> params]) async {
+  Future<Map> getInfo([Map<String, dynamic> params]) async {
     return _api.request('account.getInfo', {
       ...?params,
     });
@@ -102,7 +102,7 @@ class Account {
   /// Returns the current account info.
   ///
   /// Params: none
-  Future<Map> getProfileInfo([Map<String, String> params]) async {
+  Future<Map> getProfileInfo([Map<String, dynamic> params]) async {
     return _api.request('account.getProfileInfo', {
       ...?params,
     });
@@ -113,7 +113,7 @@ class Account {
   /// Params:
   ///
   /// `device_id` *(string)* Unique device ID.
-  Future<Map> getPushSettings([Map<String, String> params]) async {
+  Future<Map> getPushSettings([Map<String, dynamic> params]) async {
     return _api.request('account.getPushSettings', {
       ...?params,
     });
@@ -136,7 +136,7 @@ class Account {
   /// `settings` *(string)* Push settings in a [special format](https://vk.com/dev/push_settings).
   ///
   /// `sandbox` *(boolean)*
-  Future<Map> registerDevice([Map<String, String> params]) async {
+  Future<Map> registerDevice([Map<String, dynamic> params]) async {
     return _api.request('account.registerDevice', {
       ...?params,
     });
@@ -173,7 +173,7 @@ class Account {
   /// `city_id` *(integer)* User city.
   ///
   /// `status` *(string)* Status text.
-  Future<Map> saveProfileInfo([Map<String, String> params]) async {
+  Future<Map> saveProfileInfo([Map<String, dynamic> params]) async {
     return _api.request('account.saveProfileInfo', {
       ...?params,
     });
@@ -186,7 +186,7 @@ class Account {
   /// `name` *(string)* Setting name.
   ///
   /// `value` *(string)* Setting value.
-  Future<Map> setInfo([Map<String, String> params]) async {
+  Future<Map> setInfo([Map<String, dynamic> params]) async {
     return _api.request('account.setInfo', {
       ...?params,
     });
@@ -199,7 +199,7 @@ class Account {
   /// `user_id` *(integer)* User ID.
   ///
   /// `name` *(string)* Application screen name.
-  Future<Map> setNameInMenu([Map<String, String> params]) async {
+  Future<Map> setNameInMenu([Map<String, dynamic> params]) async {
     return _api.request('account.setNameInMenu', {
       ...?params,
     });
@@ -208,7 +208,7 @@ class Account {
   /// Marks a current user as offline.
   ///
   /// Params: none
-  Future<Map> setOffline([Map<String, String> params]) async {
+  Future<Map> setOffline([Map<String, dynamic> params]) async {
     return _api.request('account.setOffline', {
       ...?params,
     });
@@ -219,7 +219,7 @@ class Account {
   /// Params:
   ///
   /// `voip` *(boolean)* '1' if videocalls are available for current device.
-  Future<Map> setOnline([Map<String, String> params]) async {
+  Future<Map> setOnline([Map<String, dynamic> params]) async {
     return _api.request('account.setOnline', {
       ...?params,
     });
@@ -236,7 +236,7 @@ class Account {
   /// `key` *(string)* Notification key.
   ///
   /// `value` *(array)* New value for the key in a [special format](https://vk.com/dev/push_settings).
-  Future<Map> setPushSettings([Map<String, String> params]) async {
+  Future<Map> setPushSettings([Map<String, dynamic> params]) async {
     return _api.request('account.setPushSettings', {
       ...?params,
     });
@@ -253,7 +253,7 @@ class Account {
   /// `peer_id` *(integer)* Destination ID. "For user: 'User ID', e.g. '12345'. For chat: '2000000000' + 'Chat ID', e.g. '2000000001'. For community: '- Community ID', e.g. '-12345'. "
   ///
   /// `sound` *(integer)* '1' — to enable sound in this dialog, '0' — to disable sound. Only if 'peer_id' contains user or community ID.
-  Future<Map> setSilenceMode([Map<String, String> params]) async {
+  Future<Map> setSilenceMode([Map<String, dynamic> params]) async {
     return _api.request('account.setSilenceMode', {
       ...?params,
     });
@@ -262,7 +262,7 @@ class Account {
   /// Params:
   ///
   /// `owner_id` *(integer)*
-  Future<Map> unban([Map<String, String> params]) async {
+  Future<Map> unban([Map<String, dynamic> params]) async {
     return _api.request('account.unban', {
       ...?params,
     });
@@ -275,7 +275,7 @@ class Account {
   /// `device_id` *(string)* Unique device ID.
   ///
   /// `sandbox` *(boolean)*
-  Future<Map> unregisterDevice([Map<String, String> params]) async {
+  Future<Map> unregisterDevice([Map<String, dynamic> params]) async {
     return _api.request('account.unregisterDevice', {
       ...?params,
     });

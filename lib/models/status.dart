@@ -21,7 +21,7 @@ class Status {
   /// `user_id` *(integer)* User ID or community ID. Use a negative value to designate a community ID.
   ///
   /// `group_id` *(integer)*
-  Future<Map> get([Map<String, String> params]) async {
+  Future<Map> get([Map<String, dynamic> params]) async {
     return _api.request('status.get', {
       ...?params,
     });
@@ -34,7 +34,7 @@ class Status {
   /// `text` *(string)* Text of the new status.
   ///
   /// `group_id` *(integer)* Identifier of a community to set a status in. If left blank the status is set to current user.
-  Future<Map> set([Map<String, String> params]) async {
+  Future<Map> set([Map<String, dynamic> params]) async {
     return _api.request('status.set', {
       ...?params,
     });

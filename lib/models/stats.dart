@@ -35,7 +35,7 @@ class Stats {
   /// `stats_groups` *(array)*
   ///
   /// `extended` *(boolean)*, default: true
-  Future<Map> get([Map<String, String> params]) async {
+  Future<Map> get([Map<String, dynamic> params]) async {
     return _api.request('stats.get', {
       ...?params,
     });
@@ -48,7 +48,7 @@ class Stats {
   /// `owner_id` *(string)* post owner community id. Specify with "-" sign.
   ///
   /// `post_id` *(integer)* wall post id. Note that stats are available only for '300' last (newest) posts on a community wall.
-  Future<Map> getPostReach([Map<String, String> params]) async {
+  Future<Map> getPostReach([Map<String, dynamic> params]) async {
     return _api.request('stats.getPostReach', {
       ...?params,
     });
@@ -57,7 +57,7 @@ class Stats {
   /// Params:
   ///
   /// `id` *(string)*
-  Future<Map> trackVisitor([Map<String, String> params]) async {
+  Future<Map> trackVisitor([Map<String, dynamic> params]) async {
     return _api.request('stats.trackVisitor', {
       ...?params,
     });

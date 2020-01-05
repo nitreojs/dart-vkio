@@ -23,7 +23,7 @@ class Docs {
   /// `doc_id` *(integer)* Document ID.
   ///
   /// `access_key` *(string)* Access key. This parameter is required if 'access_key' was returned with the document's data.
-  Future<Map> add([Map<String, String> params]) async {
+  Future<Map> add([Map<String, dynamic> params]) async {
     return _api.request('docs.add', {
       ...?params,
     });
@@ -36,7 +36,7 @@ class Docs {
   /// `owner_id` *(integer)* ID of the user or community that owns the document. Use a negative value to designate a community ID.
   ///
   /// `doc_id` *(integer)* Document ID.
-  Future<Map> delete([Map<String, String> params]) async {
+  Future<Map> delete([Map<String, dynamic> params]) async {
     return _api.request('docs.delete', {
       ...?params,
     });
@@ -53,7 +53,7 @@ class Docs {
   /// `title` *(string)* Document title.
   ///
   /// `tags` *(array)* Document tags.
-  Future<Map> edit([Map<String, String> params]) async {
+  Future<Map> edit([Map<String, dynamic> params]) async {
     return _api.request('docs.edit', {
       ...?params,
     });
@@ -70,7 +70,7 @@ class Docs {
   /// `type` *(integer)*
   ///
   /// `owner_id` *(integer)* ID of the user or community that owns the documents. Use a negative value to designate a community ID.
-  Future<Map> get([Map<String, String> params]) async {
+  Future<Map> get([Map<String, dynamic> params]) async {
     return _api.request('docs.get', {
       ...?params,
     });
@@ -81,7 +81,7 @@ class Docs {
   /// Params:
   ///
   /// `docs` *(array)* Document IDs. Example: , "66748_91488,66748_91455",
-  Future<Map> getById([Map<String, String> params]) async {
+  Future<Map> getById([Map<String, dynamic> params]) async {
     return _api.request('docs.getById', {
       ...?params,
     });
@@ -94,7 +94,7 @@ class Docs {
   /// `type` *(string)* Document type., default: doc
   ///
   /// `peer_id` *(integer)* Destination ID. "For user: 'User ID', e.g. '12345'. For chat: '2000000000' + 'Chat ID', e.g. '2000000001'. For community: '- Community ID', e.g. '-12345'. "
-  Future<Map> getMessagesUploadServer([Map<String, String> params]) async {
+  Future<Map> getMessagesUploadServer([Map<String, dynamic> params]) async {
     return _api.request('docs.getMessagesUploadServer', {
       ...?params,
     });
@@ -105,7 +105,7 @@ class Docs {
   /// Params:
   ///
   /// `owner_id` *(integer)* ID of the user or community that owns the documents. Use a negative value to designate a community ID.
-  Future<Map> getTypes([Map<String, String> params]) async {
+  Future<Map> getTypes([Map<String, dynamic> params]) async {
     return _api.request('docs.getTypes', {
       ...?params,
     });
@@ -116,7 +116,7 @@ class Docs {
   /// Params:
   ///
   /// `group_id` *(integer)* Community ID (if the document will be uploaded to the community).
-  Future<Map> getUploadServer([Map<String, String> params]) async {
+  Future<Map> getUploadServer([Map<String, dynamic> params]) async {
     return _api.request('docs.getUploadServer', {
       ...?params,
     });
@@ -127,7 +127,7 @@ class Docs {
   /// Params:
   ///
   /// `group_id` *(integer)* Community ID (if the document will be uploaded to the community).
-  Future<Map> getWallUploadServer([Map<String, String> params]) async {
+  Future<Map> getWallUploadServer([Map<String, dynamic> params]) async {
     return _api.request('docs.getWallUploadServer', {
       ...?params,
     });
@@ -142,7 +142,7 @@ class Docs {
   /// `title` *(string)* Document title.
   ///
   /// `tags` *(string)* Document tags.
-  Future<Map> save([Map<String, String> params]) async {
+  Future<Map> save([Map<String, dynamic> params]) async {
     return _api.request('docs.save', {
       ...?params,
     });
@@ -159,7 +159,7 @@ class Docs {
   /// `count` *(integer)* Number of results to return.
   ///
   /// `offset` *(integer)* Offset needed to return a specific subset of results.
-  Future<Map> search([Map<String, String> params]) async {
+  Future<Map> search([Map<String, dynamic> params]) async {
     return _api.request('docs.search', {
       ...?params,
     });

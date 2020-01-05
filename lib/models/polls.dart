@@ -25,7 +25,7 @@ class Polls {
   /// `answer_ids` *(array)*
   ///
   /// `is_board` *(boolean)*
-  Future<Map> addVote([Map<String, String> params]) async {
+  Future<Map> addVote([Map<String, dynamic> params]) async {
     return _api.request('polls.addVote', {
       ...?params,
     });
@@ -50,7 +50,7 @@ class Polls {
   /// `photo_id` *(integer)*
   ///
   /// `background_id` *(string)*
-  Future<Map> create([Map<String, String> params]) async {
+  Future<Map> create([Map<String, dynamic> params]) async {
     return _api.request('polls.create', {
       ...?params,
     });
@@ -67,7 +67,7 @@ class Polls {
   /// `answer_id` *(integer)* Answer ID.
   ///
   /// `is_board` *(boolean)*
-  Future<Map> deleteVote([Map<String, String> params]) async {
+  Future<Map> deleteVote([Map<String, dynamic> params]) async {
     return _api.request('polls.deleteVote', {
       ...?params,
     });
@@ -94,7 +94,7 @@ class Polls {
   /// `photo_id` *(integer)*
   ///
   /// `background_id` *(string)*
-  Future<Map> edit([Map<String, String> params]) async {
+  Future<Map> edit([Map<String, dynamic> params]) async {
     return _api.request('polls.edit', {
       ...?params,
     });
@@ -117,7 +117,7 @@ class Polls {
   /// `fields` *(array)*
   ///
   /// `name_case` *(string)*, default: nom
-  Future<Map> getById([Map<String, String> params]) async {
+  Future<Map> getById([Map<String, dynamic> params]) async {
     return _api.request('polls.getById', {
       ...?params,
     });
@@ -144,7 +144,7 @@ class Polls {
   /// `fields` *(array)* Profile fields to return. Sample values: 'nickname', 'screen_name', 'sex', 'bdate (birthdate)', 'city', 'country', 'timezone', 'photo', 'photo_medium', 'photo_big', 'has_mobile', 'rate', 'contacts', 'education', 'online', 'counters'.
   ///
   /// `name_case` *(string)* Case for declension of user name and surname: , 'nom' — nominative (default) , 'gen' — genitive , 'dat' — dative , 'acc' — accusative , 'ins' — instrumental , 'abl' — prepositional
-  Future<Map> getVoters([Map<String, String> params]) async {
+  Future<Map> getVoters([Map<String, dynamic> params]) async {
     return _api.request('polls.getVoters', {
       ...?params,
     });

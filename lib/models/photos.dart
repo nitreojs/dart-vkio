@@ -23,7 +23,7 @@ class Photos {
   /// `photo_id` *(string)* Photo ID.
   ///
   /// `tag_id` *(integer)* Tag ID.
-  Future<Map> confirmTag([Map<String, String> params]) async {
+  Future<Map> confirmTag([Map<String, dynamic> params]) async {
     return _api.request('photos.confirmTag', {
       ...?params,
     });
@@ -38,7 +38,7 @@ class Photos {
   /// `photo_id` *(integer)* photo ID
   ///
   /// `access_key` *(string)* for private photos
-  Future<Map> copy([Map<String, String> params]) async {
+  Future<Map> copy([Map<String, dynamic> params]) async {
     return _api.request('photos.copy', {
       ...?params,
     });
@@ -61,7 +61,7 @@ class Photos {
   /// `upload_by_admins_only` *(boolean)*
   ///
   /// `comments_disabled` *(boolean)*
-  Future<Map> createAlbum([Map<String, String> params]) async {
+  Future<Map> createAlbum([Map<String, dynamic> params]) async {
     return _api.request('photos.createAlbum', {
       ...?params,
     });
@@ -88,7 +88,7 @@ class Photos {
   /// `access_key` *(string)*
   ///
   /// `guid` *(string)*
-  Future<Map> createComment([Map<String, String> params]) async {
+  Future<Map> createComment([Map<String, dynamic> params]) async {
     return _api.request('photos.createComment', {
       ...?params,
     });
@@ -101,7 +101,7 @@ class Photos {
   /// `owner_id` *(integer)* ID of the user or community that owns the photo.
   ///
   /// `photo_id` *(integer)* Photo ID.
-  Future<Map> delete([Map<String, String> params]) async {
+  Future<Map> delete([Map<String, dynamic> params]) async {
     return _api.request('photos.delete', {
       ...?params,
     });
@@ -114,7 +114,7 @@ class Photos {
   /// `album_id` *(integer)* Album ID.
   ///
   /// `group_id` *(integer)* ID of the community that owns the album.
-  Future<Map> deleteAlbum([Map<String, String> params]) async {
+  Future<Map> deleteAlbum([Map<String, dynamic> params]) async {
     return _api.request('photos.deleteAlbum', {
       ...?params,
     });
@@ -127,7 +127,7 @@ class Photos {
   /// `owner_id` *(integer)* ID of the user or community that owns the photo.
   ///
   /// `comment_id` *(integer)* Comment ID.
-  Future<Map> deleteComment([Map<String, String> params]) async {
+  Future<Map> deleteComment([Map<String, dynamic> params]) async {
     return _api.request('photos.deleteComment', {
       ...?params,
     });
@@ -152,7 +152,7 @@ class Photos {
   /// `foursquare_id` *(string)*
   ///
   /// `delete_place` *(boolean)*
-  Future<Map> edit([Map<String, String> params]) async {
+  Future<Map> edit([Map<String, dynamic> params]) async {
     return _api.request('photos.edit', {
       ...?params,
     });
@@ -177,7 +177,7 @@ class Photos {
   /// `upload_by_admins_only` *(boolean)*
   ///
   /// `comments_disabled` *(boolean)*
-  Future<Map> editAlbum([Map<String, String> params]) async {
+  Future<Map> editAlbum([Map<String, dynamic> params]) async {
     return _api.request('photos.editAlbum', {
       ...?params,
     });
@@ -194,7 +194,7 @@ class Photos {
   /// `message` *(string)* New text of the comment.
   ///
   /// `attachments` *(array)* (Required if 'message' is not set.) List of objects attached to the post, in the following format: "<owner_id>_<media_id>,<owner_id>_<media_id>", '' — Type of media attachment: 'photo' — photo, 'video' — video, 'audio' — audio, 'doc' — document, '<owner_id>' — Media attachment owner ID. '<media_id>' — Media attachment ID. Example: "photo100172_166443618,photo66748_265827614"
-  Future<Map> editComment([Map<String, String> params]) async {
+  Future<Map> editComment([Map<String, dynamic> params]) async {
     return _api.request('photos.editComment', {
       ...?params,
     });
@@ -223,7 +223,7 @@ class Photos {
   /// `offset` *(integer)*
   ///
   /// `count` *(integer)*, default: 50, max: 1000
-  Future<Map> get([Map<String, String> params]) async {
+  Future<Map> get([Map<String, dynamic> params]) async {
     return _api.request('photos.get', {
       ...?params,
     });
@@ -246,7 +246,7 @@ class Photos {
   /// `need_covers` *(boolean)* '1' — to return an additional 'thumb_src' field, '0' — (default)
   ///
   /// `photo_sizes` *(boolean)* '1' — to return photo sizes in a
-  Future<Map> getAlbums([Map<String, String> params]) async {
+  Future<Map> getAlbums([Map<String, dynamic> params]) async {
     return _api.request('photos.getAlbums', {
       ...?params,
     });
@@ -259,7 +259,7 @@ class Photos {
   /// `user_id` *(integer)* User ID.
   ///
   /// `group_id` *(integer)* Community ID.
-  Future<Map> getAlbumsCount([Map<String, String> params]) async {
+  Future<Map> getAlbumsCount([Map<String, dynamic> params]) async {
     return _api.request('photos.getAlbumsCount', {
       ...?params,
     });
@@ -284,7 +284,7 @@ class Photos {
   /// `need_hidden` *(boolean)* '1' – to show information about photos being hidden from the block above the wall.
   ///
   /// `skip_hidden` *(boolean)* '1' – not to return photos being hidden from the block above the wall. Works only with owner_id>0, no_service_albums is ignored.
-  Future<Map> getAll([Map<String, String> params]) async {
+  Future<Map> getAll([Map<String, dynamic> params]) async {
     return _api.request('photos.getAll', {
       ...?params,
     });
@@ -303,7 +303,7 @@ class Photos {
   /// `offset` *(integer)* Offset needed to return a specific subset of comments. By default, '0'.
   ///
   /// `count` *(integer)* Number of comments to return. By default, '20'. Maximum value, '100'.
-  Future<Map> getAllComments([Map<String, String> params]) async {
+  Future<Map> getAllComments([Map<String, dynamic> params]) async {
     return _api.request('photos.getAllComments', {
       ...?params,
     });
@@ -318,7 +318,7 @@ class Photos {
   /// `extended` *(boolean)* '1' — to return additional fields, '0' — (default)
   ///
   /// `photo_sizes` *(boolean)* '1' — to return photo sizes in a
-  Future<Map> getById([Map<String, String> params]) async {
+  Future<Map> getById([Map<String, dynamic> params]) async {
     return _api.request('photos.getById', {
       ...?params,
     });
@@ -335,7 +335,7 @@ class Photos {
   /// `crop_y` *(integer)*
   ///
   /// `crop_width` *(integer)* Width (in pixels) of the photo after cropping., min: 200
-  Future<Map> getChatUploadServer([Map<String, String> params]) async {
+  Future<Map> getChatUploadServer([Map<String, dynamic> params]) async {
     return _api.request('photos.getChatUploadServer', {
       ...?params,
     });
@@ -364,7 +364,7 @@ class Photos {
   /// `extended` *(boolean)*
   ///
   /// `fields` *(array)*
-  Future<Map> getComments([Map<String, String> params]) async {
+  Future<Map> getComments([Map<String, dynamic> params]) async {
     return _api.request('photos.getComments', {
       ...?params,
     });
@@ -375,7 +375,7 @@ class Photos {
   /// Params:
   ///
   /// `group_id` *(integer)* Community ID.
-  Future<Map> getMarketAlbumUploadServer([Map<String, String> params]) async {
+  Future<Map> getMarketAlbumUploadServer([Map<String, dynamic> params]) async {
     return _api.request('photos.getMarketAlbumUploadServer', {
       ...?params,
     });
@@ -394,7 +394,7 @@ class Photos {
   /// `crop_y` *(integer)* Y coordinate of the crop left upper corner.
   ///
   /// `crop_width` *(integer)* Width of the cropped photo in px., min: 400
-  Future<Map> getMarketUploadServer([Map<String, String> params]) async {
+  Future<Map> getMarketUploadServer([Map<String, dynamic> params]) async {
     return _api.request('photos.getMarketUploadServer', {
       ...?params,
     });
@@ -405,7 +405,7 @@ class Photos {
   /// Params:
   ///
   /// `peer_id` *(integer)* Destination ID. "For user: 'User ID', e.g. '12345'. For chat: '2000000000' + 'Chat ID', e.g. '2000000001'. For community: '- Community ID', e.g. '-12345'. "
-  Future<Map> getMessagesUploadServer([Map<String, String> params]) async {
+  Future<Map> getMessagesUploadServer([Map<String, dynamic> params]) async {
     return _api.request('photos.getMessagesUploadServer', {
       ...?params,
     });
@@ -418,7 +418,7 @@ class Photos {
   /// `offset` *(integer)* Offset needed to return a specific subset of photos.
   ///
   /// `count` *(integer)* Number of photos to return., default: 20, max: 100
-  Future<Map> getNewTags([Map<String, String> params]) async {
+  Future<Map> getNewTags([Map<String, dynamic> params]) async {
     return _api.request('photos.getNewTags', {
       ...?params,
     });
@@ -438,7 +438,7 @@ class Photos {
   ///
   /// `crop_y2` *(integer)* Y coordinate of the right-bottom corner, default: 200
   Future<Map> getOwnerCoverPhotoUploadServer(
-      [Map<String, String> params]) async {
+      [Map<String, dynamic> params]) async {
     return _api.request('photos.getOwnerCoverPhotoUploadServer', {
       ...?params,
     });
@@ -449,7 +449,7 @@ class Photos {
   /// Params:
   ///
   /// `owner_id` *(integer)* identifier of a community or current user. "Note that community id must be negative. 'owner_id=1' – user, 'owner_id=-1' – community, "
-  Future<Map> getOwnerPhotoUploadServer([Map<String, String> params]) async {
+  Future<Map> getOwnerPhotoUploadServer([Map<String, dynamic> params]) async {
     return _api.request('photos.getOwnerPhotoUploadServer', {
       ...?params,
     });
@@ -464,7 +464,7 @@ class Photos {
   /// `photo_id` *(integer)* Photo ID.
   ///
   /// `access_key` *(string)*
-  Future<Map> getTags([Map<String, String> params]) async {
+  Future<Map> getTags([Map<String, dynamic> params]) async {
     return _api.request('photos.getTags', {
       ...?params,
     });
@@ -477,7 +477,7 @@ class Photos {
   /// `group_id` *(integer)* ID of community that owns the album (if the photo will be uploaded to a community album).
   ///
   /// `album_id` *(integer)*
-  Future<Map> getUploadServer([Map<String, String> params]) async {
+  Future<Map> getUploadServer([Map<String, dynamic> params]) async {
     return _api.request('photos.getUploadServer', {
       ...?params,
     });
@@ -496,7 +496,7 @@ class Photos {
   /// `extended` *(boolean)* '1' — to return an additional 'likes' field, '0' — (default)
   ///
   /// `sort` *(string)* Sort order: '1' — by date the tag was added in ascending order, '0' — by date the tag was added in descending order
-  Future<Map> getUserPhotos([Map<String, String> params]) async {
+  Future<Map> getUserPhotos([Map<String, dynamic> params]) async {
     return _api.request('photos.getUserPhotos', {
       ...?params,
     });
@@ -507,7 +507,7 @@ class Photos {
   /// Params:
   ///
   /// `group_id` *(integer)* ID of community to whose wall the photo will be uploaded.
-  Future<Map> getWallUploadServer([Map<String, String> params]) async {
+  Future<Map> getWallUploadServer([Map<String, dynamic> params]) async {
     return _api.request('photos.getWallUploadServer', {
       ...?params,
     });
@@ -522,7 +522,7 @@ class Photos {
   /// `photo_id` *(integer)* Photo ID.
   ///
   /// `album_id` *(integer)* Album ID.
-  Future<Map> makeCover([Map<String, String> params]) async {
+  Future<Map> makeCover([Map<String, dynamic> params]) async {
     return _api.request('photos.makeCover', {
       ...?params,
     });
@@ -537,7 +537,7 @@ class Photos {
   /// `target_album_id` *(integer)* ID of the album to which the photo will be moved.
   ///
   /// `photo_id` *(integer)* Photo ID.
-  Future<Map> move([Map<String, String> params]) async {
+  Future<Map> move([Map<String, dynamic> params]) async {
     return _api.request('photos.move', {
       ...?params,
     });
@@ -560,7 +560,7 @@ class Photos {
   /// `x2` *(number)* Lower right-corner coordinate of the tagged area (as a percentage of the photo's width).
   ///
   /// `y2` *(number)* Lower right-corner coordinate of the tagged area (as a percentage of the photo's height).
-  Future<Map> putTag([Map<String, String> params]) async {
+  Future<Map> putTag([Map<String, dynamic> params]) async {
     return _api.request('photos.putTag', {
       ...?params,
     });
@@ -575,7 +575,7 @@ class Photos {
   /// `photo_id` *(integer)* Photo ID.
   ///
   /// `tag_id` *(integer)* Tag ID.
-  Future<Map> removeTag([Map<String, String> params]) async {
+  Future<Map> removeTag([Map<String, dynamic> params]) async {
     return _api.request('photos.removeTag', {
       ...?params,
     });
@@ -592,7 +592,7 @@ class Photos {
   /// `before` *(integer)* ID of the album before which the album in question shall be placed.
   ///
   /// `after` *(integer)* ID of the album after which the album in question shall be placed.
-  Future<Map> reorderAlbums([Map<String, String> params]) async {
+  Future<Map> reorderAlbums([Map<String, dynamic> params]) async {
     return _api.request('photos.reorderAlbums', {
       ...?params,
     });
@@ -609,7 +609,7 @@ class Photos {
   /// `before` *(integer)* ID of the photo before which the photo in question shall be placed.
   ///
   /// `after` *(integer)* ID of the photo after which the photo in question shall be placed.
-  Future<Map> reorderPhotos([Map<String, String> params]) async {
+  Future<Map> reorderPhotos([Map<String, dynamic> params]) async {
     return _api.request('photos.reorderPhotos', {
       ...?params,
     });
@@ -624,7 +624,7 @@ class Photos {
   /// `photo_id` *(integer)* Photo ID.
   ///
   /// `reason` *(integer)* Reason for the complaint: '0' – spam, '1' – child pornography, '2' – extremism, '3' – violence, '4' – drug propaganda, '5' – adult material, '6' – insult, abuse
-  Future<Map> report([Map<String, String> params]) async {
+  Future<Map> report([Map<String, dynamic> params]) async {
     return _api.request('photos.report', {
       ...?params,
     });
@@ -639,7 +639,7 @@ class Photos {
   /// `comment_id` *(integer)* ID of the comment being reported.
   ///
   /// `reason` *(integer)* Reason for the complaint: '0' – spam, '1' – child pornography, '2' – extremism, '3' – violence, '4' – drug propaganda, '5' – adult material, '6' – insult, abuse
-  Future<Map> reportComment([Map<String, String> params]) async {
+  Future<Map> reportComment([Map<String, dynamic> params]) async {
     return _api.request('photos.reportComment', {
       ...?params,
     });
@@ -652,7 +652,7 @@ class Photos {
   /// `owner_id` *(integer)* ID of the user or community that owns the photo.
   ///
   /// `photo_id` *(integer)* Photo ID.
-  Future<Map> restore([Map<String, String> params]) async {
+  Future<Map> restore([Map<String, dynamic> params]) async {
     return _api.request('photos.restore', {
       ...?params,
     });
@@ -665,7 +665,7 @@ class Photos {
   /// `owner_id` *(integer)* ID of the user or community that owns the photo.
   ///
   /// `comment_id` *(integer)* ID of the deleted comment.
-  Future<Map> restoreComment([Map<String, String> params]) async {
+  Future<Map> restoreComment([Map<String, dynamic> params]) async {
     return _api.request('photos.restoreComment', {
       ...?params,
     });
@@ -690,7 +690,7 @@ class Photos {
   /// `longitude` *(number)* Geographical longitude, in degrees (from '-180' to '180').
   ///
   /// `caption` *(string)* Text describing the photo. 2048 digits max.
-  Future<Map> save([Map<String, String> params]) async {
+  Future<Map> save([Map<String, dynamic> params]) async {
     return _api.request('photos.save', {
       ...?params,
     });
@@ -707,7 +707,7 @@ class Photos {
   /// `server` *(integer)* Parameter returned when photos are [uploaded to server](https://vk.com/dev/upload_files).
   ///
   /// `hash` *(string)* Parameter returned when photos are [uploaded to server](https://vk.com/dev/upload_files).
-  Future<Map> saveMarketAlbumPhoto([Map<String, String> params]) async {
+  Future<Map> saveMarketAlbumPhoto([Map<String, dynamic> params]) async {
     return _api.request('photos.saveMarketAlbumPhoto', {
       ...?params,
     });
@@ -728,7 +728,7 @@ class Photos {
   /// `crop_data` *(string)* Parameter returned when photos are [uploaded to server](https://vk.com/dev/upload_files).
   ///
   /// `crop_hash` *(string)* Parameter returned when photos are [uploaded to server](https://vk.com/dev/upload_files).
-  Future<Map> saveMarketPhoto([Map<String, String> params]) async {
+  Future<Map> saveMarketPhoto([Map<String, dynamic> params]) async {
     return _api.request('photos.saveMarketPhoto', {
       ...?params,
     });
@@ -743,7 +743,7 @@ class Photos {
   /// `server` *(integer)*
   ///
   /// `hash` *(string)*
-  Future<Map> saveMessagesPhoto([Map<String, String> params]) async {
+  Future<Map> saveMessagesPhoto([Map<String, dynamic> params]) async {
     return _api.request('photos.saveMessagesPhoto', {
       ...?params,
     });
@@ -756,7 +756,7 @@ class Photos {
   /// `hash` *(string)* Parameter returned when photos are [uploaded to server](https://vk.com/dev/upload_files).
   ///
   /// `photo` *(string)* Parameter returned when photos are [uploaded to server](https://vk.com/dev/upload_files).
-  Future<Map> saveOwnerCoverPhoto([Map<String, String> params]) async {
+  Future<Map> saveOwnerCoverPhoto([Map<String, dynamic> params]) async {
     return _api.request('photos.saveOwnerCoverPhoto', {
       ...?params,
     });
@@ -771,7 +771,7 @@ class Photos {
   /// `hash` *(string)* parameter returned after [photo upload](https://vk.com/dev/upload_files).
   ///
   /// `photo` *(string)* parameter returned after [photo upload](https://vk.com/dev/upload_files).
-  Future<Map> saveOwnerPhoto([Map<String, String> params]) async {
+  Future<Map> saveOwnerPhoto([Map<String, dynamic> params]) async {
     return _api.request('photos.saveOwnerPhoto', {
       ...?params,
     });
@@ -796,7 +796,7 @@ class Photos {
   /// `longitude` *(number)* Geographical longitude, in degrees (from '-180' to '180').
   ///
   /// `caption` *(string)* Text describing the photo. 2048 digits max.
-  Future<Map> saveWallPhoto([Map<String, String> params]) async {
+  Future<Map> saveWallPhoto([Map<String, dynamic> params]) async {
     return _api.request('photos.saveWallPhoto', {
       ...?params,
     });
@@ -823,7 +823,7 @@ class Photos {
   /// `count` *(integer)* Number of photos to return., default: 100, max: 1000
   ///
   /// `radius` *(integer)* Radius of search in meters (works very approximately). Available values: '10', '100', '800', '6000', '50000'., default: 5000
-  Future<Map> search([Map<String, String> params]) async {
+  Future<Map> search([Map<String, dynamic> params]) async {
     return _api.request('photos.search', {
       ...?params,
     });
