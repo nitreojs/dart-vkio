@@ -30,8 +30,13 @@ Optimize classes
 ## 1.2.0
 
 Remove useless `this.`
+
 Remove useless `new`
+
 Remove useless comments and fix some of them
+
 Add missing types for methods
+
 Convert all params into `Map<String, dynamic>` for better usability
+
 Some API and VK changes
