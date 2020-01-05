@@ -1,7 +1,7 @@
 import './models/api.dart';
 
 class VK {
-  Map options;
+  Map<String, dynamic> options;
   API api;
 
   VK({String token, String version = '5.103'}) {
@@ -13,7 +13,7 @@ class VK {
     api = API(this);
   }
 
-  VK.create(String token, [String version = '5.103'])
+  VK.create({String token, String version = '5.103'})
       : this(token: token, version: version);
 
   String toString() {

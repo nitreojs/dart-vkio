@@ -1,4 +1,6 @@
+import 'dart:async';
 import 'dart:convert';
+import 'dart:math';
 import 'package:http/http.dart' as http;
 
 import '../vk.dart';
@@ -199,8 +201,26 @@ class API {
     return 'API';
   }
 
-  Future<Map> request(String method, [Map<String, String> params]) async {
-    Map body = <String, String>{
+  Future<Map> request(String method, [Map<String, dynamic> rawParams]) async {
+    Map params = { ...?rawParams };
+
+    for (var item in params.entries) {
+      dynamic value = item.value;
+
+      if (item.value is List) {
+        value = item.value.join(',');
+      } else if (item.value is int || item.value is double) {
+        value = '${item.value}';
+      }
+
+      params[item.key] = value;
+    }
+
+    if (params['random_id'] == null) {
+      params['random_id'] = Random().nextInt(4294967296);
+    }
+
+    Map body = <String, dynamic>{
       'access_token': _vk.options['token'],
       'v': _vk.options['version'],
       ...?params,
