@@ -1,4 +1,5 @@
 import 'models/api.dart';
+import 'models/authorization.dart';
 
 import 'types.dart';
 
@@ -10,6 +11,7 @@ class VK {
 
   Map<String, dynamic> options;
   API api;
+  Authorization authorization;
 
   VK({
     String token,
@@ -23,6 +25,7 @@ class VK {
     };
 
     api = API(this);
+    authorization = Authorization(this);
   }
 
   VK.create({
