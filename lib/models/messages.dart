@@ -590,7 +590,9 @@ class Messages {
   ///
   /// `disable_mentions` *(boolean)*
   Future<Map> send([Map<String, dynamic> params]) async {
-    return _api.request('messages.send', { ...?params });
+    return _api.request('messages.send', {
+      ...?params,
+    });
   }
 
   /// Changes the status of a user as typing in a conversation.
