@@ -10,6 +10,7 @@ class Ads {
     _api = api;
   }
 
+  @override
   String toString() {
     return 'Ads';
   }

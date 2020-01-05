@@ -10,6 +10,7 @@ class Secure {
     _api = api;
   }
 
+  @override
   String toString() {
     return 'Secure';
   }

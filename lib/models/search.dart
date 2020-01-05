@@ -10,6 +10,7 @@ class Search {
     _api = api;
   }
 
+  @override
   String toString() {
     return 'Search';
   }

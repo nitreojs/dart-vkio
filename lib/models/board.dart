@@ -10,6 +10,7 @@ class Board {
     _api = api;
   }
 
+  @override
   String toString() {
     return 'Board';
   }

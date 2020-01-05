@@ -10,6 +10,7 @@ class Streaming {
     _api = api;
   }
 
+  @override
   String toString() {
     return 'Streaming';
   }

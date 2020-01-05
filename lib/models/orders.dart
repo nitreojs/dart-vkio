@@ -10,6 +10,7 @@ class Orders {
     _api = api;
   }
 
+  @override
   String toString() {
     return 'Orders';
   }

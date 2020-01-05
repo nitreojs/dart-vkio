@@ -10,6 +10,7 @@ class Video {
     _api = api;
   }
 
+  @override
   String toString() {
     return 'Video';
   }

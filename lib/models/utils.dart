@@ -10,6 +10,7 @@ class Utils {
     _api = api;
   }
 
+  @override
   String toString() {
     return 'Utils';
   }

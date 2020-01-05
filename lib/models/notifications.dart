@@ -10,6 +10,7 @@ class Notifications {
     _api = api;
   }
 
+  @override
   String toString() {
     return 'Notifications';
   }

@@ -10,6 +10,7 @@ class Stories {
     _api = api;
   }
 
+  @override
   String toString() {
     return 'Stories';
   }

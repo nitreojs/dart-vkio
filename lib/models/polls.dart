@@ -10,6 +10,7 @@ class Polls {
     _api = api;
   }
 
+  @override
   String toString() {
     return 'Polls';
   }

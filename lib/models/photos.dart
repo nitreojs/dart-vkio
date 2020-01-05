@@ -10,6 +10,7 @@ class Photos {
     _api = api;
   }
 
+  @override
   String toString() {
     return 'Photos';
   }

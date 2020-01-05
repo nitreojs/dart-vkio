@@ -10,6 +10,7 @@ class Groups {
     _api = api;
   }
 
+  @override
   String toString() {
     return 'Groups';
   }

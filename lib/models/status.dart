@@ -10,6 +10,7 @@ class Status {
     _api = api;
   }
 
+  @override
   String toString() {
     return 'Status';
   }

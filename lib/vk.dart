@@ -16,6 +16,7 @@ class VK {
   VK.create({String token, String version = '5.103'})
       : this(token: token, version: version);
 
+  @override
   String toString() {
     return 'VK';
   }

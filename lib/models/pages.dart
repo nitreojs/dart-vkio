@@ -10,6 +10,7 @@ class Pages {
     _api = api;
   }
 
+  @override
   String toString() {
     return 'Pages';
   }

@@ -10,6 +10,7 @@ class Wall {
     _api = api;
   }
 
+  @override
   String toString() {
     return 'Wall';
   }

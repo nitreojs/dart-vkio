@@ -10,6 +10,7 @@ class Account {
     _api = api;
   }
 
+  @override
   String toString() {
     return 'Account';
   }

@@ -10,6 +10,7 @@ class PrettyCards {
     _api = api;
   }
 
+  @override
   String toString() {
     return 'PrettyCards';
   }

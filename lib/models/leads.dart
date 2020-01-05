@@ -10,6 +10,7 @@ class Leads {
     _api = api;
   }
 
+  @override
   String toString() {
     return 'Leads';
   }

@@ -10,6 +10,7 @@ class Fave {
     _api = api;
   }
 
+  @override
   String toString() {
     return 'Fave';
   }

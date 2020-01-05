@@ -10,6 +10,7 @@ class Newsfeed {
     _api = api;
   }
 
+  @override
   String toString() {
     return 'Newsfeed';
   }

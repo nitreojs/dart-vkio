@@ -10,6 +10,7 @@ class Widgets {
     _api = api;
   }
 
+  @override
   String toString() {
     return 'Widgets';
   }

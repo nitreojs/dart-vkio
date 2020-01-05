@@ -10,6 +10,7 @@ class Users {
     _api = api;
   }
 
+  @override
   String toString() {
     return 'Users';
   }

@@ -10,6 +10,7 @@ class Auth {
     _api = api;
   }
 
+  @override
   String toString() {
     return 'Auth';
   }
