@@ -218,7 +218,13 @@ class API {
     }
 
     if (params['random_id'] == null) {
-      params['random_id'] = Random().nextInt(4294967296);
+      int random_id = Random().nextInt(4294967296);
+
+      params['random_id'] = '$random_id';
+    }
+
+    if (_vk.options['lang'] != null) {
+      params['lang'] = _vk.options['lang'];
     }
 
     Map body = <String, dynamic>{
