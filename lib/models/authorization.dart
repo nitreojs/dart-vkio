@@ -35,7 +35,7 @@ class Authorization {
     return 'Authorization';
   }
 
-  String _getParamsString(Map<String, String> params) {
+  String _getParamsString(Map<String, dynamic> params) {
     var paramsString = '';
 
     final Iterable iterable = params.entries;
@@ -47,7 +47,7 @@ class Authorization {
     return paramsString;
   }
 
-  Map<String, String> _getParams({
+  Map<String, dynamic> _getParams({
     Map<String, dynamic> client,
     String username,
     String password,
