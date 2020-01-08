@@ -52,3 +52,9 @@ Add language support
 Add `authorization` class
 
 Change export logic
+
+## 1.3.0
+
+Add updates
+
+Add `updates.onNewMessage` handler
