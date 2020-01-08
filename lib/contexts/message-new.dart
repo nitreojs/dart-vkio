@@ -108,7 +108,7 @@ class MessageContext extends Context {
   }
 
   /// Edits a message text
-  /// 
+  ///
   /// [Params]:
   ///
   /// `peer_id` *(integer)* Destination ID. "For user: 'User ID', e.g. '12345'. For chat: '2000000000' + 'chat_id', e.g. '2000000001'. For community: '- community ID', e.g. '-12345'. "
@@ -130,7 +130,8 @@ class MessageContext extends Context {
   /// `group_id` *(integer)* Group ID (for group messages with user access token)
   ///
   /// `dont_parse_links` *(boolean)*
-  Future<dynamic> editMessageText(String message, [Map<String, dynamic> params]) {
+  Future<dynamic> editMessageText(String message,
+      [Map<String, dynamic> params]) {
     return _vk.api.messages.edit({
       'peer_id': peerId,
       'message': message,
@@ -139,11 +140,11 @@ class MessageContext extends Context {
   }
 
   /// Replies to sent message
-  /// 
+  ///
   /// [Params]:
-  /// 
+  ///
   /// `message` *(string)* Text to reply.
-  /// 
+  ///
   /// `peer_id` *(integer)* Destination ID. "For user: 'User ID', e.g. '12345'. For chat: '2000000000' + 'chat_id', e.g. '2000000001'. For community: '- community ID', e.g. '-12345'. "
   ///
   /// `message` *(string)* (Required if 'attachments' is not set.) Text of the message.
@@ -172,10 +173,10 @@ class MessageContext extends Context {
   }
 
   /// Sends sticker by ID
-  /// 
+  ///
   /// `id` *(integer)* Sticker ID.
   Future<dynamic> sendSticker(int id) {
-    return send('', { 'sticker_id': id.toString() });
+    return send('', {'sticker_id': id.toString()});
   }
 
   // This is fucking impossible to me to do.
@@ -226,7 +227,7 @@ class MessageContext extends Context {
   // }
 
   /// Changes the status of typing in the dialog
-  /// 
+  ///
   /// `type` *(string)* Activity type. `typing` or `audiomessage`
   Future<dynamic> setActivity([String type = 'typing']) async {
     return _vk.api.messages.setActivity({
@@ -236,7 +237,7 @@ class MessageContext extends Context {
   }
 
   /// Marks messages as important or removes a mark
-  /// 
+  ///
   /// `ids` *(array)* List of message IDs.
   Future<dynamic> markAsImportant([List<int> ids = const []]) async {
     if (ids.isEmpty) ids = [id];
@@ -253,7 +254,7 @@ class MessageContext extends Context {
   }
 
   /// Deletes the message
-  /// 
+  ///
   /// `ids` *(array)* List of message IDs.
   Future<dynamic> deleteMessage([List<int> ids = const []]) {
     if (ids.isEmpty) ids = [id];
@@ -278,7 +279,7 @@ class MessageContext extends Context {
   }
 
   /// Renames the chat
-  /// 
+  ///
   /// [title]: *(string)* New chat title.
   Future<dynamic> renameChat(String title) {
     _assertIsChat();
@@ -299,7 +300,7 @@ class MessageContext extends Context {
   }
 
   /// Invites a new user
-  /// 
+  ///
   /// `id` *(integer)* User ID.
   Future<dynamic> inviteUser([int id]) {
     _assertIsChat();
@@ -313,7 +314,7 @@ class MessageContext extends Context {
   }
 
   /// Excludes user from chat
-  /// 
+  ///
   /// `id` *(integer)* User or group ID.
   Future<dynamic> kickUser([int id]) {
     _assertIsChat();

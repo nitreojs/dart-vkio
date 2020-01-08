@@ -20,9 +20,9 @@ typedef OnNewMessageHandler = Future<dynamic> Function(MessageContext context);
 
 const int POLLING_VERSION = 3;
 const String NEED_RESTART = 'NEED_RESTART';
-const int DEFAULT_MODE = ResponseMode.ATTACHMENT
-  | ResponseMode.EXTENDED
-  | ResponseMode.EXTENDED_EXTRA;
+const int DEFAULT_MODE = ResponseMode.ATTACHMENT |
+    ResponseMode.EXTENDED |
+    ResponseMode.EXTENDED_EXTRA;
 
 class Updates {
   final VK _vk;
@@ -87,12 +87,12 @@ class Updates {
 
     try {
       var response = isGroup
-        ? await _vk.api.groups.getLongPollServer({
-          'group_id': pollingGroupId,
-        })
-        : await _vk.api.messages.getLongPollServer({
-          'lp_version': POLLING_VERSION,
-        });
+          ? await _vk.api.groups.getLongPollServer({
+              'group_id': pollingGroupId,
+            })
+          : await _vk.api.messages.getLongPollServer({
+              'lp_version': POLLING_VERSION,
+            });
 
       String key = response['key'];
       String server = response['server'];
@@ -137,7 +137,9 @@ class Updates {
       Duration pollingWait = _vk.options['pollingWait'];
       int pollingAttempts = _vk.options['pollingAttempts'];
 
-      if (e is Map && e['code'] != NEED_RESTART && _restarted < pollingAttempts) {
+      if (e is Map &&
+          e['code'] != NEED_RESTART &&
+          _restarted < pollingAttempts) {
         _restarted += 1;
 
         await sleep(Duration(seconds: 3));
