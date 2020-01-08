@@ -30,6 +30,11 @@ class Authorization {
 
   Authorization(VK vk) : _vk = vk;
 
+  @override
+  String toString() {
+    return 'Authorization';
+  }
+
   String _getParamsString(Map<String, String> params) {
     var paramsString = '';
 
