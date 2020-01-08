@@ -13,7 +13,7 @@ class ResponseMode {
   static const int EXTENDED_EXTRA = 64;
   static const int RANDOM_ID = 128;
 
-  ResponseMode._() {}
+  ResponseMode._();
 }
 
 typedef OnNewMessageHandler = Future<dynamic> Function(MessageContext context);
@@ -33,7 +33,7 @@ class Updates {
   int _pts = 0;
   String _lastEventId;
 
-  OnNewMessageHandler onNewMessage = null;
+  OnNewMessageHandler onNewMessage;
 
   Updates(VK vk) : _vk = vk;
 
@@ -64,7 +64,7 @@ class Updates {
 
         _vk.options['pollingGroupId'] = group[0]['id'];
       } catch (e) {
-        throw e;
+        rethrow;
       }
     }
 
@@ -72,7 +72,7 @@ class Updates {
   }
 
   Future<void> stop() async {
-    this.isStarted = false;
+    isStarted = false;
   }
 
   Future<void> startPolling() async {

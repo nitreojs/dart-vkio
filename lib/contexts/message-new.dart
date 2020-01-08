@@ -36,9 +36,9 @@ class MessageContext extends Context {
   bool get hasReplyMessage => replyMessage != null;
   bool get isImportant => _message['important'] == 1;
   bool get isHidden => _message['is_hidden'];
-  bool get hasForwards => forwards.length != 0;
+  bool get hasForwards => forwards.isNotEmpty;
   bool get hasMessagePayload => _message['payload'] != null;
-  bool hasAttachments() => attachments.length != 0;
+  bool hasAttachments() => attachments.isNotEmpty;
 
   String get text => _message['text'];
   String get referralValue => _message['ref'];
@@ -347,7 +347,7 @@ class MessageContext extends Context {
     });
   }
 
-  operator [](String key) {
+  dynamic operator [](String key) {
     return _message[key];
   }
 }

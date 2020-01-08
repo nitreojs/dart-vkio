@@ -1,5 +1,5 @@
 class Context {
-  String _type;
+  final String _type;
 
   Context(String type) : _type = type;
 
