@@ -5,6 +5,7 @@ import 'package:http/http.dart' as http;
 
 import '../vk.dart';
 import '../contexts/main.dart';
+import '../handlers.dart';
 
 class ResponseMode {
   static const int ATTACHMENT = 2;
@@ -15,8 +16,6 @@ class ResponseMode {
 
   ResponseMode._();
 }
-
-typedef OnNewMessageHandler = Future<dynamic> Function(MessageContext context);
 
 const int POLLING_VERSION = 3;
 const String NEED_RESTART = 'NEED_RESTART';
@@ -30,10 +29,13 @@ class Updates {
   String _url;
   String _ts = '0';
   int _restarted = 0;
-  int _pts = 0;
   String _lastEventId;
 
-  OnNewMessageHandler onNewMessage;
+  OnNewMessageHandler onNewMessage = (context) async {};
+  OnEditMessageHandler onEditMessage = (context) async {};
+  OnReplyMessageHandler onReplyMessage = (context) async {};
+  OnAllowMessageHandler onAllowMessage = (context) async {};
+  OnDenyMessageHandler onDenyMessage = (context) async {};
 
   Updates(VK vk) : _vk = vk;
 
@@ -48,6 +50,30 @@ class Updates {
         final context = MessageContext(_vk, update);
 
         await onNewMessage(context);
+
+        break;
+      case 'message_edit':
+        final context = MessageEditContext(_vk, update);
+
+        await onEditMessage(context);
+
+        break;
+      case 'message_reply':
+        final context = MessageReplyContext(_vk, update);
+
+        await onReplyMessage(context);
+
+        break;
+      case 'message_allow':
+        final context = MessageAllowContext(_vk, update);
+
+        await onAllowMessage(context);
+
+        break;
+      case 'message_deny':
+        final context = MessageDenyContext(_vk, update);
+
+        await onDenyMessage(context);
 
         break;
     }
@@ -195,8 +221,6 @@ class Updates {
 
     _restarted = 0;
     _ts = jsonTs;
-
-    if (json['pts'] != null) _pts = int.parse(json['pts']);
 
     List updates = json['updates'];
 

@@ -4,14 +4,12 @@ import 'dart:convert';
 import '../vk.dart';
 import 'context.dart';
 
-class MessageContext extends Context {
+class MessageReplyContext extends Context {
   Map<String, dynamic> _message;
-  Map<String, dynamic> payload;
   VK _vk;
 
-  MessageContext(VK vk, Map<String, dynamic> update) : super(update['type']) {
-    payload = update['object'];
-    _message = payload['message'];
+  MessageReplyContext(VK vk, Map<String, dynamic> update) : super(update['type']) {
+    _message = update['object'];
     _vk = vk;
   }
 
@@ -22,6 +20,7 @@ class MessageContext extends Context {
   int get peerId => _message['peer_id'];
   int get randomId => _message['random_id'];
   int get eventMemberId => _message['action']['member_id'];
+  int get editedAt => _message['update_time'];
   double get chatId => isChat ? peerId - 2e9 : null;
 
   bool get isOutbox => _message['out'] == 1;
@@ -47,7 +46,6 @@ class MessageContext extends Context {
   String get eventText => _message['action']['text'];
   String get eventEmail => _message['action']['email'];
 
-  Map<String, dynamic> get clientInfo => payload['client_info'];
   Map<String, dynamic> get replyMessage => _message['reply_message'];
   Map<String, dynamic> get messagePayload {
     Map<String, dynamic> payload = _message['payload'];
@@ -84,8 +82,6 @@ class MessageContext extends Context {
   ///
   /// `attachment` *(string)* (Required if 'message' is not set.) List of objects attached to the message, separated by commas, in the following format: "<owner_id>_<media_id>", '' — Type of media attachment: 'photo' — photo, 'video' — video, 'audio' — audio, 'doc' — document, 'wall' — wall post, '<owner_id>' — ID of the media attachment owner. '<media_id>' — media attachment ID. Example: "photo100172_166443618"
   ///
-  /// `reply_to` *(integer)*
-  ///
   /// `forward_messages` *(string)* ID of forwarded messages, separated with a comma. Listed messages of the sender will be shown in the message body at the recipient's. Example: "123,431,544"
   ///
   /// `sticker_id` *(integer)* Sticker id.
@@ -99,10 +95,10 @@ class MessageContext extends Context {
   /// `dont_parse_links` *(boolean)*
   ///
   /// `disable_mentions` *(boolean)*
-  Future<dynamic> send(String text, [Map<String, dynamic> params]) {
+  Future<dynamic> send(String message, [Map<String, dynamic> params]) {
     return _vk.api.messages.send({
       'peer_id': peerId,
-      'message': text,
+      'message': message,
       ...?params,
     });
   }
@@ -134,39 +130,6 @@ class MessageContext extends Context {
       [Map<String, dynamic> params]) {
     return _vk.api.messages.edit({
       'peer_id': peerId,
-      'message': message,
-      ...?params,
-    });
-  }
-
-  /// Replies to sent message
-  ///
-  /// [Params]:
-  ///
-  /// `message` *(string)* Text to reply.
-  ///
-  /// `peer_id` *(integer)* Destination ID. "For user: 'User ID', e.g. '12345'. For chat: '2000000000' + 'chat_id', e.g. '2000000001'. For community: '- community ID', e.g. '-12345'. "
-  ///
-  /// `message` *(string)* (Required if 'attachments' is not set.) Text of the message.
-  ///
-  /// `message_id` *(integer)*
-  ///
-  /// `lat` *(number)* Geographical latitude of a check-in, in degrees (from -90 to 90).
-  ///
-  /// `long` *(number)* Geographical longitude of a check-in, in degrees (from -180 to 180).
-  ///
-  /// `attachment` *(string)* (Required if 'message' is not set.) List of objects attached to the message, separated by commas, in the following format: "<owner_id>_<media_id>", '' — Type of media attachment: 'photo' — photo, 'video' — video, 'audio' — audio, 'doc' — document, 'wall' — wall post, '<owner_id>' — ID of the media attachment owner. '<media_id>' — media attachment ID. Example: "photo100172_166443618"
-  ///
-  /// `keep_forward_messages` *(boolean)* '1' — to keep forwarded, messages.
-  ///
-  /// `keep_snippets` *(boolean)* '1' — to keep attached snippets.
-  ///
-  /// `group_id` *(integer)* Group ID (for group messages with user access token)
-  ///
-  /// `dont_parse_links` *(boolean)*
-  Future<dynamic> reply(String message, [Map<String, dynamic> params]) {
-    return send('', {
-      'reply_to': id,
       'message': message,
       ...?params,
     });
