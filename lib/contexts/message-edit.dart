@@ -8,7 +8,8 @@ class MessageEditContext extends Context {
   Map<String, dynamic> _message;
   VK _vk;
 
-  MessageEditContext(VK vk, Map<String, dynamic> update) : super(update['type']) {
+  MessageEditContext(VK vk, Map<String, dynamic> update)
+      : super(update['type']) {
     _message = update['object'];
     _vk = vk;
   }

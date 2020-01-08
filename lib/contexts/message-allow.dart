@@ -6,7 +6,8 @@ class MessageAllowContext extends Context {
   Map<String, dynamic> _message;
   VK _vk;
 
-  MessageAllowContext(VK vk, Map<String, dynamic> update) : super(update['type']) {
+  MessageAllowContext(VK vk, Map<String, dynamic> update)
+      : super(update['type']) {
     _message = update['object'];
     _vk = vk;
   }

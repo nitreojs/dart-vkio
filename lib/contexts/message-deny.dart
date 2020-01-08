@@ -6,7 +6,8 @@ class MessageDenyContext extends Context {
   Map<String, dynamic> _message;
   VK _vk;
 
-  MessageDenyContext(VK vk, Map<String, dynamic> update) : super(update['type']) {
+  MessageDenyContext(VK vk, Map<String, dynamic> update)
+      : super(update['type']) {
     _message = update['object'];
     _vk = vk;
   }

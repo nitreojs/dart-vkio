@@ -8,7 +8,8 @@ class MessageReplyContext extends Context {
   Map<String, dynamic> _message;
   VK _vk;
 
-  MessageReplyContext(VK vk, Map<String, dynamic> update) : super(update['type']) {
+  MessageReplyContext(VK vk, Map<String, dynamic> update)
+      : super(update['type']) {
     _message = update['object'];
     _vk = vk;
   }
