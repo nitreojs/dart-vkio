@@ -58,3 +58,13 @@ Change export logic
 Add updates
 
 Add `updates.onNewMessage` handler
+
+## 1.3.1
+
+Add `updates.onEditMessage` handler
+
+Add `updates.onReplyMessage` handler
+
+Add `updates.onAllowMessage` handler
+
+Add `updates.onDenyMessage` handler
