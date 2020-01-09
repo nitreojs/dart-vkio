@@ -83,7 +83,7 @@ class Updates {
   }
 
   void handleUserContext(List<dynamic> update) async {
-    switch(update[0]) {
+    switch (update[0]) {
       // new message
       case 4:
         var rawMessage = await _vk.api.messages.getById({
@@ -92,7 +92,9 @@ class Updates {
 
         Map<String, dynamic> actualMessage = rawMessage['items'][0];
 
-        final context = MessageContext(_vk, { 'object': { 'message': actualMessage } });
+        final context = MessageContext(_vk, {
+          'object': {'message': actualMessage}
+        });
 
         await onNewMessage(context);
 
@@ -276,18 +278,14 @@ class Updates {
       _lastEventId = updates.last['event_id'];
     }
 
-    updates.forEach(
-      (update) {
-        if (update[0] < 6) {
-          if (update[1] > _lastMessageId) {
-            _lastMessageId = update[1];
-          }
+    updates.forEach((update) {
+      if (update[0] < 6) {
+        if (update[1] > _lastMessageId) {
+          _lastMessageId = update[1];
         }
-
-        return isUser
-          ? handleUserContext(update)
-          : handleContext(update);
       }
-    );
+
+      return isUser ? handleUserContext(update) : handleContext(update);
+    });
   }
 }
