@@ -31,7 +31,7 @@ class MessageContext extends Context {
   bool get isGroup => !isUser;
   bool get isFromUser => isUser && isDM;
   bool get isFromGroup => isGroup && isDM;
-  bool get isChat => !isUser;
+  bool get isChat => peerId > 2e9;
   bool get hasText => text != null;
   bool get hasReplyMessage => replyMessage != null;
   bool get isImportant => _message['important'] == 1;
@@ -58,7 +58,7 @@ class MessageContext extends Context {
   }
 
   List<Map<String, dynamic>> get forwards => _message['fwd_messages'];
-  List<Map<String, dynamic>> get attachments => _message['attachments'];
+  List<dynamic> get attachments => _message['attachments'];
 
   /// Sends a message to the current dialog
   ///
