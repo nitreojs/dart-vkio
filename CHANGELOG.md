@@ -68,3 +68,9 @@ Add `updates.onReplyMessage` handler
 Add `updates.onAllowMessage` handler
 
 Add `updates.onDenyMessage` handler
+
+## 1.3.2
+
+Fix bad жопаs (fix some possible bugs)
+
+Add User Long Poll support (very bad but better than nothing, ye?)
