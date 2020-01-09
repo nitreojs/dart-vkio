@@ -34,6 +34,7 @@ class VK {
       'lang': '${_languages[language.index]}',
       'pollingWait': pollingWait,
       'pollingAttempts': pollingAttempts,
+      'userId': 0,
     };
 
     api = API(this);

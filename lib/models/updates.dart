@@ -23,6 +23,8 @@ const int DEFAULT_MODE = ResponseMode.ATTACHMENT |
     ResponseMode.EXTENDED |
     ResponseMode.EXTENDED_EXTRA;
 
+RegExp ATTACHMENT_ID_RE = RegExp(r"attach(?<id>\d+)(?:_(?<type>type)|$)");
+
 class Updates {
   final VK _vk;
   bool isStarted = false;
@@ -30,6 +32,7 @@ class Updates {
   String _ts = '0';
   int _restarted = 0;
   String _lastEventId;
+  int _lastMessageId = 0;
 
   OnNewMessageHandler onNewMessage = (context) async {};
   OnEditMessageHandler onEditMessage = (context) async {};
@@ -79,6 +82,24 @@ class Updates {
     }
   }
 
+  void handleUserContext(List<dynamic> update) async {
+    switch(update[0]) {
+      // new message
+      case 4:
+        var rawMessage = await _vk.api.messages.getById({
+          'message_ids': update[1],
+        });
+
+        Map<String, dynamic> actualMessage = rawMessage['items'][0];
+
+        final context = MessageContext(_vk, { 'object': { 'message': actualMessage } });
+
+        await onNewMessage(context);
+
+        break;
+    }
+  }
+
   Future<void> start() async {
     if (_vk.options['token'] == null) {
       throw 'Token is not defined';
@@ -112,6 +133,13 @@ class Updates {
     isStarted = true;
 
     try {
+      if (!isGroup && _vk.options['userId'] == 0) {
+        var response = await _vk.api.users.get();
+        Map<String, dynamic> user = response[0];
+
+        _vk.options['userId'] = user['id'];
+      }
+
       var response = isGroup
           ? await _vk.api.groups.getLongPollServer({
               'group_id': pollingGroupId,
@@ -123,7 +151,7 @@ class Updates {
       String key = response['key'];
       String server = response['server'];
       String pollingURL = isGroup ? server : 'https://$server';
-      String ts = response['ts'];
+      String ts = '${response['ts']}';
 
       _ts = ts;
 
@@ -160,6 +188,8 @@ class Updates {
         await fetchUpdates();
       }
     } catch (e) {
+      print(e);
+
       Duration pollingWait = _vk.options['pollingWait'];
       int pollingAttempts = _vk.options['pollingAttempts'];
 
@@ -202,7 +232,7 @@ class Updates {
 
     if (json['failed'] != null) {
       if (json['failed'] == 1) {
-        _ts = json['ts'];
+        _ts = '${json['ts']}';
 
         return;
       }
@@ -215,7 +245,7 @@ class Updates {
       });
     }
 
-    String jsonTs = json['ts'];
+    String jsonTs = '${json['ts']}';
 
     if (_ts == jsonTs) return;
 
@@ -232,8 +262,32 @@ class Updates {
       updates = [...updates.skip(index + 1)];
     }
 
-    _lastEventId = updates.last['event_id'];
+    if (_lastMessageId != null) {
+      int index = updates.indexWhere(
+        (e) => e[0] < 6 && e[1] == _lastMessageId,
+      );
 
-    updates.forEach((update) => handleContext(update));
+      updates = [...updates.skip(index + 1)];
+    }
+
+    bool isUser = updates[0] is List;
+
+    if (!isUser) {
+      _lastEventId = updates.last['event_id'];
+    }
+
+    updates.forEach(
+      (update) {
+        if (update[0] < 6) {
+          if (update[1] > _lastMessageId) {
+            _lastMessageId = update[1];
+          }
+        }
+
+        return isUser
+          ? handleUserContext(update)
+          : handleContext(update);
+      }
+    );
   }
 }
