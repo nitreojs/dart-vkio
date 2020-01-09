@@ -23,7 +23,7 @@ const int DEFAULT_MODE = ResponseMode.ATTACHMENT |
     ResponseMode.EXTENDED |
     ResponseMode.EXTENDED_EXTRA;
 
-RegExp ATTACHMENT_ID_RE = RegExp(r"attach(?<id>\d+)(?:_(?<type>type)|$)");
+RegExp ATTACHMENT_ID_RE = RegExp(r'attach(?<id>\d+)(?:_(?<type>type)|$)');
 
 class Updates {
   final VK _vk;
@@ -130,7 +130,7 @@ class Updates {
     }
 
     int pollingGroupId = _vk.options['pollingGroupId'];
-    bool isGroup = pollingGroupId != null;
+    var isGroup = pollingGroupId != null;
 
     isStarted = true;
 
@@ -152,8 +152,8 @@ class Updates {
 
       String key = response['key'];
       String server = response['server'];
-      String pollingURL = isGroup ? server : 'https://$server';
-      String ts = '${response['ts']}';
+      var pollingURL = isGroup ? server : 'https://$server';
+      var ts = '${response['ts']}';
 
       _ts = ts;
 
@@ -166,7 +166,7 @@ class Updates {
         'ts': _ts,
       };
 
-      String searchParams = '';
+      var searchParams = '';
 
       params.forEach(
         (key, value) {
