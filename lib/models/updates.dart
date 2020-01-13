@@ -264,7 +264,7 @@ class Updates {
       updates = [...updates.skip(index + 1)];
     }
 
-    if (_lastMessageId != null) {
+    if (_lastMessageId != 0) {
       int index = updates.indexWhere(
         (e) => e[0] < 6 && e[1] == _lastMessageId,
       );
@@ -279,13 +279,17 @@ class Updates {
     }
 
     updates.forEach((update) {
+      if (!isUser) {
+        return handleContext(update);
+      }
+
       if (update[0] < 6) {
         if (update[1] > _lastMessageId) {
           _lastMessageId = update[1];
         }
       }
 
-      return isUser ? handleUserContext(update) : handleContext(update);
+      return handleUserContext(update);
     });
   }
 }
