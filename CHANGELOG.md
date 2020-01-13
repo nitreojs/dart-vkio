@@ -74,3 +74,7 @@ Add `updates.onDenyMessage` handler
 Fix bad жопаs (fix some possible bugs)
 
 Add User Long Poll support (very bad but better than nothing, ye?)
+
+## 1.3.3
+
+Fix Bots Long Poll API handler
